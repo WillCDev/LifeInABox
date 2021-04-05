@@ -1,0 +1,61 @@
+@import "../../../../core/styles/animations.module.less";
+
+
+.menuItem {
+  transition: 250ms ease;
+  &:hover, &:focus {
+    transform: scale(1.1) rotate(5deg);
+    outline: none;
+    .hoverOver {
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(255,255,255,0.4);
+      border-radius: 100%;
+      font-size: 60px;
+      font-weight: 900;
+      text-align: left;
+      white-space: nowrap;
+      .fadeUp(300ms)
+    }
+  }
+
+  .image {
+    width: 90vw;
+    height: 90vw;
+    max-width: 20vw;
+    max-height: 20vw;
+    padding: 10px;
+    background: white;
+    cursor: pointer;
+    box-shadow: 0px 0px 40px 10px rgba(0, 0, 0, 0.25);
+  
+    &.drama {
+      .fadeUp(300ms, 100ms)
+    }
+    &.art {
+      .fadeUp(300ms, 200ms)
+    }
+    &.choir {
+      .fadeUp(300ms, 300ms)
+    }
+    &.gamelan {
+      .fadeUp(300ms, 300ms)
+    }
+    &.dance {
+      .fadeUp(300ms, 200ms)
+    }
+    &.writing {
+      .fadeUp(300ms, 100ms)
+    }
+  }
+
+  .hoverOver {
+    display: none;
+  }
+  
+}
+
