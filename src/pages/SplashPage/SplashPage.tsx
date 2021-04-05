@@ -1,12 +1,12 @@
-import React, { FC, useContext } from 'react';
-import type { RouteComponentProps } from '@reach/router';
-import { Button, Text } from '@chakra-ui/react';
-import PageWrapper from 'core/components/PageWrapper';
-import PageContext from 'core/components/PageContext';
-import styles from './SplashPage.module.less';
+import React, { FC, useContext } from 'react'
+import type { RouteComponentProps } from '@reach/router'
+import { Button, Text } from '@chakra-ui/react'
+import PageWrapper from 'core/components/PageWrapper'
+import PageContext from 'core/components/PageContext'
+import styles from './SplashPage.module.less'
 
 const SplashPage: FC<RouteComponentProps> = () => {
-  const { navigate } = useContext(PageContext);
+  const { navigate } = useContext(PageContext)
 
   return (
     <PageWrapper backgroundImage="url('/images/background/littleBoxes.jpg')">
@@ -26,7 +26,7 @@ const SplashPage: FC<RouteComponentProps> = () => {
         </Button>
       </div>
     </PageWrapper>
-  );
-};
+  )
+}
 
-export default SplashPage;
+export default SplashPage
