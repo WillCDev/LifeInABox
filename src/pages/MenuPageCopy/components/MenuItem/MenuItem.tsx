@@ -7,7 +7,7 @@ interface Props {
   title: string
 }
 
-const MenuItem : FC<Props> = ({ src, title }) => (
+const MenuItem: FC<Props> = ({ src, title }) => (
   <button className={styles.menuItem}>
     <Image
       src={src}
@@ -17,9 +17,7 @@ const MenuItem : FC<Props> = ({ src, title }) => (
       borderRadius="full"
       className={`${styles.image} ${styles[title]}`}
     />
-    <div className={styles.hoverOver}>
-      {title.toUpperCase()}
-    </div>
+    <div className={styles.hoverOver}>{title.toUpperCase()}</div>
   </button>
 )
 

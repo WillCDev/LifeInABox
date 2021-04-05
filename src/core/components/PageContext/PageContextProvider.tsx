@@ -2,7 +2,7 @@ import React, { FC, useState } from 'react'
 import { navigate } from '@reach/router'
 import PageContext from './PageContext'
 
-const PageContextProvider: FC  = ({ children }) => {
+const PageContextProvider: FC = ({ children }) => {
   const [navigating, setNavigating] = useState(false)
 
   const onNavigate = (path: string) => {

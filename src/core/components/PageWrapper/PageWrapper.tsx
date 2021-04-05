@@ -13,17 +13,17 @@ const PageWrapper: FC<Props> = ({ children, backgroundImage, className }) => {
 
   return (
     <Box
-      className={`${styles.pageWrapper} ${className} ${navigating ? styles.navigating : ''}`}
-      key='backgroundImage'  
+      className={`${styles.pageWrapper} ${className} ${
+        navigating ? styles.navigating : ''
+      }`}
+      key="backgroundImage"
     >
       <Center
         background={backgroundImage}
-        backgroundSize='cover'
+        backgroundSize="cover"
         className={styles.contentWrapper}
       >
-        <section className={styles.content}>
-          {children}
-        </section>
+        <section className={styles.content}>{children}</section>
       </Center>
     </Box>
   )

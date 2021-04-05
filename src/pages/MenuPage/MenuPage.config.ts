@@ -5,6 +5,6 @@ const config = [
   { image: 'drama.jpg', title: 'Drama' },
   { image: 'dance.png', title: 'Dance' },
   { image: 'writing.png', title: 'Writing' },
-];
+]
 
-export default config;
+export default config
