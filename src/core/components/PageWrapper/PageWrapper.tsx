@@ -4,11 +4,12 @@ import styles from './PageWrapper.module.less'
 import PageContext from '../PageContext'
 
 interface Props {
-  backgroundImage?: string
+  backgroundImage: string
+  altText?: string
   className?: string
 }
 
-const PageWrapper: FC<Props> = ({ children, backgroundImage, className }) => {
+const PageWrapper: FC<Props> = ({ children, altText, backgroundImage, className }) => {
   const { navigating } = useContext(PageContext)
 
   return (
@@ -19,9 +20,9 @@ const PageWrapper: FC<Props> = ({ children, backgroundImage, className }) => {
       key="backgroundImage"
     >
       <Center
-        background={backgroundImage}
-        backgroundSize="cover"
+        backgroundImage={backgroundImage}
         className={styles.contentWrapper}
+        alt={altText}
       >
         <section className={styles.content}>{children}</section>
       </Center>
