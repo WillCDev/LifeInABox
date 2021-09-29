@@ -1,0 +1,36 @@
+@import '../../core/styles/animations.module.less';
+
+.heading {
+  font-family: 'Anton', sans-serif;
+  font-size: 100px;
+  text-align: center;
+  z-index: 1;
+  font-weight: 600;
+  font-variant-caps: petite-caps;
+  font-size: 11vw;
+  letter-spacing: 8px;
+
+  .shadow {
+    text-shadow: 0 0 40px rgba(0,0,0,0.8);
+    position: absolute;
+    z-index: -1;
+  }
+
+  h1 {
+    background: linear-gradient(to right,#9ec5d0 0%, #f1ebc6 25%, #bcf0bd 50%, #ecbcf0 75%, #9ec5d0 100%);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #9ec5d0;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 5s linear infinite;
+    display: inline-block;
+  }
+}
+
+
+
+
