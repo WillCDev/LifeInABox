@@ -5,17 +5,12 @@ const config = merge(commonConfig, {
   mode: 'development',
   devtool: 'eval-cheap-module-source-map',
   devServer: {
-    // inline: true,
+    hot: true,
     port: 9003,
     historyApiFallback: true,
     client: {
       overlay: { errors: true, warnings: false },
-    },
-    proxy: {
-      '/**': {
-        changeOrigin: true,
-        target: 'http://localhost:8080',
-      },
+      progress: true,
     },
   },
 })

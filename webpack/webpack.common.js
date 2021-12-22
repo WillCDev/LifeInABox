@@ -30,9 +30,10 @@ module.exports = {
           options: babelConfig,
         },
       },
+      // Our CSS
       {
         test: /\.(less|css)$/,
-        include: [APP_DIR, MODULES_DIR],
+        include: [APP_DIR],
         use: [
           { loader: MiniCssExtractPlugin.loader },
           {
@@ -49,6 +50,21 @@ module.exports = {
             },
           },
           { loader: 'less-loader' },
+        ],
+      },
+      // External CSS
+      {
+        test: /\.(less|css)$/,
+        include: [MODULES_DIR],
+        use: [
+          { loader: MiniCssExtractPlugin.loader },
+          { loader: 'css-loader' },
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: { plugins: [autoprefixer] },
+            },
+          },
         ],
       },
     ],

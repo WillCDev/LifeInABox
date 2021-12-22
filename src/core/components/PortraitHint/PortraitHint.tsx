@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import { RepeatIcon } from '@chakra-ui/icons'
 import { Flex, Heading, Text, ScaleFade, useMediaQuery } from '@chakra-ui/react'
-import styles from './PortraitHint.module.less'
+import styles from './PortraitHint.less'
 
 const PortraitHint: FC = () => {
   const [isLandscape] = useMediaQuery('screen and (orientation: landscape)')
@@ -21,8 +21,10 @@ const PortraitHint: FC = () => {
           maxBlockSize={'100px'}
           className={styles.icon}
         />
-        <Heading marginBottom="10px">Please rotate your screen</Heading>
-        <Text fontWeight="light" fontSize="xl">
+        <Heading marginBottom="10px" fontSize={'2xl'}>
+          Please rotate your screen
+        </Heading>
+        <Text fontWeight="light" fontSize="l">
           This website is best viewed in landscape.
         </Text>
       </ScaleFade>

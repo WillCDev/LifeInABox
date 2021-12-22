@@ -1,4 +1,9 @@
-const config = [
+export interface MenuItem {
+  image: string
+  title: string
+}
+
+const config: Array<MenuItem> = [
   { image: 'gamelan.png', title: 'Gamelan' },
   { image: 'art.png', title: 'Art' },
   { image: 'choir.png', title: 'Choir' },

@@ -2,6 +2,7 @@ import { StrictMode } from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
 import './index.less'
+import 'react-responsive-carousel/lib/styles/carousel.min.css'
 
 ReactDOM.render(
   <StrictMode>

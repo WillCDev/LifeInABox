@@ -1,80 +1,62 @@
-import { FC, useState, useEffect, useRef } from 'react'
+import { FC, useState } from 'react'
 import type { RouteComponentProps } from '@reach/router'
+import { Carousel } from 'react-responsive-carousel'
 import PageWrapper from 'core/components/PageWrapper'
-import BoxHouse from 'core/components/BoxHouse/BoxHouse'
 import config from './MenuPage.config'
-import styles from './MenuPage.less'
+import BoxHouse, { Position } from 'core/components/BoxHouse/BoxHouse'
 
-const cellCount = config.length
-const theta = 360 / cellCount
-const radius = Math.round(100 / Math.tan(Math.PI / cellCount))
+const getPosition = (index: number, selected: number): Position => {
+  if (index === selected) return Position.Center
+  if (index < selected) return Position.Left
+  return Position.Right
+}
 
-const GamelanPage: FC<RouteComponentProps> = () => {
-  const previousSelected = useRef(0)
-  const [selected, setSelected] = useState(0)
-  const [angle, setAngle] = useState(0)
+const MenuPage: FC<RouteComponentProps> = () => {
+  const [selected, setSelected] = useState(Math.round(config.length))
 
-  // When selected cell changes, update the scene rotation
-  useEffect(() => {
-    const { current } = previousSelected
-    if (selected === current) return
-    if (current === config.length - 1 && selected === 0) setAngle(angle - theta)
-    else if (selected === config.length - 1 && current === 0)
-      setAngle(angle + theta)
-    else {
-      const diff = current - selected
-      setAngle(angle + diff * theta)
-    }
-    previousSelected.current = selected
-  }, [selected])
-
-  // Listen to left and right arrows to select the cells
-  useEffect(() => {
-    const handleKeyPress = ({ key }: KeyboardEvent): void => {
-      if (key === 'ArrowRight') setSelected((sel) => (sel + 1) % 6)
-      else if (key === 'ArrowLeft')
-        setSelected((sel) => ((sel === 0 ? config.length : sel) - 1) % 6)
-    }
-    document.body.addEventListener('keydown', handleKeyPress)
-    return () => {
-      document.body.removeEventListener('keydown', handleKeyPress)
-    }
-  }, [])
+  const onSelected = (index: number): void => {
+    console.log('onSelected', index)
+    if (index === 0) return
+    if (index === config.length + 1) return
+    setSelected(index)
+  }
 
   return (
     <PageWrapper backgroundImage="url('/images/background/abstract1.jpg')">
-      <div className={styles.scene}>
-        <div
-          className={styles.carousel}
-          style={{
-            transform: `rotateY(${angle}deg)`,
-          }}
-        >
-          {config.map(({ image, title }, index) => (
-            <button
-              tabIndex={0}
-              className={styles.carousel__cell}
-              style={{
-                transform: `rotateY(${
-                  theta * index
-                }deg) translateZ(${radius}px)`,
-              }}
-              key={index}
-              onFocus={() => setSelected(index)}
-            >
+      <Carousel
+        axis="horizontal"
+        centerMode
+        centerSlidePercentage={30}
+        showArrows={true}
+        showStatus={false}
+        showIndicators={false}
+        showThumbs={false}
+        useKeyboardArrows={true}
+        swipeable={true}
+        emulateTouch={true}
+        selectedItem={selected}
+        transitionTime={500}
+        swipeScrollTolerance={5}
+        ariaLabel={undefined}
+        onChange={onSelected}
+      >
+        {[
+          <div key="start" />,
+          ...config.map(({ image, title }, index) => (
+            <div key={title}>
               <BoxHouse
-                open={index === selected}
+                open={index === selected - 1}
+                position={getPosition(index, selected - 1)}
                 image={image}
                 text={title.toUpperCase()}
               />
-            </button>
-          ))}
-        </div>
-      </div>
-
-      {/* <MusicPlayer /> */}
+            </div>
+          )),
+          <div key="end" />,
+        ]}
+      </Carousel>
     </PageWrapper>
   )
 }
 
-export default GamelanPage
+export default MenuPage
