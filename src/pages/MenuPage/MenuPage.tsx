@@ -1,18 +1,13 @@
-import React, { FC, useState, useEffect, useRef } from 'react'
+import { FC, useState, useEffect, useRef } from 'react'
 import type { RouteComponentProps } from '@reach/router'
 import PageWrapper from 'core/components/PageWrapper'
-import MusicPlayer from './components/MusicPlayer'
-import config from './MenuPage.config'
-import styles from './MenuPage.module.less'
 import BoxHouse from 'core/components/BoxHouse/BoxHouse'
+import config from './MenuPage.config'
+import styles from './MenuPage.less'
 
 const cellCount = config.length
 const theta = 360 / cellCount
-const radius = Math.round(
-  Number(styles.cellWidth.replace('px', '')) /
-    2 /
-    Math.tan(Math.PI / cellCount),
-)
+const radius = Math.round(100 / Math.tan(Math.PI / cellCount))
 
 const GamelanPage: FC<RouteComponentProps> = () => {
   const previousSelected = useRef(0)

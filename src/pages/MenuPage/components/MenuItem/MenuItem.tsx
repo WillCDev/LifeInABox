@@ -1,6 +1,6 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import { Image } from '@chakra-ui/react'
-import styles from './MenuItem.module.less'
+import styles from './MenuItem.less'
 
 interface Props {
   src: string

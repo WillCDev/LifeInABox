@@ -1,7 +1,7 @@
-import React, { FC, useContext } from 'react'
+import { FC, useContext } from 'react'
 import { Box, Center } from '@chakra-ui/react'
-import styles from './PageWrapper.module.less'
 import PageContext from '../PageContext'
+import styles from './PageWrapper.less'
 
 interface Props {
   backgroundImage: string
@@ -9,7 +9,12 @@ interface Props {
   className?: string
 }
 
-const PageWrapper: FC<Props> = ({ children, altText, backgroundImage, className }) => {
+const PageWrapper: FC<Props> = ({
+  children,
+  altText,
+  backgroundImage,
+  className,
+}) => {
   const { navigating } = useContext(PageContext)
 
   return (
@@ -21,6 +26,7 @@ const PageWrapper: FC<Props> = ({ children, altText, backgroundImage, className 
     >
       <Center
         backgroundImage={backgroundImage}
+        backgroundSize="cover"
         className={styles.contentWrapper}
         alt={altText}
       >
