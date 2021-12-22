@@ -2,15 +2,18 @@
 
 .wrapper {
   width: 100px;
-  height: 100px;
-  transition: all 200ms ease-in-out;
   margin: 0 auto;
+  transform-style: preserve-3d;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transform: rotateX(-10deg) rotateY(5deg);
 }
 
 .box {
   position: relative;
   transform-style: preserve-3d;
-  // transform: rotateX(-10deg) rotateY(0deg);
   transition: all @open-duration ease-in-out;
   cursor: pointer;
 }
@@ -95,7 +98,7 @@
   height: 70px;
   top: -70px;
   transform-origin: 0 70px;
-  transform: rotateX(0deg);
+  transform: rotateX(10deg);
   overflow: hidden;
 }
 
