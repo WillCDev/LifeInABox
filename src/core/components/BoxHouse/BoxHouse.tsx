@@ -1,5 +1,5 @@
-import React, { FC } from 'react'
-import styles from './BoxHouse.module.less'
+import { FC } from 'react'
+import styles from './BoxHouse.less'
 
 interface Props {
   open: boolean

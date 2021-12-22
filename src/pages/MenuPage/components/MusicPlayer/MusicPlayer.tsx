@@ -1,12 +1,14 @@
-import React, { FC, useState } from 'react'
+import { FC, useState } from 'react'
 import { FiVolume2, FiVolumeX } from 'react-icons/fi'
 import { Circle } from '@chakra-ui/react'
 import Sound from 'react-sound'
-import styles from './MusicPlayer.module.less'
+import styles from './MusicPlayer.less'
 
 const MusicPlayer: FC = () => {
   const [playing, setPlaying] = useState<boolean>(false)
-  const togglePlaying = () => setPlaying((play) => !play)
+  const togglePlaying = (): void => {
+    setPlaying((play) => !play)
+  }
   const VolumeComponent = playing ? FiVolume2 : FiVolumeX
 
   return (

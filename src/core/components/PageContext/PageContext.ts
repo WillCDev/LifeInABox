@@ -1,4 +1,4 @@
-import React, { createContext } from 'react'
+import { createContext } from 'react'
 
 interface PageContextState {
   navigating: boolean
@@ -7,7 +7,7 @@ interface PageContextState {
 
 const PageContext = createContext<PageContextState>({
   navigating: false,
-  navigate: () => {},
+  navigate: () => console.log(),
 })
 
 export default PageContext
