@@ -1,26 +1,38 @@
 import { FC } from 'react'
-import { Router, Redirect } from '@reach/router'
-import { ChakraProvider } from '@chakra-ui/react'
-// import HoldingPage from 'pages/HoldingPage'
-import SplashPage from 'pages/SplashPage'
-import MenuPage from 'pages/MenuPage'
-import GamelanPage from 'pages/GamelanPage'
-import { PageContextProvider } from 'core/components/PageContext'
-import PortraitHint from 'core/components/PortraitHint'
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
+import { ChakraProvider, Box } from '@chakra-ui/react'
+import PortraitHint from 'common/components/PortraitHint'
+import pageConfig from 'pages/page.config'
+import styles from './App.less'
+import ContentWrapper from 'common/components/ContentWrapper'
+import { PageContextProvider } from 'common/components/PageContext'
 
-const App: FC = () => (
-  <ChakraProvider>
-    <PageContextProvider>
+const App: FC = () => {
+  return (
+    <ChakraProvider>
       <PortraitHint />
-      <Router>
-        {/* <HoldingPage path="/" /> */}
-        <SplashPage path="/" />
-        <MenuPage path="/menu" />
-        <GamelanPage path="/gamelan" />
-        <Redirect from="*" to="/" noThrow />
-      </Router>
-    </PageContextProvider>
-  </ChakraProvider>
-)
+      <BrowserRouter>
+        <PageContextProvider>
+          <Box className={styles.pageWrapper}>
+            <Routes>
+              {pageConfig.map(({ Component, path, bgImage, bgColor }) => (
+                <Route
+                  key={path}
+                  path={path}
+                  element={
+                    <ContentWrapper image={bgImage} bgColor={bgColor}>
+                      <Component />
+                    </ContentWrapper>
+                  }
+                />
+              ))}
+              <Route path="*" element={() => <Navigate to="/" />} />
+            </Routes>
+          </Box>
+        </PageContextProvider>
+      </BrowserRouter>
+    </ChakraProvider>
+  )
+}
 
 export default App

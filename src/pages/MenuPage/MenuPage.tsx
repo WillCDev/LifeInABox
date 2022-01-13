@@ -1,61 +1,58 @@
-import { FC, useState } from 'react'
-import type { RouteComponentProps } from '@reach/router'
-import { Carousel } from 'react-responsive-carousel'
-import PageWrapper from 'core/components/PageWrapper'
-import config from './MenuPage.config'
-import BoxHouse, { Position } from 'core/components/BoxHouse/BoxHouse'
+import { FC, useState, useEffect } from 'react'
+// Swiper Deps
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Keyboard, Pagination, Navigation, Controller } from 'swiper'
+import 'swiper/less'
+import 'swiper/less/pagination'
+// Menu Deps
+import config, { initialItemKey } from './MenuPage.config'
+import { getPosition } from './MenuPage.utils'
+import BoxHouse from 'common/components/BoxHouse/BoxHouse'
+import { usePrefersReducedMotion } from '@chakra-ui/react'
+import styles from './MenuPage.less'
+import joinClassNames from 'common/utils/joinClassNames'
 
-const getPosition = (index: number, selected: number): Position => {
-  if (index === selected) return Position.Center
-  if (index < selected) return Position.Left
-  return Position.Right
-}
+const MenuPage: FC = () => {
+  const reducedMotion = usePrefersReducedMotion()
+  const [controlledSwiper, setControlledSwiper] = useState<any>()
 
-const MenuPage: FC<RouteComponentProps> = () => {
-  const [selected, setSelected] = useState(Math.round(config.length))
-
-  const onSelected = (index: number): void => {
-    console.log('onSelected', index)
-    if (index === 0) return
-    if (index === config.length + 1) return
-    setSelected(index)
-  }
+  // Animation to slide in on first render
+  useEffect(() => {
+    if (controlledSwiper && !reducedMotion) {
+      const timer = setTimeout(() => {
+        clearTimeout(timer)
+        controlledSwiper.slideTo(initialItemKey, 1200)
+      }, 700)
+    }
+  }, [controlledSwiper, reducedMotion])
 
   return (
-    <PageWrapper backgroundImage="url('/images/background/abstract1.jpg')">
-      <Carousel
-        axis="horizontal"
-        centerMode
-        centerSlidePercentage={30}
-        showArrows={true}
-        showStatus={false}
-        showIndicators={false}
-        showThumbs={false}
-        useKeyboardArrows={true}
-        swipeable={true}
-        emulateTouch={true}
-        selectedItem={selected}
-        transitionTime={500}
-        swipeScrollTolerance={5}
-        ariaLabel={undefined}
-        onChange={onSelected}
-      >
-        {[
-          <div key="start" />,
-          ...config.map(({ image, title }, index) => (
-            <div key={title}>
-              <BoxHouse
-                open={index === selected - 1}
-                position={getPosition(index, selected - 1)}
-                image={image}
-                text={title.toUpperCase()}
-              />
-            </div>
-          )),
-          <div key="end" />,
-        ]}
-      </Carousel>
-    </PageWrapper>
+    <Swiper
+      modules={[Keyboard, Pagination, Navigation, Controller]}
+      controller={{ control: controlledSwiper }}
+      onSwiper={(controller) => setControlledSwiper(controller)}
+      speed={700}
+      keyboard={{ enabled: true, onlyInViewport: true }}
+      centeredSlides
+      slidesPerView={'auto'}
+      initialSlide={reducedMotion ? initialItemKey : 0}
+      className={joinClassNames([!reducedMotion && styles.slideIn])}
+    >
+      {config.map(({ image, title }, index) => (
+        <SwiperSlide key={title} style={{ width: '24vw' }}>
+          {({ isActive }) => (
+            <BoxHouse
+              onClick={() => controlledSwiper.slideTo(index)}
+              reducedMotion={reducedMotion}
+              open={isActive}
+              position={getPosition(index, controlledSwiper?.activeIndex)}
+              image={image}
+              text={title.toUpperCase()}
+            />
+          )}
+        </SwiperSlide>
+      ))}
+    </Swiper>
   )
 }
 

@@ -1,0 +1,28 @@
+@import './common/styles/variables.less';
+
+@margin: 10px;
+
+.pageWrapper {
+  width: calc(100vw - @margin * 2);
+  height: calc(100vh - @margin * 2);
+  padding: 40px;
+  margin: @margin;
+  background: white;
+  border: 6px solid;
+  display: flex;
+
+  @media screen and (max-width: @mobile-max-width) {
+    padding: 20px;
+    border: 5px solid;
+  }
+
+  @media screen and (max-height: @mobile-max-height) {
+    padding: 20px;
+    border: 5px solid;
+  }
+
+  @media screen and (min-width: @desktop-min-width) {
+    padding: 60px;
+    border: 7px solid;
+  }
+}

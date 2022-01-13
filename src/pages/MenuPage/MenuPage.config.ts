@@ -4,12 +4,14 @@ export interface MenuItem {
 }
 
 const config: Array<MenuItem> = [
-  { image: 'gamelan.png', title: 'Gamelan' },
-  { image: 'art.png', title: 'Art' },
-  { image: 'choir.png', title: 'Choir' },
   { image: 'drama.jpg', title: 'Drama' },
+  { image: 'writing.png', title: 'Creative Writing' },
+  { image: 'art.png', title: 'Visual Arts' },
   { image: 'dance.png', title: 'Dance' },
-  { image: 'writing.png', title: 'Writing' },
+  { image: 'gamelan.png', title: 'Gamelan' },
+  { image: 'choir.png', title: 'Choir' },
 ]
+
+export const initialItemKey = Math.floor(config.length / 2)
 
 export default config

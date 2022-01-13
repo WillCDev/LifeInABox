@@ -1,0 +1,59 @@
+.fadeUp(@duration, @waitTime: 0ms) {
+  animation: wait @waitTime, fade-in @duration @waitTime ease-out;
+}
+
+.fadeDown(@duration) {
+  animation: fade-down @duration ease-in;
+}
+
+.slideInLeft(@duration) {
+  animation: slide-left @duration ease-in-out;
+}
+
+@keyframes wait {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  50% {
+    opacity: 0.3;
+  }
+
+  100% {
+    opacity: 1;
+    transform: initial;
+  }
+}
+
+@keyframes fade-down {
+  0% {
+    opacity: 1;
+    transform: initial;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(100vw);
+  }
+
+  100% {
+    transform: initial;
+  }
+}

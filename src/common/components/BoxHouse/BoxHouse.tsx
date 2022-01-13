@@ -1,22 +1,37 @@
-import joinClassNames from 'core/utils/joinClassNames'
-import { FC } from 'react'
+import joinClassNames from 'common/utils/joinClassNames'
+import { ComponentProps, FC } from 'react'
 import styles from './BoxHouse.less'
 
 export enum Position {
-  Left = 'left',
-  Center = 'center',
-  Right = 'right',
+  Before = 'isBefore',
+  Center = 'isCenter',
+  After = 'isAfter',
 }
 
-interface Props {
-  position: Position
+interface Props extends ComponentProps<'div'> {
+  reducedMotion?: boolean
   open: boolean
+  position?: Position | null
   image: string
   text: string
 }
 
-const BoxHouse: FC<Props> = ({ open, image, text, position }) => (
-  <div className={joinClassNames([styles.wrapper, styles[position]])}>
+const BoxHouse: FC<Props> = ({
+  open,
+  image,
+  text,
+  reducedMotion,
+  position,
+  ...rest
+}) => (
+  <div
+    className={joinClassNames([
+      styles.wrapper,
+      reducedMotion && styles.reducedMotion,
+      styles[position || ''],
+    ])}
+    {...rest}
+  >
     <div className={`${styles.box} ${open ? styles.open : ''}`}>
       <div className={`${styles.side} ${styles.right}`}>
         <div

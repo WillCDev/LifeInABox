@@ -1,29 +1,65 @@
+@import url('../../common/styles/animations.less');
+@import url('../../common/styles/variables.less');
+
 .splashPage {
-  background: rgb(255 255 255 / 80%);
-  padding: 50px 70px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background:
+    linear-gradient(
+      0deg,
+      rgb(0 0 0 / 50%) 0%,
+      rgb(0 0 0 / 23.2%) 74%,
+      rgb(0 0 0 / 0%) 100%
+    );
+  padding: 16vh 0;
+
+  .wrapper {
+    margin-bottom: 20px;
+    .fadeUp(600ms);
+
+    &.fadeOut {
+      .fadeDown(400ms);
+    }
+  }
 
   .heading {
-    font-size: 100px;
-    letter-spacing: -3px;
     text-align: center;
     z-index: 1;
-    margin-bottom: 60px;
-    color: #d53f8c;
-    line-height: 0.9;
-    font-weight: 900;
+    margin-bottom: 20px;
     font-variant-caps: petite-caps;
 
+    .title {
+      font-weight: 900;
+      font-size: 15vh;
+      line-height: 0.7;
+      letter-spacing: -3px;
+      color: white;
+    }
+
     .subHeading {
-      font-size: 0.5em;
-      color: darkslategrey;
-      letter-spacing: 0.2em;
-      font-weight: 300;
+      font-size: 6vh;
+      color: lightpink;
+      letter-spacing: 0.15em;
+      font-weight: bold;
+    }
+  }
+
+  @media screen and (max-height: @tablet-max-height) {
+    padding-top: 25vh;
+    padding-bottom: 12vh;
+
+    .heading {
+      margin-bottom: 10px;
     }
   }
 }
 
-.spinout {
-  transition: 300ms ease-in-out;
-  transform: scale(0.8, 0.8);
-  opacity: 0;
+.button {
+  transform: translateZ(0);
+  .buttonHover();
+
+  .icon {
+    transform: translateZ(0);
+  }
 }

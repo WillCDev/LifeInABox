@@ -1,17 +1,18 @@
 import { FC, useState } from 'react'
-import { navigate } from '@reach/router'
+import { useNavigate } from 'react-router-dom'
 import PageContext from './PageContext'
 
 const PageContextProvider: FC = ({ children }) => {
+  const navigate = useNavigate()
   const [navigating, setNavigating] = useState(false)
 
-  const onNavigate = (path: string): void => {
+  const onNavigate = (path: string, duration?: number): void => {
     setNavigating(true)
     const timer = setTimeout(() => {
       clearTimeout(timer)
       setNavigating(false)
       navigate(path)
-    }, 300)
+    }, duration || 300)
   }
 
   return (
