@@ -1,0 +1,77 @@
+@import url('../../../common//styles/variables.less');
+
+// Variables
+@carousel-width: 800px;
+@zoom-in-duration: 1100ms;
+
+.initial-transform() {
+  transform: rotateX(-10deg) scale(0.9);
+
+  @media screen and (max-width: @desktop-min-width) {
+    transform: rotateX(-10deg) scale(0.75);
+  }
+  @media screen and (max-width: @tablet-small-max-width) {
+    padding-top: 5vh;
+    transform: rotateX(-8deg) scale(0.6);
+  }
+}
+
+.scene {
+  width: @carousel-width;
+  margin: -@box-size auto;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  .initial-transform();
+
+  &.isAnimating {
+    animation: zoom-in @zoom-in-duration ease-out;
+  }
+
+  & .boxWrapper {
+    transition: @open-duration;
+    transform: rotateY(1deg);
+
+    &.selected {
+      transform: rotateX(5deg) rotateY(1deg);
+    }
+  }
+
+  .carousel {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform @open-duration ease-out;
+
+    &__cell {
+      display: inline-block;
+      position: absolute;
+      width: @carousel-width - (@box-size*2);
+      left: @box-size;
+      transform-style: preserve-3d;
+      cursor: pointer;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  &.isAnimating .carousel {
+    transition: transform @zoom-in-duration ease-out !important;
+  }
+
+  &.isSwiping .carousel {
+    transition-duration: 0ms !important;
+  }
+}
+
+@keyframes zoom-in {
+  1% {
+    transform: rotateX(-2deg) scale(0);
+  }
+
+  80% {
+    transform: rotateX(-8deg) scale(0.75);
+  }
+}

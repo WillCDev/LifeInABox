@@ -1,13 +1,19 @@
-import { FC, useContext } from 'react'
-import { Button, ButtonGroup, useBreakpointValue } from '@chakra-ui/react'
+import { FC } from 'react'
+import {
+  Button,
+  ButtonGroup,
+  useBreakpointValue,
+  usePrefersReducedMotion,
+} from '@chakra-ui/react'
 import { ArrowForwardIcon } from '@chakra-ui/icons'
-import PageContext from 'common/components/PageContext'
 import joinClassNames from 'common/utils/joinClassNames'
 import styles from './SplashPage.less'
 import AboutModal from 'common/components/AboutModal/AboutModal'
+import { usePageContext } from 'common/components/PageContext/PageContext'
 
 const SplashPage: FC = () => {
-  const { navigating, navigate } = useContext(PageContext)
+  const { navigating, navigate } = usePageContext()
+  const useReducedMotion = usePrefersReducedMotion()
   const buttonSize = useBreakpointValue({
     base: 'md',
     lg: 'lg',
@@ -21,6 +27,7 @@ const SplashPage: FC = () => {
       <div
         className={joinClassNames([
           styles.wrapper,
+          useReducedMotion && styles.reducedMotion,
           navigating && styles.fadeOut,
         ])}
       >
@@ -56,7 +63,7 @@ const SplashPage: FC = () => {
             background="#57c165"
             color="white"
             padding="0 5vw"
-            onClick={() => navigate('/menu', 400)}
+            onClick={() => navigate('/menu', 700)}
           >
             View Projects
           </Button>

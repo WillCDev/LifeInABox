@@ -1,6 +1,7 @@
 import { FC } from 'react'
 import { Center } from '@chakra-ui/react'
 import styles from './ContentWrapper.less'
+import CoverImage from '../CoverImage'
 
 interface Props {
   image: string
@@ -8,14 +9,9 @@ interface Props {
 }
 
 const ContentWrapper: FC<Props> = ({ children, image, bgColor }) => (
-  <Center
-    backgroundImage={`url('/images/background/${image}')`}
-    backgroundSize="cover"
-    backgroundColor={bgColor}
-    className={styles.contentWrapper}
-    alt={'backgroundImage'}
-  >
-    <section className={styles.content}>{children}</section>
+  <Center backgroundColor={bgColor} className={styles.contentWrapper}>
+    <CoverImage image={image} bgColor={bgColor} />
+    <main>{children}</main>
   </Center>
 )
 

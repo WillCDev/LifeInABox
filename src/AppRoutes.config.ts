@@ -1,7 +1,7 @@
 import { FC } from 'react'
-import SplashPage from './SplashPage'
-import MenuPage from './MenuPage'
-import GamelanPage from './GamelanPage'
+import SplashPage from './pages/SplashPage'
+import MenuPage from './pages/MenuPage'
+import GamelanPage from './pages/GamelanPage'
 
 interface PageConfigItem {
   path: string
