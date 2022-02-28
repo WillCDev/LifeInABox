@@ -6,10 +6,11 @@ import {
   usePrefersReducedMotion,
 } from '@chakra-ui/react'
 import { ArrowForwardIcon } from '@chakra-ui/icons'
-import joinClassNames from 'common/utils/joinClassNames'
+import { joinClassNames } from 'utils'
 import styles from './SplashPage.less'
 import AboutModal from 'common/components/AboutModal/AboutModal'
 import { usePageContext } from 'common/components/PageContext/PageContext'
+import ContentWrapper from 'common/components/ContentWrapper'
 
 const SplashPage: FC = () => {
   const { navigating, navigate } = usePageContext()
@@ -23,53 +24,55 @@ const SplashPage: FC = () => {
   })
 
   return (
-    <div className={styles.splashPage}>
+    <ContentWrapper>
       <div
         className={joinClassNames([
-          styles.wrapper,
+          styles.splashPage,
           useReducedMotion && styles.reducedMotion,
           navigating && styles.fadeOut,
         ])}
       >
-        <header className={styles.heading}>
-          <h1 className={styles.title}>Living in a Box</h1>
-          <span className={styles.subHeading}>By Open Arts</span>
-        </header>
+        <div className={joinClassNames([styles.wrapper])}>
+          <header className={styles.heading}>
+            <h1 className={styles.title}>Living in a Box</h1>
+            <span className={styles.subHeading}>By Open Arts</span>
+          </header>
 
-        <ButtonGroup spacing="20px">
-          <AboutModal
-            TriggerEl={({ onClick }) => (
-              <Button
-                variant="unstyled"
-                size={buttonSize}
-                className={styles.button}
-                minWidth="20vw"
-                background="#D53F8C"
-                color="white"
-                padding="0 5vw"
-                onClick={onClick}
-              >
-                Read More
-              </Button>
-            )}
-          />
+          <ButtonGroup spacing="20px">
+            <AboutModal
+              TriggerEl={({ onClick }) => (
+                <Button
+                  variant="unstyled"
+                  size={buttonSize}
+                  className={styles.button}
+                  minWidth="20vw"
+                  background="#D53F8C"
+                  color="white"
+                  padding="0 5vw"
+                  onClick={onClick}
+                >
+                  Read More
+                </Button>
+              )}
+            />
 
-          <Button
-            variant="unstyled"
-            size={buttonSize}
-            rightIcon={<ArrowForwardIcon className={styles.icon} />}
-            className={styles.button}
-            minWidth="20vw"
-            background="#57c165"
-            color="white"
-            padding="0 5vw"
-            onClick={() => navigate('/menu', 700)}
-          >
-            View Projects
-          </Button>
-        </ButtonGroup>
+            <Button
+              variant="unstyled"
+              size={buttonSize}
+              rightIcon={<ArrowForwardIcon className={styles.icon} />}
+              className={styles.button}
+              minWidth="20vw"
+              background="#57c165"
+              color="white"
+              padding="0 5vw"
+              onClick={() => navigate('/menu', 700)}
+            >
+              View Projects
+            </Button>
+          </ButtonGroup>
+        </div>
       </div>
-    </div>
+    </ContentWrapper>
   )
 }
 

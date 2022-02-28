@@ -1,5 +1,5 @@
-import { FC, useState, useEffect } from 'react'
-import joinClassNames from 'common/utils/joinClassNames'
+import { FC, useState, useEffect, useContext } from 'react'
+import { joinClassNames } from 'utils'
 // Swiper Deps
 import { Swiper, SwiperSlide } from 'swiper/react'
 import {
@@ -15,6 +15,7 @@ import 'swiper/less/pagination'
 import BoxHouse from './BoxHouse'
 import { initialItemKey, getConfig } from './menu.config'
 import styles from './styles/index.less'
+import PageContext from 'common/components/PageContext'
 
 interface Props {
   reducedMotion: boolean
@@ -23,6 +24,7 @@ interface Props {
 const config = getConfig()
 
 const MenuSlider: FC<Props> = ({ reducedMotion }) => {
+  const { navigate } = useContext(PageContext)
   const [controlledSwiper, setControlledSwiper] = useState<any>()
 
   // Animation to slide in on first render
@@ -53,15 +55,17 @@ const MenuSlider: FC<Props> = ({ reducedMotion }) => {
         !reducedMotion && styles.slideIn,
       ])}
     >
-      {config.map(({ image, title }, index) => (
-        <SwiperSlide key={title} className={styles.slide}>
+      {config.map(({ image, text, path, id }, index) => (
+        <SwiperSlide key={id} className={styles.slide}>
           {({ isActive }) => (
             <BoxHouse
-              onClick={() => controlledSwiper.slideTo(index)}
+              onClick={() =>
+                isActive ? navigate(path) : controlledSwiper.slideTo(index)
+              }
               reducedMotion={reducedMotion}
               selected={isActive}
               image={image}
-              text={title}
+              text={text}
             />
           )}
         </SwiperSlide>

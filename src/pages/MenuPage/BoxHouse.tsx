@@ -1,5 +1,5 @@
-import joinClassNames from 'common/utils/joinClassNames'
 import { ComponentProps, FC } from 'react'
+import { joinClassNames } from 'utils'
 import styles from './styles/index.less'
 
 interface Props extends ComponentProps<'div'> {
@@ -57,7 +57,7 @@ const BoxHouse: FC<Props> = ({
         >
           <div
             className={styles.inner}
-            style={{ backgroundImage: `url(/images/menu/${image})` }}
+            style={{ backgroundImage: `url(/images/${image})` }}
           />
           <span className={styles.text}>{text.toUpperCase()}</span>
         </button>

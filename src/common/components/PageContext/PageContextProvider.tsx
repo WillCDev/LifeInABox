@@ -12,7 +12,7 @@ const PageContextProvider: FC = ({ children }) => {
       clearTimeout(timer)
       setNavigating(false)
       navigate(path)
-    }, duration || 500)
+    }, duration || 600)
   }
 
   return (

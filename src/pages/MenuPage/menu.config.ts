@@ -1,30 +1,27 @@
+import { toKebabCase } from 'utils'
+import siteConfig from '../../config'
+
 export interface MenuItem {
-  image: string
-  title: string
-  id: number
   angle: number
+  id: number
+  text: string
+  image: string
+  path: string
 }
 
-const baseConfig: Array<Omit<MenuItem, 'angle' | 'id'>> = [
-  { image: 'drama.jpg', title: 'Drama' },
-  { image: 'writing.png', title: 'Creative Writing' },
-  { image: 'art.png', title: 'Visual Arts' },
-  { image: 'dance.png', title: 'Dance' },
-  { image: 'gamelan.png', title: 'Gamelan' },
-  { image: 'choir.png', title: 'Choir' },
-]
-
 export const zoomInDuration = 1300
-export const menuItemCount = baseConfig.length
+export const menuItemCount = siteConfig.length
 
 export const theta = 360 / menuItemCount
 
 export const getConfig = (): Array<MenuItem> => {
-  return baseConfig
+  return siteConfig
     .sort(() => Math.random() - 0.5)
-    .map((configItem, index) => ({
-      ...configItem,
+    .map(({ group, image }, index) => ({
+      image,
+      text: group,
       id: index,
+      path: `${toKebabCase(group)}`,
       angle: theta * index,
     }))
 }

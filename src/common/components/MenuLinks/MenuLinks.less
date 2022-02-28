@@ -1,0 +1,76 @@
+@import 'common/styles/mixins.less';
+
+.menuLinks {
+  position: absolute !important;
+
+  .button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: calc(100% - 4px);
+    transition: 300ms;
+    background: black !important;
+    padding: 3px 18px 0 10px;
+    color: white;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    opacity: 0.9;
+    font-size: 0.9em;
+
+    &:hover {
+      height: calc(100% - 2px);
+      opacity: 1;
+    }
+  }
+
+  .popOver {
+    z-index: 10;
+    position: absolute;
+    bottom: 7vh;
+    right: 8px;
+
+    .link {
+      animation: animate-in 300ms both ease-in-out;
+      margin-top: 10px;
+      transition: 200ms;
+
+      &.delay1 {
+        animation-delay: 50ms;
+      }
+
+      &.delay2 {
+        animation-delay: 100ms;
+      }
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .mobileResponsive({
+    .button {
+      height: 22px;
+      padding: 1px 12px -3px 6px;
+      font-size: 0.8em;
+
+      &:hover {
+        height: 24px;
+      }
+    }
+  });
+
+  .desktopResponsive({
+    font-size: 1em;
+  });
+}
+
+@keyframes animate-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,5 +1,4 @@
 @import url('../../common/styles/animations.less');
-@import url('../../common/styles/variables.less');
 @import url('../../common/styles/mixins.less');
 
 .splashPage {
@@ -15,16 +14,16 @@
     );
   padding: 16vh 0;
 
+  &:not(.reducedMotion) {
+    .fadeUp(600ms);
+
+    &.fadeOut {
+      .fadeDown(700ms);
+    }
+  }
+
   .wrapper {
     margin-bottom: 20px;
-
-    &:not(.reducedMotion) {
-      .fadeUp(600ms);
-
-      &.fadeOut {
-        .fadeDown(700ms);
-      }
-    }
   }
 
   .heading {
@@ -51,7 +50,7 @@
     }
   }
 
-  @media screen and (max-height: @tablet-max-height) {
+  .tabletResponsive({
     padding-top: 25vh;
     padding-bottom: 12vh;
 
@@ -60,16 +59,16 @@
       .title { font-size: 18vh; }
       .subHeading { font-size: 8vh; }
     }
-  }
+  });
 
-  @media screen and (max-height: @mobile-max-height) {
+  .mobileResponsive({
     padding-bottom: 8vh;
 
     .heading {
       .title { font-size: 22vh; }
       .subHeading { font-size: 8vh; }
     }
-  }
+  });
 }
 
 .button {

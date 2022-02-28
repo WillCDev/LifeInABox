@@ -1,15 +1,16 @@
-@import url('../../../common//styles/variables.less');
+@import url('../../../common//styles/mixins.less');
 
 // Variables
 @carousel-width: 800px;
 @zoom-in-duration: 1100ms;
 
 .initial-transform() {
-  transform: rotateX(-10deg) scale(0.9);
+  transform: rotateX(-10deg) scale(0.75);
 
-  @media screen and (max-width: @desktop-min-width) {
-    transform: rotateX(-10deg) scale(0.75);
-  }
+  .desktopResponsive({
+    transform: rotateX(-10deg) scale(0.9);
+  });
+
   @media screen and (max-width: @tablet-small-max-width) {
     padding-top: 5vh;
     transform: rotateX(-8deg) scale(0.6);
@@ -25,6 +26,10 @@
 
   &.isAnimating {
     animation: zoom-in @zoom-in-duration ease-out;
+  }
+
+  &.isNavigating {
+    animation: zoom-out @zoom-in-duration ease-out;
   }
 
   & .boxWrapper {
@@ -57,7 +62,8 @@
     }
   }
 
-  &.isAnimating .carousel {
+  &.isAnimating .carousel,
+  &.isNavigating .carousel {
     transition: transform @zoom-in-duration ease-out !important;
   }
 
@@ -67,11 +73,11 @@
 }
 
 @keyframes zoom-in {
-  1% {
-    transform: rotateX(-2deg) scale(0);
-  }
+  0% { transform: rotateX(-2deg) scale(0); }
+  80% { transform: rotateX(-8deg) scale(0.75); }
+}
 
-  80% {
-    transform: rotateX(-8deg) scale(0.75);
-  }
+@keyframes zoom-out {
+  20% { transform: rotateX(-8deg) scale(0.75); }
+  80% { transform: rotateX(-2deg) scale(0); }
 }

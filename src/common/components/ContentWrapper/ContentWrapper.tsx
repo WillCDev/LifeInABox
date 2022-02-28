@@ -1,18 +1,30 @@
-import { FC } from 'react'
+import { FC, useContext } from 'react'
 import { Center } from '@chakra-ui/react'
 import styles from './ContentWrapper.less'
-import CoverImage from '../CoverImage'
+import { joinClassNames } from 'utils'
+import PageContext from '../PageContext'
 
 interface Props {
-  image: string
-  bgColor: string
+  blurred?: boolean
 }
 
-const ContentWrapper: FC<Props> = ({ children, image, bgColor }) => (
-  <Center backgroundColor={bgColor} className={styles.contentWrapper}>
-    <CoverImage image={image} bgColor={bgColor} />
-    <main>{children}</main>
-  </Center>
-)
+const ContentWrapper: FC<Props> = ({ children, blurred }) => {
+  const { navigating } = useContext(PageContext)
+  return (
+    <Center className={styles.contentWrapper}>
+      <div
+        className={joinClassNames([
+          styles.cover,
+          blurred && styles.blur,
+          navigating && styles.navigating,
+        ])}
+        style={{
+          backgroundImage: `url('/images/background/promopic.jpg')`,
+        }}
+      />
+      <main>{children}</main>
+    </Center>
+  )
+}
 
 export default ContentWrapper

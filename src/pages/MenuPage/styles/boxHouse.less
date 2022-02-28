@@ -84,10 +84,6 @@
   background: #b97b44;
 }
 
-.open .roofFlap {
-  transform: rotateX(-125deg);
-}
-
 /* Front & Back Flaps */
 .topFlap {
   position: absolute;
@@ -110,10 +106,21 @@
   transition: box-shadow 1000ms ease-in-out;
 }
 
-.open .topFlap {
-  transform: rotateX(-140deg);
-}
+.open {
+  & .topFlap {
+    transform: rotateX(-140deg);
+  }
 
-.open .topFlap::after {
-  box-shadow: 0 0 20px 1px rgb(0 0 0 / 60%);
+  & .topFlap::after {
+    box-shadow: 0 0 20px 1px rgb(0 0 0 / 60%);
+  }
+
+  & .roofFlap {
+    transform: rotateX(-125deg);
+  }
+
+  &:hover {
+    transition: 300ms;
+    transform: scale(1.1) !important;
+  }
 }
