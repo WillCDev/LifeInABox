@@ -1,0 +1,27 @@
+@import url('../../../common//styles/mixins.less');
+
+.breadcrumbs {
+  position: absolute;
+  bottom: 3vh;
+  text-align: center;
+  text-transform: capitalize;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  padding: 10px 50px;
+  z-index: 1;
+  border: 4px black solid;
+  box-shadow: 0 0 15px 0 rgb(0 0 0 / 43%);
+
+  .tabletResponsive({
+    font-size: 0.9em;
+    padding: 8px 35px;
+    border-width: 3px;
+  });
+
+  .mobileResponsive({
+    font-size: 0.8em;
+    padding: 4px 20px;
+    border-width: 2px;
+  });
+}

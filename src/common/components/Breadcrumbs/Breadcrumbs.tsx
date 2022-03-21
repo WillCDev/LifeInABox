@@ -1,38 +1,37 @@
-import { Breadcrumb, BreadcrumbItem, BreadcrumbLink } from '@chakra-ui/react'
 import { FC, useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink } from '@chakra-ui/react'
+import styles from './Breadcrumbs.less'
 
 type Crumbs = Array<{ path: string; name: string }>
 
 const Breadcrumbs: FC = () => {
   const { pathname } = useLocation()
-  const [trail, setTrail] = useState<Crumbs>([])
-
-  console.log(pathname)
+  const [breadCrumbs, setBreadCrumbs] = useState<Crumbs>([])
 
   useEffect(() => {
-    const newTrail: Crumbs = [{ path: '/', name: 'Home' }]
+    const crumbs: Crumbs = [{ path: '/', name: 'Home' }]
     const buildCrumbs = (
       [crumb, ...rest]: string[],
       prevPath: string
     ): string | undefined => {
       if (!crumb) return
-      const path = `${prevPath}/crumb`
-      newTrail.push({ name: crumb, path })
+      const path = `${prevPath}${crumb}/`
+      crumbs.push({ name: crumb, path })
       return buildCrumbs(rest, path)
     }
-    buildCrumbs(pathname.split('/'), '/')
-    console.log(newTrail)
-    setTrail(newTrail)
+    const [, ...trail] = pathname.split('/')
+    buildCrumbs(trail, '/')
+    setBreadCrumbs(crumbs)
   }, [pathname])
 
   return (
-    <div style={{ position: 'absolute', bottom: 0, textAlign: 'center' }}>
+    <div className={styles.breadcrumbs}>
       <Breadcrumb>
-        {trail.map(({ path, name }, index) => (
-          <BreadcrumbItem isCurrentPage={index === trail.length - 1}>
+        {breadCrumbs.map(({ path, name }, index) => (
+          <BreadcrumbItem isCurrentPage={index === breadCrumbs.length - 1}>
             <BreadcrumbLink as={Link} to={path}>
-              {name}
+              <strong>{name}</strong>
             </BreadcrumbLink>
           </BreadcrumbItem>
         ))}
