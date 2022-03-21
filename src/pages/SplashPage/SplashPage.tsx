@@ -8,7 +8,6 @@ import {
 import { ArrowForwardIcon } from '@chakra-ui/icons'
 import { joinClassNames } from 'utils'
 import styles from './SplashPage.less'
-import AboutModal from 'common/components/AboutModal/AboutModal'
 import { usePageContext } from 'common/components/PageContext/PageContext'
 import ContentWrapper from 'common/components/ContentWrapper'
 
@@ -39,22 +38,18 @@ const SplashPage: FC = () => {
           </header>
 
           <ButtonGroup spacing="20px">
-            <AboutModal
-              TriggerEl={({ onClick }) => (
-                <Button
-                  variant="unstyled"
-                  size={buttonSize}
-                  className={styles.button}
-                  minWidth="20vw"
-                  background="#D53F8C"
-                  color="white"
-                  padding="0 5vw"
-                  onClick={onClick}
-                >
-                  Read More
-                </Button>
-              )}
-            />
+            <Button
+              variant="unstyled"
+              size={buttonSize}
+              className={styles.button}
+              minWidth="20vw"
+              background="#D53F8C"
+              color="white"
+              padding="0 5vw"
+              onClick={() => navigate('/about', 700)}
+            >
+              Read More
+            </Button>
 
             <Button
               variant="unstyled"

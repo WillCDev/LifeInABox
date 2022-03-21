@@ -1,6 +1,7 @@
 import { FC } from 'react'
 import { Navigate, Outlet, Route, Routes } from 'react-router-dom'
 import SplashPage from './pages/SplashPage'
+import ReadMorePage from 'pages/ReadMorePage'
 import MenuPage from './pages/MenuPage'
 import ProjectListPage from 'pages/ProjectListPage'
 import ProjectPage from './pages/ProjectPage'
@@ -11,6 +12,8 @@ const AppRouter: FC = () => {
   return (
     <Routes>
       <Route path={'/'} element={<SplashPage />} />
+
+      <Route path={'/about'} element={<ReadMorePage />} />
 
       <Route path={'/menu'} element={<MenuPage />} />
 
