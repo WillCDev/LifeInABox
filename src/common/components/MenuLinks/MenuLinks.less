@@ -6,7 +6,7 @@
   .button {
     position: absolute;
     bottom: 0;
-    right: 0;
+    right: 1vw;
     height: calc(100% - 4px);
     transition: 300ms;
     background: black !important;
@@ -26,8 +26,8 @@
   .popOver {
     z-index: 10;
     position: absolute;
-    bottom: 7vh;
-    right: 8px;
+    bottom: 8vh;
+    right: 30px;
 
     .link {
       animation: animate-in 300ms both ease-in-out;
@@ -42,6 +42,10 @@
         animation-delay: 100ms;
       }
 
+      &.delay3 {
+        animation-delay: 150ms;
+      }
+
       &:hover {
         transform: scale(1.1);
       }
@@ -50,18 +54,27 @@
 
   .mobileResponsive({
     .button {
-      height: 22px;
+      height: 18px;
       padding: 1px 12px -3px 6px;
-      font-size: 0.8em;
+      font-size: 0.7em;
 
       &:hover {
-        height: 24px;
+        height: 20px;
+      }
+    }
+    .popOver {
+      right: 20px;
+      .link {
+        margin: 2vh 0px;
       }
     }
   });
 
   .desktopResponsive({
     font-size: 1em;
+    .popOver {
+      right: 35px;
+    }
   });
 }
 

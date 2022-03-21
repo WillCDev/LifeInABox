@@ -7,6 +7,7 @@ import TwitterIcon from 'common/icons/TwitterIcon'
 import FacebookIcon from 'common/icons/FacebookIcon'
 import ExternalLink from '../ExternalLink'
 import styles from './MenuLinks.less'
+import OpenArtsIcon from 'common/icons/OpenArtsIcon'
 
 interface Props {
   className?: string
@@ -32,11 +33,23 @@ const MenuLinks: FC<Props> = ({ className }) => {
         className={styles.button}
       >
         <ChevronUpIcon marginRight="6px" />
-        Menu
+        Links
       </Button>
       {isOpen && (
         <div ref={ref} className={styles.popOver}>
           <VStack alignItems="end">
+            <ExternalLink
+              to="https://openartsni.org/"
+              label="Goto the OpenArts website"
+            >
+              <Avatar
+                bgColor="#1DA1F2"
+                icon={<OpenArtsIcon />}
+                className={joinClassNames([styles.link, styles.delay3])}
+                onClick={toggleIsOpen}
+                overflow="hidden"
+              />
+            </ExternalLink>
             <ExternalLink
               to="https://www.youtube.com/channel/UCgiF1lql5kRiMta2At4Y9IA?view_as=subscriber"
               label="Goto the OpenArts youtube page"
