@@ -1,9 +1,9 @@
+import { usePrefersReducedMotion } from '@chakra-ui/react'
 import { ComponentProps, FC } from 'react'
 import { joinClassNames } from 'utils'
 import styles from './styles/index.less'
 
 interface Props extends ComponentProps<'div'> {
-  reducedMotion?: boolean
   selected: boolean
   image: string
   text: string
@@ -13,10 +13,11 @@ const BoxHouse: FC<Props> = ({
   selected,
   image,
   text,
-  reducedMotion,
 
   ...rest
 }) => {
+  const reducedMotion = usePrefersReducedMotion()
+
   return (
     <div
       className={joinClassNames([

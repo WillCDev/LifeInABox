@@ -62,7 +62,6 @@ const MenuSlider: FC<Props> = ({ reducedMotion }) => {
               onClick={() =>
                 isActive ? navigate(path) : controlledSwiper.slideTo(index)
               }
-              reducedMotion={reducedMotion}
               selected={isActive}
               image={image}
               text={text}
