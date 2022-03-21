@@ -11,7 +11,7 @@ export interface ProjectConfig {
   title: string
   works: Array<{
     title: string
-    image?: string
+    image: string
     primaryContent: VideoContent | AudioContent
     audioDescription?: VideoContent | AudioContent
   }>

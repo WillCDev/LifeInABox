@@ -18,7 +18,7 @@ const siteConfig: Array<PageConfig> = [
   },
   {
     group: 'Dance',
-    image: '/menu/dance.png',
+    image: '/menu/luminous_soul.png',
     projects: [],
   },
   {
@@ -29,7 +29,7 @@ const siteConfig: Array<PageConfig> = [
   {
     group: 'Choir',
     image: '/menu/choir.png',
-    projects: [],
+    projects: [{ title: 'Open Arts Community Choir', works: [] }],
   },
 ]
 

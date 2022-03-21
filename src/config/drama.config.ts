@@ -9,6 +9,7 @@ const dramaPage: PageConfig = {
       works: [
         {
           title: 'Love in lock down',
+          image: '/background/promopic.jpg',
           primaryContent: {
             type: Media.Video,
             link: 'https://youtu.be/ST9hmuxXUuY',
@@ -20,6 +21,7 @@ const dramaPage: PageConfig = {
         },
         {
           title: 'Waiting for Gemma',
+          image: '/background/promopic.jpg',
           primaryContent: {
             type: Media.Video,
             link: 'https://youtu.be/SjzfOPIuZCs',
@@ -31,6 +33,7 @@ const dramaPage: PageConfig = {
         },
         {
           title: 'Ronald the Clown and the Bird House',
+          image: '/background/promopic.jpg',
           primaryContent: {
             type: Media.Video,
             link: 'https://youtu.be/fR2T6BuTxoU',
@@ -42,6 +45,7 @@ const dramaPage: PageConfig = {
         },
         {
           title: 'Aslan Meets Doctor Who',
+          image: '/background/promopic.jpg',
           primaryContent: {
             type: Media.Video,
             link: 'https://youtu.be/7zw2Dpye7Kg',
@@ -53,6 +57,7 @@ const dramaPage: PageConfig = {
         },
         {
           title: 'The Wonderful Wizard of Lockdown',
+          image: '/background/promopic.jpg',
           primaryContent: {
             type: Media.Video,
             link: 'https://youtu.be/90sSwJFsI7E',
