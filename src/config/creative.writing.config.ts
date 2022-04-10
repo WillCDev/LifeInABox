@@ -9,7 +9,7 @@ const creativeWritingPage: PageConfig = {
       projects: [
         {
           title: 'A Mask by Peter Livingstone',
-          image: '/thumbnails/writing/aMask.jpg',
+          image: '/thumbnails/writing/AMask_Titled.jpg',
           primaryContent: {
             type: Media.Video,
             link: 'https://youtu.be/po_OnSS3TSY',
@@ -33,7 +33,7 @@ const creativeWritingPage: PageConfig = {
         },
         {
           title: 'A Little Ouch by Carly Palmer',
-          image: '/thumbnails/writing/aLittleOuch.jpg',
+          image: '/thumbnails/writing/ALittleOuch_Titled.jpg',
           primaryContent: {
             type: Media.Video,
             link: 'https://youtu.be/1WLS5w7Rp-U',
@@ -65,7 +65,7 @@ const creativeWritingPage: PageConfig = {
         },
         {
           title: 'Thousands by Alison Black',
-          image: '/thumbnails/writing/Thousands.jpg',
+          image: '/thumbnails/writing/Thousands_Titled.jpg',
           primaryContent: {
             type: Media.Video,
             link: 'https://youtu.be/AnNAnQP1kSU',
@@ -86,7 +86,7 @@ const creativeWritingPage: PageConfig = {
       projects: [
         {
           title: 'Scent by Alison Black',
-          image: '/thumbnails/writing/Scent.jpg',
+          image: '/thumbnails/writing/Scent_Titled.jpg',
           primaryContent: {
             type: Media.Video,
             link: 'https://youtu.be/fjXkcHfvjWU',
@@ -98,7 +98,7 @@ const creativeWritingPage: PageConfig = {
         },
         {
           title: 'Scent of the Roses by Alison Black',
-          image: '/thumbnails/writing/ScentOfTheRoses.jpg',
+          image: '/thumbnails/writing/ScentOfTheRoses_Titled.jpg',
           primaryContent: {
             type: Media.Video,
             link: 'https://youtu.be/EgrJ21pKAMI',
@@ -110,7 +110,7 @@ const creativeWritingPage: PageConfig = {
         },
         {
           title: 'The Seagull by Sarah Cantillon',
-          image: '/thumbnails/writing/theSeagull.jpg',
+          image: '/thumbnails/writing/TheSeagull_Titled.jpg',
           primaryContent: {
             type: Media.Video,
             link: 'https://youtu.be/_Du-LoXS0cs ',
@@ -122,7 +122,7 @@ const creativeWritingPage: PageConfig = {
         },
         {
           title: 'New Hope by Sarah Cantillon',
-          image: '/thumbnails/writing/NewHope.jpg',
+          image: '/thumbnails/writing/NewHope_Titled.jpg',
           primaryContent: {
             type: Media.Video,
             link: 'https://youtu.be/nMVfy4Vxv5k',
@@ -134,7 +134,7 @@ const creativeWritingPage: PageConfig = {
         },
         {
           title: 'On Being Alone by Andy Ward',
-          image: '/thumbnails/writing/OnBeingAlone.jpg',
+          image: '/thumbnails/writing/OnBeingAlone_Titled.jpg',
           primaryContent: {
             type: Media.Video,
             link: 'https://youtu.be/CyAszOriLjc',
