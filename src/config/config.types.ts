@@ -15,6 +15,7 @@ type TextContent = { type: Media.Text; link: string; title: string }
 
 export interface ProjectConfig {
   title: string
+  showTitle?: boolean
   image: string
   primaryContent: VideoContent | AudioContent | ImageContent
   audioDescription?: VideoContent | AudioContent
@@ -28,8 +29,5 @@ export interface ProjectGroupConfig {
 export interface PageConfig {
   group: string
   image: string
-  projectGroups:
-    | [ProjectGroupConfig]
-    | [ProjectGroupConfig, ProjectGroupConfig]
-    | []
+  projectGroups: Array<ProjectGroupConfig>
 }

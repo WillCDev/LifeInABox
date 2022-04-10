@@ -11,11 +11,14 @@ import {
 import ContentWrapper from 'common/components/ContentWrapper'
 import useControlledSwiper from 'common/hooks/useControlledSwiper'
 import { joinClassNames, toKebabCase } from 'utils'
-import { ProjectGroupConfig } from 'config'
 import styles from './ProjectListPage.less'
 import { useLinkClickHandler } from 'react-router-dom'
 
-const ProjectListPage: FC<ProjectGroupConfig> = ({ projects }) => {
+interface Props {
+  projects: Array<{ title: string; image: string; showTitle?: boolean }>
+}
+
+const ProjectListPage: FC<Props> = ({ projects }) => {
   const reducedMotion = usePrefersReducedMotion()
   const [controlledSwiper, setControlledSwiper] = useControlledSwiper()
 
@@ -52,7 +55,7 @@ const ProjectListPage: FC<ProjectGroupConfig> = ({ projects }) => {
           ])}
           grabCursor
         >
-          {items.map(({ image, title }, index) => {
+          {items.map(({ image, title, showTitle }, index) => {
             const onClick = useLinkClickHandler(`./${toKebabCase(title)}`)
             return (
               <SwiperSlide
@@ -70,9 +73,11 @@ const ProjectListPage: FC<ProjectGroupConfig> = ({ projects }) => {
                       className={styles.coverImage}
                       style={{ backgroundImage: `url(/images${image})` }}
                     />
-                    <Heading className={styles.title} size={'xl'}>
-                      {title}
-                    </Heading>
+                    {showTitle && (
+                      <Heading className={styles.title} size={'xl'}>
+                        {title}
+                      </Heading>
+                    )}
                   </>
                 )}
               </SwiperSlide>

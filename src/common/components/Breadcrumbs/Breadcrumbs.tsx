@@ -21,7 +21,7 @@ const Breadcrumbs: FC = () => {
     ): string | undefined => {
       if (!crumb) return
       const path = `${prevPath}${crumb}/`
-      crumbs.push({ name: crumb, path })
+      crumbs.push({ name: crumb.replace(/-/g, ' '), path })
       return buildCrumbs(rest, path)
     }
     const [, ...trail] = pathname.split('/')
@@ -35,13 +35,14 @@ const Breadcrumbs: FC = () => {
     <div className={styles.breadcrumbs}>
       <Breadcrumb>
         {breadCrumbs.map(({ path, name }, index) => (
-          <BreadcrumbItem
-            key={name}
-            isCurrentPage={index === breadCrumbs.length - 1}
-          >
-            <BreadcrumbLink as={Link} to={path}>
+          <BreadcrumbItem key={name}>
+            {index === breadCrumbs.length - 1 ? (
               <strong>{name}</strong>
-            </BreadcrumbLink>
+            ) : (
+              <BreadcrumbLink as={Link} to={path}>
+                <strong>{name}</strong>
+              </BreadcrumbLink>
+            )}
           </BreadcrumbItem>
         ))}
       </Breadcrumb>

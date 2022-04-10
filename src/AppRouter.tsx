@@ -1,13 +1,25 @@
 import { FC } from 'react'
-import { Navigate, Outlet, Route, Routes } from 'react-router-dom'
+import { Outlet, Route, Routes } from 'react-router-dom'
 import SplashPage from './pages/SplashPage'
 import ReadMorePage from 'pages/ReadMorePage'
 import MenuPage from './pages/MenuPage'
-import GroupPage from 'pages/GroupPage'
 import ProjectListPage from './pages/ProjectListPage'
 import ProjectPage from 'pages/ProjectPage'
-import menuConfig from 'config'
+import menuConfig, { ProjectGroupConfig } from 'config'
 import { toKebabCase } from 'utils'
+
+const buildGroupRoutes = (group: ProjectGroupConfig): any => (
+  <Route key={'root'} path={toKebabCase(group.title)} element={<Outlet />}>
+    <Route key={group.title} path="" element={<ProjectListPage {...group} />} />
+    {group.projects.map((project) => (
+      <Route
+        key={project.title}
+        path={toKebabCase(project.title)}
+        element={<ProjectPage {...project} />}
+      />
+    ))}
+  </Route>
+)
 
 const AppRouter: FC = () => {
   return (
@@ -19,39 +31,25 @@ const AppRouter: FC = () => {
       <Route path={'/menu'} element={<MenuPage />} />
 
       {menuConfig.map(({ group, projectGroups }) => {
-        if (projectGroups.length === 1)
-          return (
-            <Route
-              key={group}
-              path={toKebabCase(group)}
-              element={<ProjectListPage {...projectGroups[0]} />}
-            />
-          )
-        else
+        if (!projectGroups.length) return null
+        if (projectGroups.length === 1) {
+          return buildGroupRoutes(projectGroups[0]!)
+        } else
           return (
             <Route key={group} path={toKebabCase(group)} element={<Outlet />}>
               <Route
                 key="root"
                 path=""
                 element={
-                  <GroupPage group={group} projectGroups={projectGroups} />
+                  <ProjectListPage
+                    projects={projectGroups.map(({ title }) => ({
+                      title,
+                      image: '',
+                    }))}
+                  />
                 }
               />
-              {projectGroups.map((projectGroup) => (
-                <Route
-                  key={projectGroup.title}
-                  path={toKebabCase(projectGroup.title)}
-                  element={<ProjectListPage {...projectGroup} />}
-                >
-                  {projectGroup.projects.map((project) => (
-                    <Route
-                      key={project.title}
-                      path={toKebabCase(project.title)}
-                      element={<ProjectPage {...project} />}
-                    />
-                  ))}
-                </Route>
-              ))}
+              {projectGroups.map(buildGroupRoutes)}
             </Route>
           )
       })}
