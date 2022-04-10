@@ -2,7 +2,7 @@
 
 .breadcrumbs {
   position: absolute;
-  bottom: 3vh;
+  animation: slide-up 300ms forwards;
   text-align: center;
   text-transform: capitalize;
   left: 50%;
@@ -24,4 +24,9 @@
     padding: 4px 20px;
     border-width: 2px;
   });
+}
+
+@keyframes slide-up {
+  0% { bottom: -10vh; }
+  100% { bottom: 3vh; }
 }
