@@ -6,6 +6,10 @@
   animation: fade-down @duration ease-in-out;
 }
 
+.slideIn(@duration: 1200ms) {
+  animation: slide-right @duration ease-in-out;
+}
+
 @keyframes wait {
   0% {
     opacity: 0;
@@ -41,5 +45,15 @@
   100% {
     opacity: 0;
     transform: translateY(100%);
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    transform: translateX(-100vw);
+  }
+
+  100% {
+    transform: initial;
   }
 }

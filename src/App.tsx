@@ -7,6 +7,9 @@ import styles from './App.less'
 import AppRouter from 'AppRouter'
 import Breadcrumbs from 'common/components/Breadcrumbs'
 import MenuLinks from 'common/components/MenuLinks'
+// Swiper Deps
+import 'swiper/less'
+import 'swiper/less/pagination'
 
 const App: FC = () => {
   return (

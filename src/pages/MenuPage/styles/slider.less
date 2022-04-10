@@ -1,3 +1,4 @@
+@import url('../../../common//styles/animations.less');
 @slide-width: 40vw;
 
 .slider {
@@ -6,7 +7,7 @@
   overflow: visible;
 
   &.slideIn {
-    animation: slide-right 1200ms ease-in-out;
+    .slideIn();
   }
 
   .slide {
@@ -31,19 +32,5 @@
   .swiper-wrapper {
     transform-style: preserve-3d;
     overflow: visible;
-  }
-}
-
-@keyframes slide-right {
-  0% {
-    transform: translateX(-100vw);
-  }
-
-  // 70% {
-  //   transform: scale(0.8);
-  // }
-
-  100% {
-    transform: initial;
   }
 }

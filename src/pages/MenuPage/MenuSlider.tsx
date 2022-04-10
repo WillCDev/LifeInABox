@@ -1,4 +1,4 @@
-import { FC, useState, useEffect, useContext } from 'react'
+import { FC, useContext } from 'react'
 import { joinClassNames } from 'utils'
 // Swiper Deps
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -9,13 +9,12 @@ import {
   Controller,
   EffectCoverflow,
 } from 'swiper'
-import 'swiper/less'
-import 'swiper/less/pagination'
 // Menu Deps
 import BoxHouse from './BoxHouse'
-import { initialItemKey, getConfig } from './menu.config'
+import { getConfig } from './menu.config'
 import styles from './styles/index.less'
 import PageContext from 'common/components/PageContext'
+import useControlledSwiper from 'common/hooks/useControlledSwiper'
 
 interface Props {
   reducedMotion: boolean
@@ -25,17 +24,7 @@ const config = getConfig()
 
 const MenuSlider: FC<Props> = ({ reducedMotion }) => {
   const { navigate } = useContext(PageContext)
-  const [controlledSwiper, setControlledSwiper] = useState<any>()
-
-  // Animation to slide in on first render
-  useEffect(() => {
-    if (controlledSwiper && !reducedMotion) {
-      const timer = setTimeout(() => {
-        clearTimeout(timer)
-        controlledSwiper.slideTo(initialItemKey, 1100)
-      }, 400)
-    }
-  }, [controlledSwiper, reducedMotion])
+  const [controlledSwiper, setControlledSwiper] = useControlledSwiper()
 
   return (
     <Swiper
@@ -49,7 +38,7 @@ const MenuSlider: FC<Props> = ({ reducedMotion }) => {
       centeredSlides
       simulateTouch
       slidesPerView={'auto'}
-      initialSlide={reducedMotion ? initialItemKey : config.length}
+      initialSlide={reducedMotion ? 0 : config.length}
       className={joinClassNames([
         styles.slider,
         !reducedMotion && styles.slideIn,
@@ -60,7 +49,7 @@ const MenuSlider: FC<Props> = ({ reducedMotion }) => {
           {({ isActive }) => (
             <BoxHouse
               onClick={() =>
-                isActive ? navigate(path) : controlledSwiper.slideTo(index)
+                isActive ? navigate(path) : controlledSwiper?.slideTo(index)
               }
               selected={isActive}
               image={image}
