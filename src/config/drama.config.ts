@@ -9,7 +9,7 @@ const dramaPage: PageConfig = {
       projects: [
         {
           title: 'Love in lock down',
-          image: '/drama/LoveInLockdown.jpg',
+          image: '/thumbnails/drama/LoveInLockdown.jpg',
           primaryContent: {
             type: Media.Video,
             link: 'https://youtu.be/ST9hmuxXUuY',
@@ -21,7 +21,7 @@ const dramaPage: PageConfig = {
         },
         {
           title: 'Waiting for Gemma',
-          image: '/drama/WaitingForGemma.jpg',
+          image: '/thumbnails/drama/WaitingForGemma.jpg',
           primaryContent: {
             type: Media.Video,
             link: 'https://youtu.be/SjzfOPIuZCs',
@@ -33,7 +33,7 @@ const dramaPage: PageConfig = {
         },
         {
           title: 'Ronald the Clown and the Bird House',
-          image: '/drama/RonaldTheClown.jpg',
+          image: '/thumbnails/drama/RonaldTheClown.jpg',
           primaryContent: {
             type: Media.Video,
             link: 'https://youtu.be/fR2T6BuTxoU',
@@ -45,7 +45,7 @@ const dramaPage: PageConfig = {
         },
         {
           title: 'Aslan Meets Doctor Who',
-          image: '/drama/AslanMeetsDrWho.jpg',
+          image: '/thumbnails/drama/AslanMeetsDrWho.jpg',
           primaryContent: {
             type: Media.Video,
             link: 'https://youtu.be/7zw2Dpye7Kg',
@@ -57,7 +57,7 @@ const dramaPage: PageConfig = {
         },
         {
           title: 'The Wonderful Wizard of Lockdown',
-          image: '/drama/WizardOfLockdown.jpg',
+          image: '/thumbnails/drama/WizardOfLockdown.jpg',
           primaryContent: {
             type: Media.Video,
             link: 'https://youtu.be/90sSwJFsI7E',
