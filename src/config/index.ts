@@ -1,13 +1,10 @@
 import { PageConfig } from './config.types'
 import dramaPage from './drama.config'
+import creativeWritingPage from './creative.writing.config'
 
 const siteConfig: Array<PageConfig> = [
   dramaPage,
-  {
-    group: 'Creative Writing',
-    image: '/menu/writing.png',
-    projectGroups: [],
-  },
+  creativeWritingPage,
   {
     group: 'Visual Arts',
     image: '/menu/art.png',
