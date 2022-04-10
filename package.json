@@ -5,8 +5,8 @@
   "description": "Website for the OpenArts NI Life In A Box project",
   "private": true,
   "engines": {
-    "node": "^16",
-    "npm": "^8"
+    "node": "^14",
+    "npm": "^6"
   },
   "scripts": {
     "build": "rm -rf ./dist/ && webpack --config ./webpack/webpack.prod.js --progress --color",
