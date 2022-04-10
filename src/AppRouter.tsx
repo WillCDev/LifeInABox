@@ -3,8 +3,8 @@ import { Navigate, Outlet, Route, Routes } from 'react-router-dom'
 import SplashPage from './pages/SplashPage'
 import ReadMorePage from 'pages/ReadMorePage'
 import MenuPage from './pages/MenuPage'
-import ProjectListPage from 'pages/ProjectListPage'
-import ProjectPage from './pages/ProjectPage'
+import GroupPage from 'pages/GroupPage'
+import ProjectListPage from './pages/ProjectListPage'
 import menuConfig from 'config'
 import { toKebabCase } from 'utils'
 
@@ -23,7 +23,7 @@ const AppRouter: FC = () => {
             <Route
               key={group}
               path={toKebabCase(group)}
-              element={<ProjectPage {...projects[0]} />}
+              element={<ProjectListPage {...projects[0]} />}
             />
           )
         else
@@ -32,14 +32,22 @@ const AppRouter: FC = () => {
               <Route
                 key="root"
                 path=""
-                element={<ProjectListPage group={group} projects={projects} />}
+                element={<GroupPage group={group} projects={projects} />}
               />
               {projects.map((project) => (
                 <Route
                   key={project.title}
                   path={toKebabCase(project.title)}
-                  element={<ProjectPage {...project} />}
-                />
+                  element={<ProjectListPage {...project} />}
+                >
+                  {project.works.map((work) => (
+                    <Route
+                      key={work.title}
+                      path={toKebabCase(work.title)}
+                      element={<ProjectListPage {...project} />}
+                    />
+                  ))}
+                </Route>
               ))}
             </Route>
           )

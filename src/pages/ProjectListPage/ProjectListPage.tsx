@@ -1,22 +1,80 @@
-import { FC } from 'react'
-import { Link } from 'react-router-dom'
-import { PageConfig } from 'config'
-import { toKebabCase } from 'utils'
+import { FC, useContext, useMemo } from 'react'
+import { Center, Heading, usePrefersReducedMotion } from '@chakra-ui/react'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import {
+  Keyboard,
+  Pagination,
+  Navigation,
+  Controller,
+  EffectCoverflow,
+} from 'swiper'
 import ContentWrapper from 'common/components/ContentWrapper'
-import { Button } from '@chakra-ui/react'
+import PageContext from 'common/components/PageContext'
+import useControlledSwiper from 'common/hooks/useControlledSwiper'
+import { joinClassNames, toKebabCase } from 'utils'
+import { ProjectConfig } from 'config'
+import styles from './ProjectListPage.less'
 
-const ProjectListPage: FC<Pick<PageConfig, 'group' | 'projects'>> = ({
-  group,
-  projects,
-}) => (
-  <ContentWrapper blurred>
-    <h1>All Projects by: {group}</h1>
-    {projects.map(({ title }) => (
-      <Link key={title} to={`./${toKebabCase(title)}`}>
-        <Button>{title}</Button>
-      </Link>
-    ))}
-  </ContentWrapper>
-)
+const ProjectListPage: FC<ProjectConfig> = ({ works }) => {
+  const { navigate } = useContext(PageContext)
+  const reducedMotion = usePrefersReducedMotion()
+  const [controlledSwiper, setControlledSwiper] = useControlledSwiper()
+
+  const items = useMemo(() => works.sort(() => Math.random() - 0.5), [works])
+
+  return (
+    <>
+      <ContentWrapper blurred>
+        <Swiper
+          modules={[
+            Keyboard,
+            Pagination,
+            Navigation,
+            Controller,
+            EffectCoverflow,
+          ]}
+          controller={{ control: controlledSwiper }}
+          onSwiper={(controller) => setControlledSwiper(controller)}
+          speed={700}
+          slidesPerView="auto"
+          effect={'coverflow'}
+          coverflowEffect={{ rotate: 7, modifier: -1 }}
+          keyboard={{ enabled: true, onlyInViewport: true }}
+          centeredSlides
+          simulateTouch
+          spaceBetween={30}
+          initialSlide={reducedMotion ? 0 : works.length}
+          className={joinClassNames([
+            styles.slider,
+            !reducedMotion && styles.slideIn,
+          ])}
+          grabCursor
+        >
+          {items.map(({ image, title }, index) => (
+            <SwiperSlide
+              key={index}
+              className={styles.slide}
+              onClick={() => navigate(`/${toKebabCase(title)}`)}
+            >
+              {({ isActive }) => (
+                <>
+                  <Center
+                    as={isActive ? 'button' : undefined}
+                    autoFocus={isActive}
+                    className={styles.coverImage}
+                    style={{ backgroundImage: `url(/images${image})` }}
+                  ></Center>
+                  <Heading className={styles.title} size={'xl'}>
+                    {title}
+                  </Heading>
+                </>
+              )}
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </ContentWrapper>
+    </>
+  )
+}
 
 export default ProjectListPage
