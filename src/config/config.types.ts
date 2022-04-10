@@ -5,7 +5,7 @@ export enum Media {
   Text,
 }
 
-type VideoContent = { type: Media.Video; link: string; title: string }
+type VideoContent = { type: Media.Video; link: string }
 type AudioContent = { type: Media.Audio; link: string; title: string }
 type ImageContent = {
   type: Media.Image
