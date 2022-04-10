@@ -5,13 +5,13 @@ import { toKebabCase } from 'utils'
 import ContentWrapper from 'common/components/ContentWrapper'
 import { Button } from '@chakra-ui/react'
 
-const GroupPage: FC<Pick<PageConfig, 'group' | 'projects'>> = ({
+const GroupPage: FC<Pick<PageConfig, 'group' | 'projectGroups'>> = ({
   group,
-  projects,
+  projectGroups,
 }) => (
   <ContentWrapper blurred>
     <h1>All Projects by: {group}</h1>
-    {projects.map(({ title }) => (
+    {projectGroups.map(({ title }) => (
       <Link key={title} to={`./${toKebabCase(title)}`}>
         <Button>{title}</Button>
       </Link>

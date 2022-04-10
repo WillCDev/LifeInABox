@@ -6,30 +6,30 @@ const siteConfig: Array<PageConfig> = [
   {
     group: 'Creative Writing',
     image: '/menu/writing.png',
-    projects: [],
+    projectGroups: [],
   },
   {
     group: 'Visual Arts',
     image: '/menu/art.png',
-    projects: [
-      { title: 'Project one', works: [] },
-      { title: 'Project two', works: [] },
+    projectGroups: [
+      { title: 'Project one', projects: [] },
+      { title: 'Project two', projects: [] },
     ],
   },
   {
     group: 'Dance',
     image: '/menu/luminous_soul.png',
-    projects: [],
+    projectGroups: [],
   },
   {
     group: 'Gamelan',
     image: '/menu/gamelan.png',
-    projects: [],
+    projectGroups: [],
   },
   {
     group: 'Choir',
     image: '/menu/choir.png',
-    projects: [{ title: 'Open Arts Community Choir', works: [] }],
+    projectGroups: [{ title: 'Open Arts Community Choir', projects: [] }],
   },
 ]
 

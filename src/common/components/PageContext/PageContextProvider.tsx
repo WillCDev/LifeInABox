@@ -11,7 +11,7 @@ const PageContextProvider: FC = ({ children }) => {
     const timer = setTimeout(() => {
       clearTimeout(timer)
       setNavigating(false)
-      navigate(path)
+      navigate(`./${path}`)
     }, duration || 600)
   }
 

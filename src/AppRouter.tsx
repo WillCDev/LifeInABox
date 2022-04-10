@@ -5,6 +5,7 @@ import ReadMorePage from 'pages/ReadMorePage'
 import MenuPage from './pages/MenuPage'
 import GroupPage from 'pages/GroupPage'
 import ProjectListPage from './pages/ProjectListPage'
+import ProjectPage from 'pages/ProjectPage'
 import menuConfig from 'config'
 import { toKebabCase } from 'utils'
 
@@ -17,13 +18,13 @@ const AppRouter: FC = () => {
 
       <Route path={'/menu'} element={<MenuPage />} />
 
-      {menuConfig.map(({ group, projects }) => {
-        if (projects.length === 1)
+      {menuConfig.map(({ group, projectGroups }) => {
+        if (projectGroups.length === 1)
           return (
             <Route
               key={group}
               path={toKebabCase(group)}
-              element={<ProjectListPage {...projects[0]} />}
+              element={<ProjectListPage {...projectGroups[0]} />}
             />
           )
         else
@@ -32,19 +33,21 @@ const AppRouter: FC = () => {
               <Route
                 key="root"
                 path=""
-                element={<GroupPage group={group} projects={projects} />}
+                element={
+                  <GroupPage group={group} projectGroups={projectGroups} />
+                }
               />
-              {projects.map((project) => (
+              {projectGroups.map((projectGroup) => (
                 <Route
-                  key={project.title}
-                  path={toKebabCase(project.title)}
-                  element={<ProjectListPage {...project} />}
+                  key={projectGroup.title}
+                  path={toKebabCase(projectGroup.title)}
+                  element={<ProjectListPage {...projectGroup} />}
                 >
-                  {project.works.map((work) => (
+                  {projectGroup.projects.map((project) => (
                     <Route
-                      key={work.title}
-                      path={toKebabCase(work.title)}
-                      element={<ProjectListPage {...project} />}
+                      key={project.title}
+                      path={toKebabCase(project.title)}
+                      element={<ProjectPage {...project} />}
                     />
                   ))}
                 </Route>
@@ -53,7 +56,7 @@ const AppRouter: FC = () => {
           )
       })}
 
-      <Route path="/*" element={<Navigate to="/" />} />
+      {/* <Route path="/*" element={<Navigate to="/" />} /> */}
     </Routes>
   )
 }

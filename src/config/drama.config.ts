@@ -3,10 +3,10 @@ import { Media, PageConfig } from './config.types'
 const dramaPage: PageConfig = {
   group: 'Monday Players',
   image: '/menu/drama.jpg',
-  projects: [
+  projectGroups: [
     {
       title: 'Monday Players',
-      works: [
+      projects: [
         {
           title: 'Love in lock down',
           image: '/drama/LoveInLockdown.jpg',

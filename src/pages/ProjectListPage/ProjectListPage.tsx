@@ -1,4 +1,4 @@
-import { FC, useContext, useMemo } from 'react'
+import { FC, useMemo } from 'react'
 import { Center, Heading, usePrefersReducedMotion } from '@chakra-ui/react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import {
@@ -9,18 +9,20 @@ import {
   EffectCoverflow,
 } from 'swiper'
 import ContentWrapper from 'common/components/ContentWrapper'
-import PageContext from 'common/components/PageContext'
 import useControlledSwiper from 'common/hooks/useControlledSwiper'
 import { joinClassNames, toKebabCase } from 'utils'
-import { ProjectConfig } from 'config'
+import { ProjectGroupConfig } from 'config'
 import styles from './ProjectListPage.less'
+import { useLinkClickHandler } from 'react-router-dom'
 
-const ProjectListPage: FC<ProjectConfig> = ({ works }) => {
-  const { navigate } = useContext(PageContext)
+const ProjectListPage: FC<ProjectGroupConfig> = ({ projects }) => {
   const reducedMotion = usePrefersReducedMotion()
   const [controlledSwiper, setControlledSwiper] = useControlledSwiper()
 
-  const items = useMemo(() => works.sort(() => Math.random() - 0.5), [works])
+  const items = useMemo(
+    () => projects.sort(() => Math.random() - 0.5),
+    [projects]
+  )
 
   return (
     <>
@@ -43,34 +45,39 @@ const ProjectListPage: FC<ProjectConfig> = ({ works }) => {
           centeredSlides
           simulateTouch
           spaceBetween={30}
-          initialSlide={reducedMotion ? 0 : works.length}
+          initialSlide={reducedMotion ? 0 : projects.length}
           className={joinClassNames([
             styles.slider,
             !reducedMotion && styles.slideIn,
           ])}
           grabCursor
         >
-          {items.map(({ image, title }, index) => (
-            <SwiperSlide
-              key={index}
-              className={styles.slide}
-              onClick={() => navigate(`/${toKebabCase(title)}`)}
-            >
-              {({ isActive }) => (
-                <>
-                  <Center
-                    as={isActive ? 'button' : undefined}
-                    autoFocus={isActive}
-                    className={styles.coverImage}
-                    style={{ backgroundImage: `url(/images${image})` }}
-                  ></Center>
-                  <Heading className={styles.title} size={'xl'}>
-                    {title}
-                  </Heading>
-                </>
-              )}
-            </SwiperSlide>
-          ))}
+          {items.map(({ image, title }, index) => {
+            const onClick = useLinkClickHandler(`./${toKebabCase(title)}`)
+            return (
+              <SwiperSlide
+                key={index}
+                className={styles.slide}
+                onClick={onClick}
+              >
+                {({ isActive }) => (
+                  <>
+                    <Center
+                      as={isActive ? 'button' : undefined}
+                      autoFocus={isActive}
+                      role="link"
+                      aria-label={`Click to go to ${title}`}
+                      className={styles.coverImage}
+                      style={{ backgroundImage: `url(/images${image})` }}
+                    />
+                    <Heading className={styles.title} size={'xl'}>
+                      {title}
+                    </Heading>
+                  </>
+                )}
+              </SwiperSlide>
+            )
+          })}
         </Swiper>
       </ContentWrapper>
     </>
