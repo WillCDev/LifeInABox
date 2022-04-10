@@ -15,7 +15,7 @@ import styles from './ProjectListPage.less'
 import { useLinkClickHandler } from 'react-router-dom'
 
 interface Props {
-  projects: Array<{ title: string; image: string; showTitle?: boolean }>
+  projects: Array<{ title: string; image: string; noTitleInImage?: boolean }>
 }
 
 const ProjectListPage: FC<Props> = ({ projects }) => {
@@ -55,7 +55,7 @@ const ProjectListPage: FC<Props> = ({ projects }) => {
           ])}
           grabCursor
         >
-          {items.map(({ image, title, showTitle }, index) => {
+          {items.map(({ image, title, noTitleInImage }, index) => {
             const onClick = useLinkClickHandler(`./${toKebabCase(title)}`)
             return (
               <SwiperSlide
@@ -73,7 +73,7 @@ const ProjectListPage: FC<Props> = ({ projects }) => {
                       className={styles.coverImage}
                       style={{ backgroundImage: `url(/images${image})` }}
                     />
-                    {showTitle && (
+                    {noTitleInImage && (
                       <Heading className={styles.title} size={'xl'}>
                         {title}
                       </Heading>
