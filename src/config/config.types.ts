@@ -2,15 +2,21 @@ export enum Media {
   Video,
   Audio,
   Image,
+  Text,
 }
 
-type VideoContent = { type: Media.Video; link: string }
-type AudioContent = { type: Media.Audio; link: string }
+type VideoContent = { type: Media.Video; link: string; title: string }
+type AudioContent = { type: Media.Audio; link: string; title: string }
+type ImageContent = {
+  type: Media.Image
+  images: { link: string; title: string }[]
+}
+type TextContent = { type: Media.Text; link: string; title: string }
 
 export interface ProjectConfig {
   title: string
   image: string
-  primaryContent: VideoContent | AudioContent
+  primaryContent: VideoContent | AudioContent | ImageContent
   audioDescription?: VideoContent | AudioContent
 }
 
