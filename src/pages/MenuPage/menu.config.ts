@@ -33,4 +33,3 @@ const radiuMultiplier = 2
 export const radius = Math.round(
   100 / Math.tan(Math.PI / (menuItemCount * radiuMultiplier))
 )
-export const initialItemKey = 0
