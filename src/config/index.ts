@@ -1,6 +1,7 @@
 import { PageConfig } from './config.types'
 import dramaPage from './drama.config'
 import gamelanPage from './gamelan.config'
+import artPage from './art.config'
 import choirPage from './choir.config'
 import luminousSoulPage from './luminousSoul.config'
 import creativeWritingPage from './creative.writing.config'
@@ -8,14 +9,7 @@ import creativeWritingPage from './creative.writing.config'
 const siteConfig: Array<PageConfig> = [
   dramaPage,
   creativeWritingPage,
-  {
-    group: 'Visual Arts',
-    image: '/art/art_menu.png',
-    projectGroups: [
-      { title: 'Project one', projects: [] },
-      { title: 'Project two', projects: [] },
-    ],
-  },
+  artPage,
   luminousSoulPage,
   gamelanPage,
   choirPage,

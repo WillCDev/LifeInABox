@@ -9,9 +9,8 @@ type VideoContent = { type: Media.Video; link: string }
 type AudioContent = { type: Media.Audio; link: string }
 type ImageContent = {
   type: Media.Image
-  images: { link: string; title: string }[]
+  images: { link: string; audioDescription: string }[]
 }
-// type TextContent = { type: Media.Text; link: string; title: string }
 
 export interface ProjectConfig {
   title: string
