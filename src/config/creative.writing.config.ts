@@ -113,10 +113,11 @@ const creativeWritingPage: PageConfig = {
             type: Media.Video,
             link: 'https://youtu.be/nMVfy4Vxv5k',
           },
+          audioIntro: '/writing/newhope/nh_audiointro.m4a',
           transcript: '/writing/newhope/nh_transcript.html',
         },
         {
-          title: 'On Being Alone by Andy Ward',
+          title: 'On Being Alone by Andrew Ward',
           image: '/writing/onbeingalone/oba_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
