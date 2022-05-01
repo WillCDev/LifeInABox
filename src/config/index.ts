@@ -10,7 +10,7 @@ const siteConfig: Array<PageConfig> = [
   creativeWritingPage,
   {
     group: 'Visual Arts',
-    image: '/menu/art.png',
+    image: '/art/art_menu.png',
     projectGroups: [
       { title: 'Project one', projects: [] },
       { title: 'Project two', projects: [] },
