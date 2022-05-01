@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { FC, ReactElement } from 'react'
 import { Outlet, Route, Routes } from 'react-router-dom'
 import SplashPage from './pages/SplashPage'
 import ReadMorePage from 'pages/ReadMorePage'
@@ -8,7 +8,7 @@ import ProjectPage from 'pages/ProjectPage'
 import menuConfig, { ProjectGroupConfig } from 'config'
 import { toKebabCase } from 'utils'
 
-const buildGroupRoutes = (group: ProjectGroupConfig): any => (
+const buildGroupRoutes = (group: ProjectGroupConfig): ReactElement => (
   <Route key={'root'} path={toKebabCase(group.title)} element={<Outlet />}>
     <Route key={group.title} path="" element={<ProjectListPage {...group} />} />
     {group.projects.map((project) => (
@@ -44,6 +44,7 @@ const AppRouter: FC = () => {
                   <ProjectListPage
                     projects={projectGroups.map(({ title }) => ({
                       title,
+                      noTitleInImage: true,
                       image: '',
                     }))}
                   />

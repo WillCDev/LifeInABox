@@ -5,7 +5,7 @@ const creativeWritingPage: PageConfig = {
   image: '/menu/writing.png',
   projectGroups: [
     {
-      title: 'Creative Writing - Final Pieces',
+      title: 'Final Pieces',
       projects: [
         {
           title: 'A Mask by Peter Livingstone',
@@ -82,7 +82,7 @@ const creativeWritingPage: PageConfig = {
       ],
     },
     {
-      title: 'Creative Writing - Visual Arts Collaboration',
+      title: 'Visual Arts Collaboration',
       projects: [
         {
           title: 'Scent by Alison Black',
