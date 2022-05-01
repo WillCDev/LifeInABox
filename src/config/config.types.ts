@@ -6,12 +6,12 @@ export enum Media {
 }
 
 type VideoContent = { type: Media.Video; link: string }
-type AudioContent = { type: Media.Audio; link: string; title: string }
+type AudioContent = { type: Media.Audio; link: string }
 type ImageContent = {
   type: Media.Image
   images: { link: string; title: string }[]
 }
-type TextContent = { type: Media.Text; link: string; title: string }
+// type TextContent = { type: Media.Text; link: string; title: string }
 
 export interface ProjectConfig {
   title: string
@@ -19,6 +19,8 @@ export interface ProjectConfig {
   image: string
   primaryContent: VideoContent | AudioContent | ImageContent
   audioDescription?: VideoContent | AudioContent
+  audioIntro?: string
+  transcript?: string
 }
 
 export interface ProjectGroupConfig {

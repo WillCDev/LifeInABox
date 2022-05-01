@@ -2,7 +2,7 @@ import { Media, PageConfig } from './config.types'
 
 const templatePage: PageConfig = {
   group: 'OACC Choir',
-  image: '/menu/writing.png',
+  image: '/choir/choir_menu.png',
   projectGroups: [
     {
       title: 'OACC Choir',
@@ -10,138 +10,101 @@ const templatePage: PageConfig = {
         {
           noTitleInImage: true,
           title: 'Little Boxes',
-          image: '/thumbnails/choir/LittleBoxes.jpg',
+          image: '/choir/littleboxes/lb_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
             link: 'https://youtu.be/qV18bMAqe_o',
           },
-          // audioDescription: {
-          //   type: Media.Video,
-          //   link: 'https://youtu.be/vwlSibMnuYo',
-          // },
+          audioIntro: '/choir/littleboxes/lb_audiointro.mp3',
         },
         {
           title: 'A Little Bit Of Love',
-          image: '/thumbnails/choir/ALittleBitOfLove_Titled.jpg',
+          image: '/choir/alittlebitoflove/albol_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
             link: 'https://youtu.be/pkilFTWsR6I',
           },
-          // audioDescription: {
-          //   type: Media.Video,
-          //   link: 'https://youtu.be/vwlSibMnuYo',
-          // },
+          audioIntro: '/choir/alittlebitoflove/albol_audiointro.jmp3pg',
         },
         {
           title: 'Boxes Rap',
-          image: '/thumbnails/choir/BoxesRap_Titled.jpg',
+          image: '/choir/boxesrap/br_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
             link: 'https://youtu.be/Dyk3slLtHNg',
           },
-          // audioDescription: {
-          //   type: Media.Video,
-          //   link: 'https://youtu.be/vwlSibMnuYo',
-          // },
+          audioIntro: '/choir/boxesrap/br_audiointro.mp3',
         },
         {
           title: 'Happy Birthday',
-          image: '/thumbnails/choir/HappyBirthday_Titled.jpg',
+          image: '/choir/happybirthday/hb_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
             link: 'https://youtu.be/evXfluGDC9o',
           },
-          // audioDescription: {
-          //   type: Media.Video,
-          //   link: 'https://youtu.be/vwlSibMnuYo',
-          // },
+          audioIntro: '/choir/happybirthday/hb_audiointro.mp3',
         },
         {
           title: 'Dawn Chorus Day',
-          image: '',
+          image: '/choir/dawnchorusday/dcd_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
-            link: '',
+            link: 'https://www.youtube.com/watch?v=xbKqMvXljOE',
           },
-          // audioDescription: {
-          //   type: Media.Video,
-          //   link: 'https://youtu.be/vwlSibMnuYo',
-          // },
+          audioIntro: '/choir/dawnchorusday/dcd_audiointro.mp3',
         },
         {
           title: 'Jab Me Tender',
-          image: '/thumbnails/choir/JabMeTender_Titled.jpg',
+          image: '/choir/jabmetender/jmt_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
             link: 'https://youtu.be/YTdNjfRESTQ',
           },
-          // audioDescription: {
-          //   type: Media.Video,
-          //   link: 'https://youtu.be/vwlSibMnuYo',
-          // },
         },
         {
           noTitleInImage: true,
           title: 'Last Christmas',
-          image: '/thumbnails/choir/LastChristmas.jpg',
+          image: '/choir/lastchristmas/lc_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
             link: 'https://youtu.be/YTdNjfRESTQ',
           },
-          // audioDescription: {
-          //   type: Media.Video,
-          //   link: 'https://youtu.be/vwlSibMnuYo',
-          // },
         },
         {
           title: 'A Rather Strange Old Year',
-          image: '/thumbnails/choir/ARatherStrangeOldYear_Titled.jpg',
+          image: '/choir/aratherstrangeoldyear/soy_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
             link: 'https://youtu.be/YTdNjfRESTQ',
           },
-          // audioDescription: {
-          //   type: Media.Video,
-          //   link: 'https://youtu.be/vwlSibMnuYo',
-          // },
         },
         {
           noTitleInImage: true,
           title: 'Fairytale',
-          image: '/thumbnails/choir/Fairytale.jpg',
+          image: '/choir/fairytale/ft_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
             link: 'https://youtu.be/3SJDnTatF1w',
           },
-          // audioDescription: {
-          //   type: Media.Video,
-          //   link: 'https://youtu.be/vwlSibMnuYo',
-          // },
         },
         {
           noTitleInImage: true,
           title: 'Covid Is All Around',
-          image: '/thumbnails/choir/CovidIsAllAround.jpg',
+          image: '/choir/covidisallaround/ciaa_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
             link: 'https://youtu.be/ZK_4_fKeQ8o',
           },
-          // audioDescription: {
-          //   type: Media.Video,
-          //   link: 'https://youtu.be/vwlSibMnuYo',
-          // },
+          audioIntro: '/choir/covidisallaround/ciaa_audiointro.mp3',
         },
         {
           title: 'Closer Together',
-          image: '/thumbnails/choir/CloserTogether_Titled.jpg',
+          image: '/choir/closertogether/ct_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
             link: 'https://youtu.be/IFafgrCr3CI',
           },
-          // audioDescription: {
-          //   type: Media.Video,
-          //   link: 'https://youtu.be/vwlSibMnuYo',
-          // },
+          audioIntro: '/choir/closertogether/ct_audiointro.mp3',
         },
       ],
     },

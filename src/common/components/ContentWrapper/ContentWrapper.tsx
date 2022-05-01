@@ -19,7 +19,7 @@ const ContentWrapper: FC<Props> = ({ children, blurred }) => {
           navigating && styles.navigating,
         ])}
         style={{
-          backgroundImage: `url('/images/background/promopic.jpg')`,
+          backgroundImage: `url('/promopic.jpg')`,
         }}
       />
       <main>{children}</main>

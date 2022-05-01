@@ -71,7 +71,7 @@ const ProjectListPage: FC<Props> = ({ projects }) => {
                       role="link"
                       aria-label={`Click to go to ${title}`}
                       className={styles.coverImage}
-                      style={{ backgroundImage: `url(/images${image})` }}
+                      style={{ backgroundImage: `url(${image})` }}
                     />
                     {noTitleInImage && (
                       <Heading className={styles.title} size={'xl'}>

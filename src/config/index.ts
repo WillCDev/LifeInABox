@@ -1,5 +1,8 @@
 import { PageConfig } from './config.types'
 import dramaPage from './drama.config'
+import gamelanPage from './gamelan.config'
+import choirPage from './choir.config'
+import luminousSoulPage from './luminousSoul.config'
 import creativeWritingPage from './creative.writing.config'
 
 const siteConfig: Array<PageConfig> = [
@@ -13,21 +16,9 @@ const siteConfig: Array<PageConfig> = [
       { title: 'Project two', projects: [] },
     ],
   },
-  {
-    group: 'Dance',
-    image: '/menu/luminous_soul.png',
-    projectGroups: [],
-  },
-  {
-    group: 'Gamelan',
-    image: '/menu/gamelan.png',
-    projectGroups: [],
-  },
-  {
-    group: 'Choir',
-    image: '/menu/choir.png',
-    projectGroups: [{ title: 'Open Arts Community Choir', projects: [] }],
-  },
+  luminousSoulPage,
+  gamelanPage,
+  choirPage,
 ]
 
 export * from './config.types'

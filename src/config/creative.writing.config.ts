@@ -2,82 +2,77 @@ import { Media, PageConfig } from './config.types'
 
 const creativeWritingPage: PageConfig = {
   group: 'Creative Writing',
-  image: '/menu/writing.png',
+  image: '/writing/writing_menu.png',
   projectGroups: [
     {
       title: 'Final Pieces',
       projects: [
         {
           title: 'A Mask by Peter Livingstone',
-          image: '/thumbnails/writing/AMask_Titled.jpg',
+          image: '/writing/amask/am_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
             link: 'https://youtu.be/po_OnSS3TSY',
           },
-          // audioDescription: {
-          //   type: Media.Video,
-          //   link: 'https://youtu.be/vwlSibMnuYo',
-          // },
+          audioIntro: 'writing/amask/am_audiointro.mp3',
+          transcript: 'writing/amask/am_transcript.html',
         },
         {
           title: 'When Lock downs over by Bernice Burrows',
-          image: '/thumbnails/writing/WhenLockdownsOver.jpg',
+          image: '/writing/whenlockdownisover/wlo_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
             link: '',
           },
-          // audioDescription: {
-          //   type: Media.Video,
-          //   link: 'https://youtu.be/vwlSibMnuYo',
-          // },
+          transcript: 'writing/amask/wlo_transcript.html',
         },
         {
           title: 'A Little Ouch by Carly Palmer',
-          image: '/thumbnails/writing/ALittleOuch_Titled.jpg',
+          image: '/writing/alittleouch/alo_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
             link: 'https://youtu.be/1WLS5w7Rp-U',
           },
-          // audioDescription: {
-          //   type: Media.Video,
-          //   link: 'https://youtu.be/RnDdSTo-nAs',
-          // },
+          audioIntro: '/writing/alittleouch/alo_audiointro.mp3',
+          transcript: 'writing/amask/alo_transcript.html',
         },
         {
           title: "Lockdown the year we've had by Sarah Cantillon",
-          image: '/thumbnails/writing/LockdownTheYearWeveHad.jpg',
+          image: '/writing/lockdowntheyearwevehad/tywh_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
             link: '',
           },
-          // audioDescription: {
-          //   type: Media.Video,
-          //   link: 'https://youtu.be/lyuHxHctNSk',
-          // },
+          transcript: 'writing/amask/tywh_transcript.html',
         },
         {
           title: 'A Need for Natural Silence by Andy Ward',
-          image: '/thumbnails/writing/aNeedForNaturalSilence.jpg',
+          image: '/writing/aneedforanaturalsilence/nfns_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
             link: 'https://youtu.be/JCrRF2XDIfM',
           },
+          audioIntro: '/writing/aneedforanaturalsilence/nfns_audiointro.mp3',
+          transcript: '/writing/aneedforanaturalsilence/nfns_transcript.html',
         },
         {
           title: 'Thousands by Alison Black',
-          image: '/thumbnails/writing/Thousands_Titled.jpg',
+          image: '/writing/thousands/th_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
             link: 'https://youtu.be/AnNAnQP1kSU',
           },
+          audioIntro: '/writing/thousands/th_audiointro.mp3',
+          transcript: '/writing/thousands/th_transcript.mp3',
         },
         {
           title: 'My Lockdown Companion by Gerry McBride',
-          image: '/thumbnails/writing/MyLockdownCompanion.jpg',
+          image: '/writing/mylockdowncompanion/mlc_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
             link: '',
           },
+          transcript: '/writing/mylockdowncompanion/mlc_transcript.html',
         },
       ],
     },
@@ -86,63 +81,48 @@ const creativeWritingPage: PageConfig = {
       projects: [
         {
           title: 'Scent by Alison Black',
-          image: '/thumbnails/writing/Scent_Titled.jpg',
+          image: '/writing/scent/sc_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
             link: 'https://youtu.be/fjXkcHfvjWU',
           },
-          // audioDescription: {
-          //   type: Media.Video,
-          //   link: 'https://youtu.be/vwlSibMnuYo',
-          // },
+          transcript: '/writing/scent/sc_transcript.html',
         },
         {
           title: 'Scent of the Roses by Alison Black',
-          image: '/thumbnails/writing/ScentOfTheRoses_Titled.jpg',
+          image: '/writing/scentoftheroses/sotr_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
             link: 'https://youtu.be/EgrJ21pKAMI',
           },
-          // audioDescription: {
-          //   type: Media.Video,
-          //   link: 'https://youtu.be/vwlSibMnuYo',
-          // },
+          transcript: '/writing/scentoftheroses/sotr_transcript.html',
         },
         {
           title: 'The Seagull by Sarah Cantillon',
-          image: '/thumbnails/writing/TheSeagull_Titled.jpg',
+          image: '/writing/theseagull/tsg_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
             link: 'https://youtu.be/_Du-LoXS0cs ',
           },
-          // audioDescription: {
-          //   type: Media.Video,
-          //   link: 'https://youtu.be/vwlSibMnuYo',
-          // },
+          transcript: '/writing/theseagull/tsg_transcript.html',
         },
         {
           title: 'New Hope by Sarah Cantillon',
-          image: '/thumbnails/writing/NewHope_Titled.jpg',
+          image: '/writing/newhope/nh_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
             link: 'https://youtu.be/nMVfy4Vxv5k',
           },
-          // audioDescription: {
-          //   type: Media.Video,
-          //   link: 'https://youtu.be/vwlSibMnuYo',
-          // },
+          transcript: '/writing/newhope/nh_transcript.html',
         },
         {
           title: 'On Being Alone by Andy Ward',
-          image: '/thumbnails/writing/OnBeingAlone_Titled.jpg',
+          image: '/writing/onbeingalone/oba_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
             link: 'https://youtu.be/CyAszOriLjc',
           },
-          // audioDescription: {
-          //   type: Media.Video,
-          //   link: 'https://youtu.be/vwlSibMnuYo',
-          // },
+          transcript: '/writing/onbeingalone/oba_transcript.html',
         },
       ],
     },

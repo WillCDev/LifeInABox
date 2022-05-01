@@ -2,26 +2,26 @@ import { Media, PageConfig } from './config.types'
 
 const dramaPage: PageConfig = {
   group: 'Monday Players',
-  image: '/menu/drama.jpg',
+  image: '/drama/drama_menu.jpg',
   projectGroups: [
     {
       title: 'Monday Players',
       projects: [
         {
           title: 'Love in lock down',
-          image: '/thumbnails/drama/LoveInLockdown_Titled.jpg',
+          image: '/drama/loveinlockdown/lil_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
             link: 'https://youtu.be/ST9hmuxXUuY',
           },
           audioDescription: {
             type: Media.Video,
-            link: 'https://youtu.be/vwlSibMnuYo',
+            link: 'https://youtu.be/lyuHxHctNSk',
           },
         },
         {
           title: 'Waiting for Gemma',
-          image: '/thumbnails/drama/WaitingForGemma_Titled.jpg',
+          image: '/drama/waitingforgemma/wfg_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
             link: 'https://youtu.be/SjzfOPIuZCs',
@@ -33,7 +33,7 @@ const dramaPage: PageConfig = {
         },
         {
           title: 'Ronald the Clown and the Bird House',
-          image: '/thumbnails/drama/RonaldTheClownAndTheBirdhouse_Titled.jpg',
+          image: '/drama/ronaldtheclown/rtc_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
             link: 'https://youtu.be/fR2T6BuTxoU',
@@ -45,7 +45,7 @@ const dramaPage: PageConfig = {
         },
         {
           title: 'Aslan Meets Doctor Who',
-          image: '/thumbnails/drama/AslanMeetsDoctorWho_Titled.jpg',
+          image: '/drama/aslanmeetsdrwho/amdw_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
             link: 'https://youtu.be/7zw2Dpye7Kg',
@@ -57,7 +57,7 @@ const dramaPage: PageConfig = {
         },
         {
           title: 'The Wonderful Wizard of Lockdown',
-          image: '/thumbnails/drama/TheWonderfulWizardOfLockdown_Titled.jpg',
+          image: '/drama/wonderfulwizardoflockdown/wwol_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
             link: 'https://youtu.be/90sSwJFsI7E',

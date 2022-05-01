@@ -2,48 +2,49 @@ import { Media, PageConfig } from './config.types'
 
 const templatePage: PageConfig = {
   group: 'Luminous Soul Dance',
-  image: '/menu/writing.png',
+  image: '/luminoussoul/luminous_soul_menu.png',
   projectGroups: [
     {
       title: 'Luminous Soul Dance',
       projects: [
         {
-          noTitleInImage: true,
           title: 'Lockdown Duets',
-          image: '/thumbnails/luminousSoulDance/LockdownDuets.jpg',
+          noTitleInImage: true,
+          image: '/luminoussoul/lockdownduets/ld_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
             link: 'https://youtu.be/AX3hxdcfhNA',
           },
-          // audioDescription: {
-          //   type: Media.Video,
-          //   link: 'https://youtu.be/vwlSibMnuYo',
-          // },
+          audioDescription: {
+            type: Media.Video,
+            link: 'https://youtu.be/6bYhwWLc5ic',
+          },
         },
         {
           title: 'Inside The Box',
-          image: '/thumbnails/luminousSoulDance/InsideTheBox_Titled.jpg',
+          noTitleInImage: true,
+          image: '/luminoussoul/insidethebox/itb_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
             link: 'https://youtu.be/6bYhwWLc5ic',
           },
-          // audioDescription: {
-          //   type: Media.Video,
-          //   link: 'https://youtu.be/vwlSibMnuYo',
-          // },
+          audioDescription: {
+            type: Media.Video,
+            link: 'https://youtu.be/qjjSS2cSW0o',
+          },
         },
         {
-          noTitleInImage: true,
           title: 'When I Hear Music',
-          image: '/thumbnails/luminousSoulDance/WhenIHearMusic.jpg',
+          noTitleInImage: true,
+          image: '/luminoussoul/whenihearmusic/wihm_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
             link: 'https://youtu.be/MATNYxDAYVM',
           },
-          // audioDescription: {
-          //   type: Media.Video,
-          //   link: 'https://youtu.be/vwlSibMnuYo',
-          // },
+          audioDescription: {
+            type: Media.Video,
+            link: 'https://youtu.be/kRUDWcyX3hk',
+          },
         },
       ],
     },
