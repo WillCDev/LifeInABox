@@ -32,15 +32,15 @@ const ProjectListPage: FC<Props> = ({ projects }) => {
       <ContentWrapper blurred>
         <Swiper
           modules={[
+            Controller,
             Keyboard,
             Pagination,
             Navigation,
-            Controller,
             EffectCoverflow,
           ]}
           controller={{ control: controlledSwiper }}
-          onSwiper={(controller) => setControlledSwiper(controller)}
-          speed={700}
+          onSwiper={setControlledSwiper}
+          speed={200}
           slidesPerView="auto"
           effect={'coverflow'}
           coverflowEffect={{ rotate: 7, modifier: -1 }}
