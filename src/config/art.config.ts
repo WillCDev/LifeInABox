@@ -5,10 +5,10 @@ const templatePage: PageConfig = {
   image: '/art/art_menu.png',
   projectGroups: [
     {
-      title: 'Final Pieces',
+      title: 'Visual Art - Final Pieces',
       projects: [
         {
-          title: 'Angela Porter - Final Pieces',
+          title: 'Angela Porter',
           noTitleInImage: true,
           image: '/art/finalpieces/angelaporter/ap1_image.jpg',
           primaryContent: {
@@ -28,7 +28,7 @@ const templatePage: PageConfig = {
           },
         },
         {
-          title: 'Gary Linton - Final Pieces',
+          title: 'Gary Linton',
           noTitleInImage: true,
           image: '/art/finalpieces/garylinton/gl1_image.jpg',
           primaryContent: {
@@ -43,7 +43,7 @@ const templatePage: PageConfig = {
           },
         },
         {
-          title: 'Jayne Mulholland - Final Pieces',
+          title: 'Jayne Mulholland',
           noTitleInImage: true,
           image: '/art/finalpieces/jaynemulholland/jm1_image.jpg',
           primaryContent: {
@@ -58,7 +58,7 @@ const templatePage: PageConfig = {
           },
         },
         {
-          title: 'Jodie Devlin - Final Pieces',
+          title: 'Jodie Devlin',
           noTitleInImage: true,
           image: '/art/finalpieces/jodiedevlin/jd1_image.jpg',
           primaryContent: {
@@ -78,7 +78,7 @@ const templatePage: PageConfig = {
           },
         },
         {
-          title: 'Julie Dorrity - Final Pieces',
+          title: 'Julie Dorrity',
           noTitleInImage: true,
           image: '/art/finalpieces/juliedorrity/jdo1_image.jpg',
           primaryContent: {
@@ -98,7 +98,7 @@ const templatePage: PageConfig = {
           },
         },
         {
-          title: 'Katy Megahey - Final Pieces',
+          title: 'Katy Megahey',
           noTitleInImage: true,
           image: '/art/finalpieces/katymegahey/km1_image.jpg',
           primaryContent: {
@@ -118,7 +118,7 @@ const templatePage: PageConfig = {
           },
         },
         {
-          title: 'Mary Lou McCord - Final Pieces',
+          title: 'Mary Lou McCord',
           noTitleInImage: true,
           image: '/art/finalpieces/mayloumccord/mlm1_image.jpg',
           primaryContent: {
@@ -133,7 +133,7 @@ const templatePage: PageConfig = {
           },
         },
         {
-          title: 'Rene Boyd - Final Pieces',
+          title: 'Rene Boyd',
           noTitleInImage: true,
           image: '/art/finalpieces/reneboyd/reb1_image.jpg',
           primaryContent: {
@@ -148,7 +148,7 @@ const templatePage: PageConfig = {
           },
         },
         {
-          title: 'Ryan McCartney - Final Pieces',
+          title: 'Ryan McCartney',
           noTitleInImage: true,
           image: '/art/finalpieces/ryanmccartney/rmc1_image.jpg',
           primaryContent: {
@@ -168,7 +168,7 @@ const templatePage: PageConfig = {
           },
         },
         {
-          title: 'Sarah Cantillon - Final Pieces',
+          title: 'Sarah Cantillon',
           noTitleInImage: true,
           image: '/art/finalpieces/sarahcantillon/sca1_image.jpg',
           primaryContent: {
@@ -183,7 +183,7 @@ const templatePage: PageConfig = {
           },
         },
         {
-          title: 'Tim Leathem - Final Pieces',
+          title: 'Tim Leathem',
           noTitleInImage: true,
           image: '/art/finalpieces/timleathem/tl1_image.jpg',
           primaryContent: {
