@@ -6,9 +6,10 @@ import PageContext from '../PageContext'
 
 interface Props {
   blurred?: boolean
+  height?: string | number
 }
 
-const ContentWrapper: FC<Props> = ({ children, blurred }) => {
+const ContentWrapper: FC<Props> = ({ children, blurred, height }) => {
   const { navigating } = useContext(PageContext)
   return (
     <Center className={styles.contentWrapper}>
@@ -22,7 +23,7 @@ const ContentWrapper: FC<Props> = ({ children, blurred }) => {
           backgroundImage: `url('/promopic.jpg')`,
         }}
       />
-      <main>{children}</main>
+      <main style={{ height }}>{children}</main>
     </Center>
   )
 }

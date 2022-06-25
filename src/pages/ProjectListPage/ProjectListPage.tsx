@@ -28,64 +28,58 @@ const ProjectListPage: FC<Props> = ({ projects }) => {
   )
 
   return (
-    <>
-      <ContentWrapper blurred>
-        <Swiper
-          modules={[
-            Controller,
-            Keyboard,
-            Pagination,
-            Navigation,
-            EffectCoverflow,
-          ]}
-          controller={{ control: controlledSwiper }}
-          onSwiper={setControlledSwiper}
-          speed={200}
-          slidesPerView="auto"
-          effect={'coverflow'}
-          coverflowEffect={{ rotate: 7, modifier: -1 }}
-          keyboard={{ enabled: true, onlyInViewport: true }}
-          centeredSlides
-          simulateTouch
-          spaceBetween={30}
-          initialSlide={reducedMotion ? 0 : projects.length}
-          className={joinClassNames([
-            styles.slider,
-            !reducedMotion && styles.slideIn,
-          ])}
-          grabCursor
-        >
-          {items.map(({ image, title, noTitleInImage }, index) => {
-            const onClick = useLinkClickHandler(`./${toKebabCase(title)}`)
-            return (
-              <SwiperSlide
-                key={index}
-                className={styles.slide}
-                onClick={onClick}
-              >
-                {({ isActive }) => (
-                  <>
-                    <Center
-                      as={isActive ? 'button' : undefined}
-                      autoFocus={isActive}
-                      role="link"
-                      aria-label={`Click to go to ${title}`}
-                      className={styles.coverImage}
-                      style={{ backgroundImage: `url(${image})` }}
-                    />
-                    {noTitleInImage && (
-                      <Heading className={styles.title} size={'xl'}>
-                        {title}
-                      </Heading>
-                    )}
-                  </>
-                )}
-              </SwiperSlide>
-            )
-          })}
-        </Swiper>
-      </ContentWrapper>
-    </>
+    <ContentWrapper blurred>
+      <Swiper
+        modules={[
+          Controller,
+          Keyboard,
+          Pagination,
+          Navigation,
+          EffectCoverflow,
+        ]}
+        controller={{ control: controlledSwiper }}
+        onSwiper={setControlledSwiper}
+        speed={700}
+        slidesPerView="auto"
+        effect={'coverflow'}
+        coverflowEffect={{ rotate: 7, modifier: -1 }}
+        keyboard={{ enabled: true, onlyInViewport: true }}
+        centeredSlides
+        simulateTouch
+        spaceBetween={30}
+        initialSlide={reducedMotion ? 0 : projects.length}
+        className={joinClassNames([
+          styles.slider,
+          !reducedMotion && styles.slideIn,
+        ])}
+        grabCursor
+      >
+        {items.map(({ image, title, noTitleInImage }, index) => {
+          const onClick = useLinkClickHandler(`./${toKebabCase(title)}`)
+          return (
+            <SwiperSlide key={index} className={styles.slide} onClick={onClick}>
+              {({ isActive }) => (
+                <>
+                  <Center
+                    as={isActive ? 'button' : undefined}
+                    autoFocus={isActive}
+                    role="link"
+                    aria-label={`Click to go to ${title}`}
+                    className={styles.coverImage}
+                    style={{ backgroundImage: `url(${image})` }}
+                  />
+                  {noTitleInImage && (
+                    <Heading className={styles.title} size={'xl'}>
+                      {title}
+                    </Heading>
+                  )}
+                </>
+              )}
+            </SwiperSlide>
+          )
+        })}
+      </Swiper>
+    </ContentWrapper>
   )
 }
 

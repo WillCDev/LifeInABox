@@ -1,0 +1,30 @@
+@import url('common/styles/mixins');
+
+.contentWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+
+  .desktopResponsive({
+    // flex-direction: column;
+  });
+}
+
+.primaryContent {
+  flex: 1;
+  min-height: 20px;
+  min-width: 20px;
+  padding: 4vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.secondaryContent {
+  flex: 0;
+  min-height: 150px;
+  min-width: 150px;
+  padding: 4vh;
+}
