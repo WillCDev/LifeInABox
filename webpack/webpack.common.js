@@ -19,6 +19,7 @@ module.exports = {
     path: BUILD_DIR,
     chunkFilename: 'js/[name].[contenthash].js',
     filename: 'js/[name].[contenthash].js',
+    publicPath: '/',
   },
   module: {
     rules: [
