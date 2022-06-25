@@ -13,9 +13,10 @@ import { usePageContext } from 'common/components/PageContext/PageContext'
 import useControlledSwiper from 'common/hooks/useControlledSwiper'
 import { joinClassNames, toKebabCase } from 'utils'
 import styles from './ProjectListPage.less'
+import { ProjectConfig } from 'config'
 
 interface Props {
-  projects: Array<{ title: string; image: string; showTitle?: boolean }>
+  projects: Array<Pick<ProjectConfig, 'title' | 'coverImage' | 'showTitle'>>
 }
 
 const ProjectListPage: FC<Props> = ({ projects }) => {
@@ -56,7 +57,7 @@ const ProjectListPage: FC<Props> = ({ projects }) => {
         ])}
         grabCursor
       >
-        {items.map(({ image, title, showTitle }, index) => {
+        {items.map(({ coverImage, title, showTitle }, index) => {
           const onClick = (): void =>
             navigate(`${window.location.pathname}/${toKebabCase(title)}`, 800)
           return (
@@ -75,7 +76,7 @@ const ProjectListPage: FC<Props> = ({ projects }) => {
                         styles.bgImage,
                         showTitle && styles.blur,
                       ])}
-                      style={{ backgroundImage: `url(${image})` }}
+                      style={{ backgroundImage: `url(${coverImage})` }}
                     />
                   </Center>
                   {showTitle && (

@@ -2,7 +2,7 @@ import { Media, PageConfig } from './config.types'
 
 const templatePage: PageConfig = {
   group: 'Luminous Soul Dance',
-  image: '/luminoussoul/luminous_soul_menu.png',
+  coverImage: '/luminoussoul/luminous_soul_menu.png',
   projectGroups: [
     {
       title: 'Luminous Soul Dance',
@@ -10,11 +10,9 @@ const templatePage: PageConfig = {
         {
           title: 'Lockdown Duets',
           showTitle: true,
-          image: '/luminoussoul/lockdownduets/ld_thumbnail.jpg',
-          primaryContent: {
-            type: Media.Video,
-            link: 'https://www.youtube.com/embed/AX3hxdcfhNA',
-          },
+          coverImage: '/luminoussoul/lockdownduets/ld_thumbnail.jpg',
+          type: Media.Video,
+          link: 'https://www.youtube.com/embed/AX3hxdcfhNA',
           audioDescription: {
             type: Media.Video,
             link: 'https://www.youtube.com/embed/6bYhwWLc5ic',
@@ -23,11 +21,9 @@ const templatePage: PageConfig = {
         {
           title: 'Inside The Box',
           showTitle: true,
-          image: '/luminoussoul/insidethebox/itb_thumbnail.jpg',
-          primaryContent: {
-            type: Media.Video,
-            link: 'https://www.youtube.com/embed/6bYhwWLc5ic',
-          },
+          coverImage: '/luminoussoul/insidethebox/itb_thumbnail.jpg',
+          type: Media.Video,
+          link: 'https://www.youtube.com/embed/6bYhwWLc5ic',
           audioDescription: {
             type: Media.Video,
             link: 'https://www.youtube.com/embed/qjjSS2cSW0o',
@@ -36,11 +32,9 @@ const templatePage: PageConfig = {
         {
           title: 'When I Hear Music',
           showTitle: true,
-          image: '/luminoussoul/whenihearmusic/wihm_thumbnail.jpg',
-          primaryContent: {
-            type: Media.Video,
-            link: 'https://www.youtube.com/embed/MATNYxDAYVM',
-          },
+          coverImage: '/luminoussoul/whenihearmusic/wihm_thumbnail.jpg',
+          type: Media.Video,
+          link: 'https://www.youtube.com/embed/MATNYxDAYVM',
           audioDescription: {
             type: Media.Video,
             link: 'https://www.youtube.com/embed/kRUDWcyX3hk',

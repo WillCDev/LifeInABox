@@ -12,15 +12,17 @@ export type ImageContent = {
   images: { link: string; audioDescription: string }[]
 }
 
-export interface ProjectConfig {
+interface ProjectBase {
   title: string
   showTitle?: boolean
-  image: string
-  primaryContent: VideoContent | AudioContent | ImageContent
+  coverImage: string
   audioDescription?: VideoContent | AudioContent
   audioIntro?: string
   transcript?: string
 }
+export type ImageProject = ImageContent & ProjectBase
+export type VideoProject = VideoContent & ProjectBase
+export type ProjectConfig = ImageProject | VideoProject
 
 export interface ProjectGroupConfig {
   title: string
@@ -29,6 +31,6 @@ export interface ProjectGroupConfig {
 
 export interface PageConfig {
   group: string
-  image: string
+  coverImage: string
   projectGroups: Array<ProjectGroupConfig>
 }

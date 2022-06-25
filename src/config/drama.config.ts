@@ -2,18 +2,16 @@ import { Media, PageConfig } from './config.types'
 
 const dramaPage: PageConfig = {
   group: 'Monday Players',
-  image: '/drama/drama_menu.jpg',
+  coverImage: '/drama/drama_menu.jpg',
   projectGroups: [
     {
       title: 'Monday Players',
       projects: [
         {
           title: 'Love in lock down',
-          image: '/drama/loveinlockdown/lil_thumbnail.jpg',
-          primaryContent: {
-            type: Media.Video,
-            link: 'https://www.youtube.com/embed/ST9hmuxXUuY',
-          },
+          coverImage: '/drama/loveinlockdown/lil_thumbnail.jpg',
+          type: Media.Video,
+          link: 'https://www.youtube.com/embed/ST9hmuxXUuY',
           audioDescription: {
             type: Media.Video,
             link: 'https://www.youtube.com/embed/lyuHxHctNSk',
@@ -21,11 +19,9 @@ const dramaPage: PageConfig = {
         },
         {
           title: 'Waiting for Gemma',
-          image: '/drama/waitingforgemma/wfg_thumbnail.jpg',
-          primaryContent: {
-            type: Media.Video,
-            link: 'https://www.youtube.com/embed/SjzfOPIuZCs',
-          },
+          coverImage: '/drama/waitingforgemma/wfg_thumbnail.jpg',
+          type: Media.Video,
+          link: 'https://www.youtube.com/embed/SjzfOPIuZCs',
           audioDescription: {
             type: Media.Video,
             link: 'https://www.youtube.com/embed/vwlSibMnuYo',
@@ -33,11 +29,9 @@ const dramaPage: PageConfig = {
         },
         {
           title: 'Ronald the Clown and the Bird House',
-          image: '/drama/ronaldtheclown/rtc_thumbnail.jpg',
-          primaryContent: {
-            type: Media.Video,
-            link: 'https://www.youtube.com/embed/fR2T6BuTxoU',
-          },
+          coverImage: '/drama/ronaldtheclown/rtc_thumbnail.jpg',
+          type: Media.Video,
+          link: 'https://www.youtube.com/embed/fR2T6BuTxoU',
           audioDescription: {
             type: Media.Video,
             link: 'https://www.youtube.com/embed/RnDdSTo-nAs',
@@ -45,11 +39,9 @@ const dramaPage: PageConfig = {
         },
         {
           title: 'Aslan Meets Doctor Who',
-          image: '/drama/aslanmeetsdrwho/amdw_thumbnail.jpg',
-          primaryContent: {
-            type: Media.Video,
-            link: 'https://www.youtube.com/embed/7zw2Dpye7Kg',
-          },
+          coverImage: '/drama/aslanmeetsdrwho/amdw_thumbnail.jpg',
+          type: Media.Video,
+          link: 'https://www.youtube.com/embed/7zw2Dpye7Kg',
           audioDescription: {
             type: Media.Video,
             link: 'https://www.youtube.com/embed/lyuHxHctNSk',
@@ -57,11 +49,9 @@ const dramaPage: PageConfig = {
         },
         {
           title: 'The Wonderful Wizard of Lockdown',
-          image: '/drama/wonderfulwizardoflockdown/wwol_thumbnail.jpg',
-          primaryContent: {
-            type: Media.Video,
-            link: 'https://www.youtube.com/embed/90sSwJFsI7E',
-          },
+          coverImage: '/drama/wonderfulwizardoflockdown/wwol_thumbnail.jpg',
+          type: Media.Video,
+          link: 'https://www.youtube.com/embed/90sSwJFsI7E',
           audioDescription: {
             type: Media.Video,
             link: 'https://www.youtube.com/embed/FLGQiceE2kI',

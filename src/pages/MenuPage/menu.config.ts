@@ -17,8 +17,8 @@ export const theta = 360 / menuItemCount
 export const getConfig = (): Array<MenuItem> => {
   return siteConfig
     .sort(() => Math.random() - 0.5)
-    .map(({ group, image }, index) => ({
-      image,
+    .map(({ group, coverImage }, index) => ({
+      image: coverImage,
       text: group,
       id: index,
       path: `${toKebabCase(group)}`,

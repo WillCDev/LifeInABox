@@ -49,7 +49,7 @@ const AppRouter: FC = () => {
                       return {
                         title,
                         showTitle: true,
-                        image: projects[imageIndex]?.image || '',
+                        coverImage: projects[imageIndex]?.coverImage || '',
                       }
                     })}
                   />
