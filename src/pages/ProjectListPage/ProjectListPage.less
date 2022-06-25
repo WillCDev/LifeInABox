@@ -1,3 +1,4 @@
+@import url('common/styles/mixins.less');
 @import url('common/styles/animations.less');
 
 .slider {
@@ -43,11 +44,20 @@
 .coverImage {
   height: 100%;
   width: 100%;
-  background-size: cover;
   transition: 250ms;
   box-shadow: 0 0 20px 0 rgb(0 0 0 / 40%);
   border: 8px solid white;
   outline: 3px solid black;
+
+  .bgImage {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+
+    &.blur {
+      .blurMixin(2px);
+    }
+  }
 
   &:hover {
     transform: scale(1.02);

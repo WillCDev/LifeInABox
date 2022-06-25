@@ -42,11 +42,16 @@ const AppRouter: FC = () => {
                 path=""
                 element={
                   <ProjectListPage
-                    projects={projectGroups.map(({ title }) => ({
-                      title,
-                      showTitle: true,
-                      image: '',
-                    }))}
+                    projects={projectGroups.map(({ title, projects }) => {
+                      const imageIndex = Math.floor(
+                        Math.random() * projects.length
+                      )
+                      return {
+                        title,
+                        showTitle: true,
+                        image: projects[imageIndex]?.image || '',
+                      }
+                    })}
                   />
                 }
               />
