@@ -13,7 +13,7 @@ const templatePage: PageConfig = {
           image: '/choir/littleboxes/lb_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
-            link: 'https://youtu.be/qV18bMAqe_o',
+            link: 'https://www.youtube.com/embed/qV18bMAqe_o',
           },
           audioIntro: '/choir/littleboxes/lb_audiointro.mp3',
         },
@@ -22,7 +22,7 @@ const templatePage: PageConfig = {
           image: '/choir/alittlebitoflove/albol_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
-            link: 'https://youtu.be/pkilFTWsR6I',
+            link: 'https://www.youtube.com/embed/pkilFTWsR6I',
           },
           audioIntro: '/choir/alittlebitoflove/albol_audiointro.jmp3pg',
         },
@@ -31,7 +31,7 @@ const templatePage: PageConfig = {
           image: '/choir/boxesrap/br_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
-            link: 'https://youtu.be/Dyk3slLtHNg',
+            link: 'https://www.youtube.com/embed/Dyk3slLtHNg',
           },
           audioIntro: '/choir/boxesrap/br_audiointro.mp3',
         },
@@ -40,7 +40,7 @@ const templatePage: PageConfig = {
           image: '/choir/happybirthday/hb_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
-            link: 'https://youtu.be/evXfluGDC9o',
+            link: 'https://www.youtube.com/embed/evXfluGDC9o',
           },
           audioIntro: '/choir/happybirthday/hb_audiointro.mp3',
         },
@@ -49,7 +49,7 @@ const templatePage: PageConfig = {
           image: '/choir/dawnchorusday/dcd_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
-            link: 'https://www.youtube.com/watch?v=xbKqMvXljOE',
+            link: 'https://www.youtube.com/embed/xbKqMvXljOE',
           },
           audioIntro: '/choir/dawnchorusday/dcd_audiointro.mp3',
         },
@@ -58,7 +58,7 @@ const templatePage: PageConfig = {
           image: '/choir/jabmetender/jmt_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
-            link: 'https://youtu.be/YTdNjfRESTQ',
+            link: 'https://www.youtube.com/embed/YTdNjfRESTQ',
           },
         },
         {
@@ -67,7 +67,7 @@ const templatePage: PageConfig = {
           image: '/choir/lastchristmas/lc_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
-            link: 'https://youtu.be/YTdNjfRESTQ',
+            link: 'https://www.youtube.com/embed/YTdNjfRESTQ',
           },
         },
         {
@@ -75,7 +75,7 @@ const templatePage: PageConfig = {
           image: '/choir/aratherstrangeoldyear/soy_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
-            link: 'https://youtu.be/YTdNjfRESTQ',
+            link: 'https://www.youtube.com/embed/YTdNjfRESTQ',
           },
         },
         {
@@ -84,7 +84,7 @@ const templatePage: PageConfig = {
           image: '/choir/fairytale/ft_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
-            link: 'https://youtu.be/3SJDnTatF1w',
+            link: 'https://www.youtube.com/embed/3SJDnTatF1w',
           },
         },
         {
@@ -93,7 +93,7 @@ const templatePage: PageConfig = {
           image: '/choir/covidisallaround/ciaa_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
-            link: 'https://youtu.be/ZK_4_fKeQ8o',
+            link: 'https://www.youtube.com/embed/ZK_4_fKeQ8o',
           },
           audioIntro: '/choir/covidisallaround/ciaa_audiointro.mp3',
         },
@@ -102,7 +102,7 @@ const templatePage: PageConfig = {
           image: '/choir/closertogether/ct_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
-            link: 'https://youtu.be/IFafgrCr3CI',
+            link: 'https://www.youtube.com/embed/IFafgrCr3CI',
           },
           audioIntro: '/choir/closertogether/ct_audiointro.mp3',
         },

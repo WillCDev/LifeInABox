@@ -13,7 +13,7 @@ const templatePage: PageConfig = {
           image: '/gamelan/notwavingbutdrowning/nwbd_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
-            link: 'https://youtu.be/A7mH6BfGVoE',
+            link: 'https://www.youtube.com/embed/A7mH6BfGVoE',
           },
           audioIntro: '/gamelan/notwavingbutdrowning/nwbd_audiointro.mp3',
         },
@@ -23,7 +23,7 @@ const templatePage: PageConfig = {
           image: '/gamelan/allwillbewell/awbw_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
-            link: 'https://youtu.be/-s5GFY6ve-E',
+            link: 'https://www.youtube.com/embed/-s5GFY6ve-E',
           },
           audioIntro: '/gamelan/allwillbewell/awbw_audiointro.mp3',
         },
@@ -33,11 +33,11 @@ const templatePage: PageConfig = {
           image: '/gamelan/boxperience/bp_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
-            link: 'https://youtu.be/-WrgbkrK6vw ',
+            link: 'https://www.youtube.com/embed/-WrgbkrK6vw ',
           },
           audioDescription: {
             type: Media.Video,
-            link: 'https://youtu.be/wy6CsSlb80Y',
+            link: 'https://www.youtube.com/embed/wy6CsSlb80Y',
           },
         },
         {
@@ -46,7 +46,7 @@ const templatePage: PageConfig = {
           image: '/gamelan/lockdowngamelan/lg_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
-            link: 'https://youtu.be/UtHKvhsyaoI',
+            link: 'https://www.youtube.com/embed/UtHKvhsyaoI',
           },
         },
       ],

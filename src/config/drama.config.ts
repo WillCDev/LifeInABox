@@ -12,11 +12,11 @@ const dramaPage: PageConfig = {
           image: '/drama/loveinlockdown/lil_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
-            link: 'https://youtu.be/ST9hmuxXUuY',
+            link: 'https://www.youtube.com/embed/ST9hmuxXUuY',
           },
           audioDescription: {
             type: Media.Video,
-            link: 'https://youtu.be/lyuHxHctNSk',
+            link: 'https://www.youtube.com/embed/lyuHxHctNSk',
           },
         },
         {
@@ -24,11 +24,11 @@ const dramaPage: PageConfig = {
           image: '/drama/waitingforgemma/wfg_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
-            link: 'https://youtu.be/SjzfOPIuZCs',
+            link: 'https://www.youtube.com/embed/SjzfOPIuZCs',
           },
           audioDescription: {
             type: Media.Video,
-            link: 'https://youtu.be/vwlSibMnuYo',
+            link: 'https://www.youtube.com/embed/vwlSibMnuYo',
           },
         },
         {
@@ -36,11 +36,11 @@ const dramaPage: PageConfig = {
           image: '/drama/ronaldtheclown/rtc_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
-            link: 'https://youtu.be/fR2T6BuTxoU',
+            link: 'https://www.youtube.com/embed/fR2T6BuTxoU',
           },
           audioDescription: {
             type: Media.Video,
-            link: 'https://youtu.be/RnDdSTo-nAs',
+            link: 'https://www.youtube.com/embed/RnDdSTo-nAs',
           },
         },
         {
@@ -48,11 +48,11 @@ const dramaPage: PageConfig = {
           image: '/drama/aslanmeetsdrwho/amdw_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
-            link: 'https://youtu.be/7zw2Dpye7Kg',
+            link: 'https://www.youtube.com/embed/7zw2Dpye7Kg',
           },
           audioDescription: {
             type: Media.Video,
-            link: 'https://youtu.be/lyuHxHctNSk',
+            link: 'https://www.youtube.com/embed/lyuHxHctNSk',
           },
         },
         {
@@ -60,7 +60,7 @@ const dramaPage: PageConfig = {
           image: '/drama/wonderfulwizardoflockdown/wwol_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
-            link: 'https://youtu.be/90sSwJFsI7E',
+            link: 'https://www.youtube.com/embed/90sSwJFsI7E',
           },
         },
       ],

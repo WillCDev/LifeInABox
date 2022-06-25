@@ -13,11 +13,11 @@ const templatePage: PageConfig = {
           image: '/luminoussoul/lockdownduets/ld_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
-            link: 'https://youtu.be/AX3hxdcfhNA',
+            link: 'https://www.youtube.com/embed/AX3hxdcfhNA',
           },
           audioDescription: {
             type: Media.Video,
-            link: 'https://youtu.be/6bYhwWLc5ic',
+            link: 'https://www.youtube.com/embed/6bYhwWLc5ic',
           },
         },
         {
@@ -26,11 +26,11 @@ const templatePage: PageConfig = {
           image: '/luminoussoul/insidethebox/itb_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
-            link: 'https://youtu.be/6bYhwWLc5ic',
+            link: 'https://www.youtube.com/embed/6bYhwWLc5ic',
           },
           audioDescription: {
             type: Media.Video,
-            link: 'https://youtu.be/qjjSS2cSW0o',
+            link: 'https://www.youtube.com/embed/qjjSS2cSW0o',
           },
         },
         {
@@ -39,11 +39,11 @@ const templatePage: PageConfig = {
           image: '/luminoussoul/whenihearmusic/wihm_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
-            link: 'https://youtu.be/MATNYxDAYVM',
+            link: 'https://www.youtube.com/embed/MATNYxDAYVM',
           },
           audioDescription: {
             type: Media.Video,
-            link: 'https://youtu.be/kRUDWcyX3hk',
+            link: 'https://www.youtube.com/embed/kRUDWcyX3hk',
           },
         },
       ],

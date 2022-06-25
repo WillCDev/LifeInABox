@@ -12,7 +12,7 @@ const creativeWritingPage: PageConfig = {
           image: '/writing/amask/am_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
-            link: 'https://youtu.be/po_OnSS3TSY',
+            link: 'https://www.youtube.com/embed/po_OnSS3TSY',
           },
           audioIntro: 'writing/amask/am_audiointro.mp3',
           transcript: 'writing/amask/am_transcript.html',
@@ -31,7 +31,7 @@ const creativeWritingPage: PageConfig = {
           image: '/writing/alittleouch/alo_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
-            link: 'https://youtu.be/1WLS5w7Rp-U',
+            link: 'https://www.youtube.com/embed/1WLS5w7Rp-U',
           },
           audioIntro: '/writing/alittleouch/alo_audiointro.mp3',
           transcript: 'writing/amask/alo_transcript.html',
@@ -50,7 +50,7 @@ const creativeWritingPage: PageConfig = {
           image: '/writing/aneedforanaturalsilence/nfns_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
-            link: 'https://youtu.be/JCrRF2XDIfM',
+            link: 'https://www.youtube.com/embed/JCrRF2XDIfM',
           },
           audioIntro: '/writing/aneedforanaturalsilence/nfns_audiointro.mp3',
           transcript: '/writing/aneedforanaturalsilence/nfns_transcript.html',
@@ -60,7 +60,7 @@ const creativeWritingPage: PageConfig = {
           image: '/writing/thousands/th_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
-            link: 'https://youtu.be/AnNAnQP1kSU',
+            link: 'https://www.youtube.com/embed/AnNAnQP1kSU',
           },
           audioIntro: '/writing/thousands/th_audiointro.mp3',
           transcript: '/writing/thousands/th_transcript.mp3',
@@ -84,7 +84,7 @@ const creativeWritingPage: PageConfig = {
           image: '/writing/scent/sc_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
-            link: 'https://youtu.be/fjXkcHfvjWU',
+            link: 'https://www.youtube.com/embed/fjXkcHfvjWU',
           },
           transcript: '/writing/scent/sc_transcript.html',
         },
@@ -93,7 +93,7 @@ const creativeWritingPage: PageConfig = {
           image: '/writing/scentoftheroses/sotr_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
-            link: 'https://youtu.be/EgrJ21pKAMI',
+            link: 'https://www.youtube.com/embed/EgrJ21pKAMI',
           },
           transcript: '/writing/scentoftheroses/sotr_transcript.html',
         },
@@ -102,7 +102,7 @@ const creativeWritingPage: PageConfig = {
           image: '/writing/theseagull/tsg_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
-            link: 'https://youtu.be/_Du-LoXS0cs ',
+            link: 'https://www.youtube.com/embed/_Du-LoXS0cs ',
           },
           transcript: '/writing/theseagull/tsg_transcript.html',
         },
@@ -111,7 +111,7 @@ const creativeWritingPage: PageConfig = {
           image: '/writing/newhope/nh_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
-            link: 'https://youtu.be/nMVfy4Vxv5k',
+            link: 'https://www.youtube.com/embed/nMVfy4Vxv5k',
           },
           audioIntro: '/writing/newhope/nh_audiointro.m4a',
           transcript: '/writing/newhope/nh_transcript.html',
@@ -121,7 +121,7 @@ const creativeWritingPage: PageConfig = {
           image: '/writing/onbeingalone/oba_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
-            link: 'https://youtu.be/CyAszOriLjc',
+            link: 'https://www.youtube.com/embed/CyAszOriLjc',
           },
           transcript: '/writing/onbeingalone/oba_transcript.html',
         },
