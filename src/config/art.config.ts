@@ -9,7 +9,7 @@ const templatePage: PageConfig = {
       projects: [
         {
           title: 'Angela Porter',
-          noTitleInImage: true,
+          showTitle: true,
           image: '/art/finalpieces/angelaporter/ap1_image.jpg',
           primaryContent: {
             type: Media.Image,
@@ -29,7 +29,7 @@ const templatePage: PageConfig = {
         },
         {
           title: 'Gary Linton',
-          noTitleInImage: true,
+          showTitle: true,
           image: '/art/finalpieces/garylinton/gl1_image.jpg',
           primaryContent: {
             type: Media.Image,
@@ -44,7 +44,7 @@ const templatePage: PageConfig = {
         },
         {
           title: 'Jayne Mulholland',
-          noTitleInImage: true,
+          showTitle: true,
           image: '/art/finalpieces/jaynemulholland/jm1_image.jpg',
           primaryContent: {
             type: Media.Image,
@@ -59,7 +59,7 @@ const templatePage: PageConfig = {
         },
         {
           title: 'Jodie Devlin',
-          noTitleInImage: true,
+          showTitle: true,
           image: '/art/finalpieces/jodiedevlin/jd1_image.jpg',
           primaryContent: {
             type: Media.Image,
@@ -79,7 +79,7 @@ const templatePage: PageConfig = {
         },
         {
           title: 'Julie Dorrity',
-          noTitleInImage: true,
+          showTitle: true,
           image: '/art/finalpieces/juliedorrity/jdo1_image.jpg',
           primaryContent: {
             type: Media.Image,
@@ -99,7 +99,7 @@ const templatePage: PageConfig = {
         },
         {
           title: 'Katy Megahey',
-          noTitleInImage: true,
+          showTitle: true,
           image: '/art/finalpieces/katymegahey/km1_image.jpg',
           primaryContent: {
             type: Media.Image,
@@ -119,7 +119,7 @@ const templatePage: PageConfig = {
         },
         {
           title: 'Mary Lou McCord',
-          noTitleInImage: true,
+          showTitle: true,
           image: '/art/finalpieces/mayloumccord/mlm1_image.jpg',
           primaryContent: {
             type: Media.Image,
@@ -134,7 +134,7 @@ const templatePage: PageConfig = {
         },
         {
           title: 'Rene Boyd',
-          noTitleInImage: true,
+          showTitle: true,
           image: '/art/finalpieces/reneboyd/reb1_image.jpg',
           primaryContent: {
             type: Media.Image,
@@ -149,7 +149,7 @@ const templatePage: PageConfig = {
         },
         {
           title: 'Ryan McCartney',
-          noTitleInImage: true,
+          showTitle: true,
           image: '/art/finalpieces/ryanmccartney/rmc1_image.jpg',
           primaryContent: {
             type: Media.Image,
@@ -169,7 +169,7 @@ const templatePage: PageConfig = {
         },
         {
           title: 'Sarah Cantillon',
-          noTitleInImage: true,
+          showTitle: true,
           image: '/art/finalpieces/sarahcantillon/sca1_image.jpg',
           primaryContent: {
             type: Media.Image,
@@ -184,7 +184,7 @@ const templatePage: PageConfig = {
         },
         {
           title: 'Tim Leathem',
-          noTitleInImage: true,
+          showTitle: true,
           image: '/art/finalpieces/timleathem/tl1_image.jpg',
           primaryContent: {
             type: Media.Image,

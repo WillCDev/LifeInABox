@@ -8,7 +8,7 @@ const templatePage: PageConfig = {
       title: 'OACC Choir',
       projects: [
         {
-          noTitleInImage: true,
+          showTitle: true,
           title: 'Little Boxes',
           image: '/choir/littleboxes/lb_thumbnail.jpg',
           primaryContent: {
@@ -24,7 +24,7 @@ const templatePage: PageConfig = {
             type: Media.Video,
             link: 'https://www.youtube.com/embed/pkilFTWsR6I',
           },
-          audioIntro: '/choir/alittlebitoflove/albol_audiointro.jmp3pg',
+          audioIntro: '/choir/alittlebitoflove/albol_audiointro.mp3',
         },
         {
           title: 'Boxes Rap',
@@ -60,9 +60,13 @@ const templatePage: PageConfig = {
             type: Media.Video,
             link: 'https://www.youtube.com/embed/YTdNjfRESTQ',
           },
+          audioDescription: {
+            type: Media.Video,
+            link: 'https://www.youtube.com/embed/vwlSibMnuYo',
+          },
         },
         {
-          noTitleInImage: true,
+          showTitle: true,
           title: 'Last Christmas',
           image: '/choir/lastchristmas/lc_thumbnail.jpg',
           primaryContent: {
@@ -79,7 +83,7 @@ const templatePage: PageConfig = {
           },
         },
         {
-          noTitleInImage: true,
+          showTitle: true,
           title: 'Fairytale',
           image: '/choir/fairytale/ft_thumbnail.jpg',
           primaryContent: {
@@ -88,7 +92,7 @@ const templatePage: PageConfig = {
           },
         },
         {
-          noTitleInImage: true,
+          showTitle: true,
           title: 'Covid Is All Around',
           image: '/choir/covidisallaround/ciaa_thumbnail.jpg',
           primaryContent: {

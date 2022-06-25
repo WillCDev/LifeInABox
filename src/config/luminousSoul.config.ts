@@ -9,7 +9,7 @@ const templatePage: PageConfig = {
       projects: [
         {
           title: 'Lockdown Duets',
-          noTitleInImage: true,
+          showTitle: true,
           image: '/luminoussoul/lockdownduets/ld_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
@@ -22,7 +22,7 @@ const templatePage: PageConfig = {
         },
         {
           title: 'Inside The Box',
-          noTitleInImage: true,
+          showTitle: true,
           image: '/luminoussoul/insidethebox/itb_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
@@ -35,7 +35,7 @@ const templatePage: PageConfig = {
         },
         {
           title: 'When I Hear Music',
-          noTitleInImage: true,
+          showTitle: true,
           image: '/luminoussoul/whenihearmusic/wihm_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,

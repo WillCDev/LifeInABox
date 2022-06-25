@@ -14,7 +14,7 @@ export type ImageContent = {
 
 export interface ProjectConfig {
   title: string
-  noTitleInImage?: boolean
+  showTitle?: boolean
   image: string
   primaryContent: VideoContent | AudioContent | ImageContent
   audioDescription?: VideoContent | AudioContent

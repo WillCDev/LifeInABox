@@ -1,5 +1,5 @@
 import { FC, ReactElement } from 'react'
-import { Outlet, Route, Routes } from 'react-router-dom'
+import { Navigate, Outlet, Route, Routes } from 'react-router-dom'
 import SplashPage from './pages/SplashPage'
 import ReadMorePage from 'pages/ReadMorePage'
 import MenuPage from './pages/MenuPage'
@@ -44,7 +44,7 @@ const AppRouter: FC = () => {
                   <ProjectListPage
                     projects={projectGroups.map(({ title }) => ({
                       title,
-                      noTitleInImage: true,
+                      showTitle: true,
                       image: '',
                     }))}
                   />
@@ -55,7 +55,7 @@ const AppRouter: FC = () => {
           )
       })}
 
-      {/* <Route path="/*" element={<Navigate to="/" />} /> */}
+      <Route path="/*" element={<Navigate to="/" />} />
     </Routes>
   )
 }

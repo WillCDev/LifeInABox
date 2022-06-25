@@ -8,7 +8,7 @@ const templatePage: PageConfig = {
       title: 'Gamelan',
       projects: [
         {
-          noTitleInImage: true,
+          showTitle: true,
           title: 'Not Waving But Drowning',
           image: '/gamelan/notwavingbutdrowning/nwbd_thumbnail.jpg',
           primaryContent: {
@@ -18,7 +18,7 @@ const templatePage: PageConfig = {
           audioIntro: '/gamelan/notwavingbutdrowning/nwbd_audiointro.mp3',
         },
         {
-          noTitleInImage: true,
+          showTitle: true,
           title: 'All Will Be Well',
           image: '/gamelan/allwillbewell/awbw_thumbnail.jpg',
           primaryContent: {
@@ -28,7 +28,7 @@ const templatePage: PageConfig = {
           audioIntro: '/gamelan/allwillbewell/awbw_audiointro.mp3',
         },
         {
-          noTitleInImage: true,
+          showTitle: true,
           title: 'Boxperience',
           image: '/gamelan/boxperience/bp_thumbnail.jpg',
           primaryContent: {
@@ -41,7 +41,7 @@ const templatePage: PageConfig = {
           },
         },
         {
-          noTitleInImage: true,
+          showTitle: true,
           title: 'Lockdown Gamelan',
           image: '/gamelan/lockdowngamelan/lg_thumbnail.jpg',
           primaryContent: {

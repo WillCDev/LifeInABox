@@ -22,7 +22,7 @@ const creativeWritingPage: PageConfig = {
           image: '/writing/whenlockdownisover/wlo_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
-            link: '',
+            link: 'https://www.youtube.com/embed/EvBGx0A7PVg',
           },
           transcript: 'writing/amask/wlo_transcript.html',
         },
@@ -41,7 +41,7 @@ const creativeWritingPage: PageConfig = {
           image: '/writing/lockdowntheyearwevehad/tywh_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
-            link: '',
+            link: 'https://www.youtube.com/embed/hYOcPONFAPk',
           },
           transcript: 'writing/amask/tywh_transcript.html',
         },
@@ -70,7 +70,7 @@ const creativeWritingPage: PageConfig = {
           image: '/writing/mylockdowncompanion/mlc_thumbnail.jpg',
           primaryContent: {
             type: Media.Video,
-            link: '',
+            link: 'https://www.youtube.com/embed/BswPV9TToLM',
           },
           transcript: '/writing/mylockdowncompanion/mlc_transcript.html',
         },

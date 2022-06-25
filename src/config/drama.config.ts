@@ -62,6 +62,10 @@ const dramaPage: PageConfig = {
             type: Media.Video,
             link: 'https://www.youtube.com/embed/90sSwJFsI7E',
           },
+          audioDescription: {
+            type: Media.Video,
+            link: 'https://www.youtube.com/embed/FLGQiceE2kI',
+          },
         },
       ],
     },
