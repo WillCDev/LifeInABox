@@ -20,7 +20,7 @@ const Breadcrumbs: FC = () => {
       prevPath: string
     ): string | undefined => {
       if (!crumb) return
-      const path = `${prevPath}${crumb}/`
+      const path = `${prevPath}/${crumb}`.replace('//', '/') // Super Hack. Need to fix this at some point
       crumbs.push({ name: crumb.replace(/-/g, ' '), path })
       return buildCrumbs(rest, path)
     }
