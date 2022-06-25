@@ -9,17 +9,18 @@ import {
   EffectCoverflow,
 } from 'swiper'
 import ContentWrapper from 'common/components/ContentWrapper'
+import { usePageContext } from 'common/components/PageContext/PageContext'
 import useControlledSwiper from 'common/hooks/useControlledSwiper'
 import { joinClassNames, toKebabCase } from 'utils'
 import styles from './ProjectListPage.less'
-import { useLinkClickHandler } from 'react-router-dom'
 
 interface Props {
-  projects: Array<{ title: string; image: string; noTitleInImage?: boolean }>
+  projects: Array<{ title: string; image: string; showTitle?: boolean }>
 }
 
 const ProjectListPage: FC<Props> = ({ projects }) => {
   const reducedMotion = usePrefersReducedMotion()
+  const { navigate, navigating } = usePageContext()
   const [controlledSwiper, setControlledSwiper] = useControlledSwiper()
 
   const items = useMemo(
@@ -47,15 +48,17 @@ const ProjectListPage: FC<Props> = ({ projects }) => {
         centeredSlides
         simulateTouch
         spaceBetween={30}
-        initialSlide={reducedMotion ? 0 : projects.length}
+        initialSlide={0}
         className={joinClassNames([
           styles.slider,
-          !reducedMotion && styles.slideIn,
+          reducedMotion && styles.reducedMotion,
+          navigating && styles.slideOut,
         ])}
         grabCursor
       >
-        {items.map(({ image, title, noTitleInImage }, index) => {
-          const onClick = useLinkClickHandler(`./${toKebabCase(title)}`)
+        {items.map(({ image, title, showTitle }, index) => {
+          const onClick = (): void =>
+            navigate(`${window.location.pathname}/${toKebabCase(title)}`, 800)
           return (
             <SwiperSlide key={index} className={styles.slide} onClick={onClick}>
               {({ isActive }) => (
@@ -68,7 +71,7 @@ const ProjectListPage: FC<Props> = ({ projects }) => {
                     className={styles.coverImage}
                     style={{ backgroundImage: `url(${image})` }}
                   />
-                  {noTitleInImage && (
+                  {showTitle && (
                     <Heading className={styles.title} size={'xl'}>
                       {title}
                     </Heading>

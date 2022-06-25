@@ -2,9 +2,14 @@
 
 .slider {
   overflow: visible;
+  width: 100%;
 
-  &.slideIn {
-    .slideIn();
+  &:not(.reducedMotion) {
+    .slideIn(800ms);
+
+    &.slideOut {
+      .slideOut(800ms);
+    }
   }
 
   .slide {
