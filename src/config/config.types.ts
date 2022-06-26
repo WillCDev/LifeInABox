@@ -5,8 +5,12 @@ export enum Media {
   Text,
 }
 
-export type VideoContent = { type: Media.Video; link: string }
 export type AudioContent = { type: Media.Audio; link: string }
+export type VideoContent = {
+  type: Media.Video
+  link: string
+  audioDescription?: string
+}
 export type ImageContent = {
   type: Media.Image
   images: { link: string; audioDescription: string }[]
@@ -16,7 +20,6 @@ interface ProjectBase {
   title: string
   showTitle?: boolean
   coverImage: string
-  audioDescription?: VideoContent | AudioContent
   audioIntro?: string
   transcript?: string
 }

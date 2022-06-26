@@ -29,10 +29,7 @@ const templatePage: PageConfig = {
           coverImage: '/gamelan/boxperience/bp_thumbnail.jpg',
           type: Media.Video,
           link: 'https://www.youtube.com/embed/-WrgbkrK6vw ',
-          audioDescription: {
-            type: Media.Video,
-            link: 'https://www.youtube.com/embed/wy6CsSlb80Y',
-          },
+          audioDescription: 'https://www.youtube.com/embed/wy6CsSlb80Y',
         },
         {
           showTitle: true,

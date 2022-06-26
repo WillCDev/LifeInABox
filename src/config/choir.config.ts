@@ -48,10 +48,7 @@ const templatePage: PageConfig = {
           coverImage: '/choir/jabmetender/jmt_thumbnail.jpg',
           type: Media.Video,
           link: 'https://www.youtube.com/embed/YTdNjfRESTQ',
-          audioDescription: {
-            type: Media.Video,
-            link: 'https://www.youtube.com/embed/vwlSibMnuYo',
-          },
+          audioDescription: 'https://www.youtube.com/embed/vwlSibMnuYo',
         },
         {
           showTitle: true,
@@ -79,7 +76,6 @@ const templatePage: PageConfig = {
           coverImage: '/choir/covidisallaround/ciaa_thumbnail.jpg',
           type: Media.Video,
           link: 'https://www.youtube.com/embed/ZK_4_fKeQ8o',
-
           audioIntro: '/choir/covidisallaround/ciaa_audiointro.mp3',
         },
         {
@@ -87,7 +83,6 @@ const templatePage: PageConfig = {
           coverImage: '/choir/closertogether/ct_thumbnail.jpg',
           type: Media.Video,
           link: 'https://www.youtube.com/embed/IFafgrCr3CI',
-
           audioIntro: '/choir/closertogether/ct_audiointro.mp3',
         },
       ],

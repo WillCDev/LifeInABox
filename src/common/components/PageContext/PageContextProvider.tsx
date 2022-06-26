@@ -5,6 +5,14 @@ import PageContext from './PageContext'
 const PageContextProvider: FC = ({ children }) => {
   const navigate = useNavigate()
   const [navigating, setNavigating] = useState(false)
+  const [playVideosWithAD, setPlayWithAD] = useState(
+    JSON.parse(localStorage.getItem('LIAB-playVideosWithAD') || 'false')
+  )
+
+  const setPlayVideosWithAD = (playWithAD: boolean): void => {
+    localStorage.setItem('LIAB-playVideosWithAD', JSON.stringify(playWithAD))
+    setPlayWithAD(playWithAD)
+  }
 
   const onNavigate = (path: string, duration?: number): void => {
     setNavigating(true)
@@ -16,7 +24,14 @@ const PageContextProvider: FC = ({ children }) => {
   }
 
   return (
-    <PageContext.Provider value={{ navigating, navigate: onNavigate }}>
+    <PageContext.Provider
+      value={{
+        navigating,
+        navigate: onNavigate,
+        playVideosWithAD,
+        setPlayVideosWithAD,
+      }}
+    >
       {children}
     </PageContext.Provider>
   )
