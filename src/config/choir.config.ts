@@ -48,20 +48,20 @@ const templatePage: PageConfig = {
           coverImage: '/choir/jabmetender/jmt_thumbnail.jpg',
           type: Media.Video,
           link: 'https://www.youtube.com/embed/YTdNjfRESTQ',
-          audioDescription: 'https://www.youtube.com/embed/vwlSibMnuYo',
+          audioDescription: 'https://www.youtube.com/embed/iTGPWe-lqXI',
         },
         {
           showTitle: true,
           title: 'Last Christmas',
           coverImage: '/choir/lastchristmas/lc_thumbnail.jpg',
           type: Media.Video,
-          link: 'https://www.youtube.com/embed/YTdNjfRESTQ',
+          link: 'https://www.youtube.com/embed/hdzhu7rXddQ',
         },
         {
           title: 'A Rather Strange Old Year',
           coverImage: '/choir/aratherstrangeoldyear/soy_thumbnail.jpg',
           type: Media.Video,
-          link: 'https://www.youtube.com/embed/YTdNjfRESTQ',
+          link: 'https://www.youtube.com/embed/EFYVrburRww',
         },
         {
           showTitle: true,

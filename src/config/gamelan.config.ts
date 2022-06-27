@@ -30,7 +30,6 @@ const templatePage: PageConfig = {
           type: Media.Video,
           link: 'https://www.youtube.com/embed/-WrgbkrK6vw ',
           audioDescription: 'https://www.youtube.com/embed/wy6CsSlb80Y',
-          audioIntro: '/choir/closertogether/ct_audiointro.mp3',
         },
         {
           showTitle: true,
