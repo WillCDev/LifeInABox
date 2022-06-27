@@ -33,6 +33,8 @@ const SecondaryContent: FC<Props> = ({
       padding="20px"
       gridGap="5vh"
       color="#666c86"
+      tabIndex={0}
+      aria-label="Controls"
     >
       <Button
         className={styles.mediaButton}

@@ -26,7 +26,11 @@ const MenuLinks: FC<Props> = ({ className }) => {
   }
 
   return (
-    <div ref={ref} className={joinClassNames([styles.menuLinks, className])}>
+    <div
+      ref={ref}
+      className={joinClassNames([styles.menuLinks, className])}
+      aria-label="Links"
+    >
       <Button
         aria-label="Social Media Links"
         onClick={toggleIsOpen}

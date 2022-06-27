@@ -35,6 +35,7 @@ const VideoContent: FC<VideoProject> = ({
             flexDirection: 'column',
             justifyContent: 'center',
           }}
+          tabIndex={1}
         >
           <AspectRatio ratio={16 / 9} border="3px solid white" maxHeight="100%">
             <iframe
