@@ -1,6 +1,6 @@
 import { FC, useContext } from 'react'
-import { FormControl, Switch, Tooltip } from '@chakra-ui/react'
-import AudioDescriptionIcon from 'common/icons/AudioDescriptionIcon'
+import { Button, FormControl, Switch, Tooltip } from '@chakra-ui/react'
+import { FaAudioDescription } from 'react-icons/fa'
 import PageContext from 'common/components/PageContext'
 import styles from './SecondaryContent.less'
 
@@ -16,19 +16,18 @@ const VideoADButton: FC = () => {
       }
       hasArrow
     >
-      <FormControl as="span" className={styles.mediaButton} maxHeight="48px">
-        <label
-          style={{
-            fontSize: '30px',
-            marginLeft: '-13px',
-            cursor: 'inherit',
-          }}
-          htmlFor="video-ad"
-        >
-          <AudioDescriptionIcon width={'2.3em'} h="auto" />
-        </label>
+      <FormControl
+        as={Button}
+        tabIndex={-1}
+        className={styles.mediaButton}
+        onClick={(e) => {
+          e.preventDefault()
+          setPlayVideosWithAD(!playVideosWithAD)
+        }}
+      >
+        <FaAudioDescription fill="#3182ce" size={36} />
         <Switch
-          aria-label="Play videos with Audio Descriptions"
+          ariaLabel="Play videos with Audio Descriptions"
           isChecked={playVideosWithAD}
           size="md"
           id="video-ad"

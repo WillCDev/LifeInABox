@@ -1,17 +1,19 @@
 import { Flex } from '@chakra-ui/react'
 import { FC } from 'react'
-import AudioIntroButton from './AudioIntroButton'
+import AudioContentButton from './AudioContentButton'
 import VideoADButton from './VideoADButton'
 
 interface Props {
-  audioDescription?: string
+  videoAD?: string
   audioIntro?: string
+  title: string
 }
 
 const SecondaryContent: FC<Props> = ({
   children,
-  audioDescription,
+  videoAD,
   audioIntro,
+  title,
 }) => {
   return (
     <Flex
@@ -23,8 +25,15 @@ const SecondaryContent: FC<Props> = ({
       gridGap="5vh"
       color="#666c86"
     >
-      {audioDescription && <VideoADButton />}
-      {audioIntro && <AudioIntroButton link={audioIntro} />}
+      {videoAD && <VideoADButton />}
+      {audioIntro && (
+        <AudioContentButton
+          link={audioIntro}
+          title={title}
+          type="Audio Introduction"
+          label="Audio Intro"
+        />
+      )}
       {children}
     </Flex>
   )

@@ -40,8 +40,9 @@ const VideoContent: FC<VideoProject> = ({
         </div>
 
         <SecondaryContent
-          audioDescription={audioDescription}
+          videoAD={audioDescription}
           audioIntro={audioIntro}
+          title={title}
         />
       </Flex>
     </Flex>

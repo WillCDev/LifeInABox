@@ -1,44 +1,27 @@
 .mediaButton {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  justify-content: center;
   color: #3182ce;
   background-color: white !important;
-  padding: 0 10px;
+  padding: 20px 10px;
   border: 2px solid #3182ce;
   border-radius: 6px;
+  gap: 8px;
+  transition: 150ms;
+
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 15px 1px lightblue;
+  }
 }
 
 .audioButton {
   font-size: 18px !important;
   font-weight: bold !important;
-  gap: 6px;
-  padding: 22px 10px;
-  color: rgb(10 176 79);
-  border-color: rgb(10 176 79) !important;
+}
 
-  svg {
-    transition: transform 350ms;
-  }
+.modalBody {
+  padding: 1rem 1.5rem 1.5rem !important;
+}
 
-  &:hover {
-    svg {
-      transform: translateX(4px);
-    }
-  }
-
-  &.playing {
-    color: rgb(213 70 70);
-    border-color: rgb(213 70 70) !important;
-
-    svg {
-      animation: scale 2s infinite;
-    }
-    @keyframes scale {
-      0% { transform: scale(1) translateX(4px); }
-      50% { transform: scale(1.1) translateX(4px); }
-      100% { transform: scale(1) translateX(4px); }
-    }
-  }
+.title {
+  color: #3182ce;
 }
