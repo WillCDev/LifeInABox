@@ -45,10 +45,8 @@ const AudioContentButton: FC<Props> = ({ link, title, type, label }) => {
         size="xl"
       >
         <ModalOverlay />
-        <ModalContent>
-          <ModalHeader>
-            <span className={styles.title}>{title}:</span> {type}
-          </ModalHeader>
+        <ModalContent padding="2rem 3rem 3rem">
+          <ModalHeader className={styles.modalTitle}>{title}</ModalHeader>
           <ModalCloseButton />
           <ModalBody className={styles.modalBody}>
             <AudioPlayer

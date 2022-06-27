@@ -12,15 +12,15 @@ const creativeWritingPage: PageConfig = {
           coverImage: '/writing/amask/am_thumbnail.jpg',
           type: Media.Video,
           link: 'https://www.youtube.com/embed/po_OnSS3TSY',
-          audioIntro: 'writing/amask/am_audiointro.mp3',
-          transcript: 'writing/amask/am_transcript.html',
+          audioIntro: '/writing/amask/am_audiointro.mp3',
+          transcript: '/writing/amask/am_transcript.html',
         },
         {
           title: 'When Lock downs over by Bernice Burrows',
           coverImage: '/writing/whenlockdownisover/wlo_thumbnail.jpg',
           type: Media.Video,
           link: 'https://www.youtube.com/embed/EvBGx0A7PVg',
-          transcript: 'writing/amask/wlo_transcript.html',
+          transcript: '/writing/whenlockdownisover/wlo_transcript.html',
         },
         {
           title: 'A Little Ouch by Carly Palmer',
@@ -28,14 +28,14 @@ const creativeWritingPage: PageConfig = {
           type: Media.Video,
           link: 'https://www.youtube.com/embed/1WLS5w7Rp-U',
           audioIntro: '/writing/alittleouch/alo_audiointro.mp3',
-          transcript: 'writing/amask/alo_transcript.html',
+          transcript: '/writing/alittleouch/alo_transcript.html',
         },
         {
           title: "Lockdown the year we've had by Sarah Cantillon",
           coverImage: '/writing/lockdowntheyearwevehad/tywh_thumbnail.jpg',
           type: Media.Video,
           link: 'https://www.youtube.com/embed/hYOcPONFAPk',
-          transcript: 'writing/amask/tywh_transcript.html',
+          transcript: '/writing/lockdowntheyearwevehad/tywh_transcript.html',
         },
         {
           title: 'A Need for Natural Silence by Andy Ward',
@@ -51,7 +51,7 @@ const creativeWritingPage: PageConfig = {
           type: Media.Video,
           link: 'https://www.youtube.com/embed/AnNAnQP1kSU',
           audioIntro: '/writing/thousands/th_audiointro.mp3',
-          transcript: '/writing/thousands/th_transcript.mp3',
+          transcript: '/writing/thousands/th_transcript.html',
         },
         {
           title: 'My Lockdown Companion by Gerry McBride',
@@ -91,7 +91,7 @@ const creativeWritingPage: PageConfig = {
           coverImage: '/writing/newhope/nh_thumbnail.jpg',
           type: Media.Video,
           link: 'https://www.youtube.com/embed/nMVfy4Vxv5k',
-          audioIntro: '/writing/newhope/nh_audiointro.m4a',
+          audioIntro: '/writing/newhope/nh_audiotintro.m4a',
           transcript: '/writing/newhope/nh_transcript.html',
         },
         {

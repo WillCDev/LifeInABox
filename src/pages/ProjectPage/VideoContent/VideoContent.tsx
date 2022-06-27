@@ -9,10 +9,10 @@ const VideoContent: FC<VideoProject> = ({
   title,
   audioDescription,
   audioIntro,
+  transcript,
 }) => {
   const { playVideosWithAD } = useContext(PageContext)
 
-  console.log(audioDescription)
   return (
     <Flex
       h="100%"
@@ -26,6 +26,7 @@ const VideoContent: FC<VideoProject> = ({
           videoAD={audioDescription}
           audioIntro={audioIntro}
           title={title}
+          transcript={transcript}
         />
 
         <div
