@@ -1,20 +1,29 @@
-import { Flex } from '@chakra-ui/react'
 import { FC } from 'react'
+import { Button, Flex } from '@chakra-ui/react'
+import { FaChevronCircleLeft } from 'react-icons/fa'
 import AudioContentButton from './AudioContentButton'
+import TranscriptButton from './TranscriptButton'
 import VideoADButton from './VideoADButton'
+import styles from './SecondaryContent.less'
+import { useLocation, useNavigate } from 'react-router-dom'
 
 interface Props {
   videoAD?: string
   audioIntro?: string
   title: string
+  transcript?: string
 }
 
 const SecondaryContent: FC<Props> = ({
   children,
   videoAD,
   audioIntro,
+  transcript,
   title,
 }) => {
+  const navigate = useNavigate()
+  const { pathname } = useLocation()
+
   return (
     <Flex
       flex={0}
@@ -25,13 +34,35 @@ const SecondaryContent: FC<Props> = ({
       gridGap="5vh"
       color="#666c86"
     >
+      <Button
+        className={styles.mediaButton}
+        onClick={() => {
+          const path = pathname.split('/')
+          path.pop()
+          navigate(path.join('/'))
+        }}
+        aria-label="Back to previous page"
+      >
+        <FaChevronCircleLeft size={26} className={styles.hoverLeft} />
+        Back
+      </Button>
+
       {videoAD && <VideoADButton />}
+
       {audioIntro && (
         <AudioContentButton
           link={audioIntro}
           title={title}
           type="Audio Introduction"
-          label="Audio Intro"
+          label="Intro"
+        />
+      )}
+
+      {transcript && (
+        <TranscriptButton
+          link={transcript}
+          title={title}
+          label={'Poem / Story'}
         />
       )}
       {children}

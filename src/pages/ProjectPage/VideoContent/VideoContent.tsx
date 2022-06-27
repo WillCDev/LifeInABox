@@ -12,6 +12,7 @@ const VideoContent: FC<VideoProject> = ({
 }) => {
   const { playVideosWithAD } = useContext(PageContext)
 
+  console.log(audioDescription)
   return (
     <Flex
       h="100%"
@@ -21,6 +22,12 @@ const VideoContent: FC<VideoProject> = ({
       justifyContent="center"
     >
       <Flex maxH="100%">
+        <SecondaryContent
+          videoAD={audioDescription}
+          audioIntro={audioIntro}
+          title={title}
+        />
+
         <div
           style={{
             flex: '1 1 100%',
@@ -38,12 +45,6 @@ const VideoContent: FC<VideoProject> = ({
             />
           </AspectRatio>
         </div>
-
-        <SecondaryContent
-          videoAD={audioDescription}
-          audioIntro={audioIntro}
-          title={title}
-        />
       </Flex>
     </Flex>
   )

@@ -27,7 +27,7 @@ const VideoADButton: FC = () => {
       >
         <FaAudioDescription fill="#3182ce" size={36} />
         <Switch
-          ariaLabel="Play videos with Audio Descriptions"
+          aria-label="Play videos with Audio Descriptions"
           isChecked={playVideosWithAD}
           size="md"
           id="video-ad"

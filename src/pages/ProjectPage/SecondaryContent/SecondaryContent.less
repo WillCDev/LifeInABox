@@ -1,21 +1,26 @@
 .mediaButton {
   color: #3182ce;
   background-color: white !important;
+  font-weight: bold !important;
+  font-size: 18px !important;
   padding: 20px 10px;
   border: 2px solid #3182ce;
   border-radius: 6px;
   gap: 8px;
   transition: 150ms;
 
+  svg {
+    transition: inherit;
+  }
+
   &:hover {
     transform: scale(1.02);
     box-shadow: 0 0 15px 1px lightblue;
-  }
-}
 
-.audioButton {
-  font-size: 18px !important;
-  font-weight: bold !important;
+    & .hoverLeft {
+      transform: translateX(-3px);
+    }
+  }
 }
 
 .modalBody {

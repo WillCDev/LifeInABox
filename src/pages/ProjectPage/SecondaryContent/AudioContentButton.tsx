@@ -11,7 +11,6 @@ import {
 } from '@chakra-ui/react'
 import { FiPlayCircle } from 'react-icons/fi'
 import AudioPlayer from 'react-h5-audio-player'
-import { joinClassNames } from 'utils'
 import styles from './SecondaryContent.less'
 import H5AudioPlayer from 'react-h5-audio-player'
 
@@ -28,16 +27,11 @@ const AudioContentButton: FC<Props> = ({ link, title, type, label }) => {
 
   return (
     <>
-      <Tooltip
-        label={
-          isPlaying ? `${type} playing. Click to stop.` : `Listen to ${type}`
-        }
-        hasArrow
-      >
+      <Tooltip label={`Listen to ${type}`} hasArrow>
         <Button
           aria-label={label}
           onClick={() => setIsPlaying(true)}
-          className={joinClassNames([styles.mediaButton, styles.audioButton])}
+          className={styles.mediaButton}
         >
           {label}
           <FiPlayCircle size={30} />
