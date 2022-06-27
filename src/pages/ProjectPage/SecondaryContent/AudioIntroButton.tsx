@@ -1,6 +1,6 @@
 import { FC, useEffect, useState } from 'react'
 import { Button, Tooltip } from '@chakra-ui/react'
-import { FiPlayCircle } from 'react-icons/fi'
+import { FiPlayCircle, FiStopCircle } from 'react-icons/fi'
 import useAudioFile from 'common/hooks/useAudioFile'
 import styles from './SecondaryContent.less'
 import { joinClassNames } from 'utils'
@@ -42,7 +42,7 @@ const AudioIntroButton: FC<{ link: string }> = ({ link }) => {
         ])}
       >
         Audio Intro
-        <FiPlayCircle size={30} />
+        {isPlaying ? <FiStopCircle size={30} /> : <FiPlayCircle size={30} />}
       </Button>
     </Tooltip>
   )

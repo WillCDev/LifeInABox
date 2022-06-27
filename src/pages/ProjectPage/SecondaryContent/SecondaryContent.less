@@ -15,9 +15,11 @@
   font-weight: bold !important;
   gap: 6px;
   padding: 22px 10px;
+  color: rgb(10 176 79);
+  border-color: rgb(10 176 79) !important;
 
   svg {
-    transition: 350ms;
+    transition: transform 350ms;
   }
 
   &:hover {
@@ -27,9 +29,8 @@
   }
 
   &.playing {
-    color: white;
-    background-color: rgb(10 176 79) !important;
-    border-color: white;
+    color: rgb(213 70 70);
+    border-color: rgb(213 70 70) !important;
 
     svg {
       animation: scale 2s infinite;
