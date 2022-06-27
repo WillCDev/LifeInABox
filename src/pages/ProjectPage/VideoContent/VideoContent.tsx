@@ -3,9 +3,13 @@ import { AspectRatio, Flex } from '@chakra-ui/react'
 import PageContext from 'common/components/PageContext'
 import { VideoProject } from 'config'
 import SecondaryContent from '../SecondaryContent'
-import VideoADButton from './VideoADButton'
 
-const VideoContent: FC<VideoProject> = ({ link, title, audioDescription }) => {
+const VideoContent: FC<VideoProject> = ({
+  link,
+  title,
+  audioDescription,
+  audioIntro,
+}) => {
   const { playVideosWithAD } = useContext(PageContext)
 
   return (
@@ -35,9 +39,10 @@ const VideoContent: FC<VideoProject> = ({ link, title, audioDescription }) => {
           </AspectRatio>
         </div>
 
-        <SecondaryContent>
-          {audioDescription && <VideoADButton />}
-        </SecondaryContent>
+        <SecondaryContent
+          audioDescription={audioDescription}
+          audioIntro={audioIntro}
+        />
       </Flex>
     </Flex>
   )

@@ -1,0 +1,43 @@
+.mediaButton {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  justify-content: center;
+  color: #3182ce;
+  background-color: white !important;
+  padding: 0 10px;
+  border: 2px solid #3182ce;
+  border-radius: 6px;
+}
+
+.audioButton {
+  font-size: 18px !important;
+  font-weight: bold !important;
+  gap: 6px;
+  padding: 22px 10px;
+
+  svg {
+    transition: 350ms;
+  }
+
+  &:hover {
+    svg {
+      transform: translateX(4px);
+    }
+  }
+
+  &.playing {
+    color: white;
+    background-color: rgb(10 176 79) !important;
+    border-color: white;
+
+    svg {
+      animation: scale 2s infinite;
+    }
+    @keyframes scale {
+      0% { transform: scale(1) translateX(4px); }
+      50% { transform: scale(1.1) translateX(4px); }
+      100% { transform: scale(1) translateX(4px); }
+    }
+  }
+}

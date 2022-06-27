@@ -30,6 +30,7 @@ const templatePage: PageConfig = {
           type: Media.Video,
           link: 'https://www.youtube.com/embed/-WrgbkrK6vw ',
           audioDescription: 'https://www.youtube.com/embed/wy6CsSlb80Y',
+          audioIntro: '/choir/closertogether/ct_audiointro.mp3',
         },
         {
           showTitle: true,
@@ -37,6 +38,7 @@ const templatePage: PageConfig = {
           coverImage: '/gamelan/lockdowngamelan/lg_thumbnail.jpg',
           type: Media.Video,
           link: 'https://www.youtube.com/embed/UtHKvhsyaoI',
+          audioDescription: 'https://www.youtube.com/embed/GkOcXeBuONU',
         },
       ],
     },
