@@ -1,17 +1,17 @@
 .fadeUp(@duration, @waitTime: 0ms) {
-  animation: wait @waitTime, fade-in @duration @waitTime ease-out;
+  animation: wait @waitTime, fade-in @duration @waitTime ease-out forwards;
 }
 
 .fadeDown(@duration) {
-  animation: fade-down @duration ease-in-out;
+  animation: fade-down @duration ease-in-out forwards;
 }
 
 .slideIn(@duration: 1200ms) {
-  animation: slide-right @duration;
+  animation: slide-right @duration forwards;
 }
 
 .slideOut(@duration: 1200ms) {
-  animation: slide-out-left @duration ease-out;
+  animation: slide-out-left @duration ease-out forwards;
 }
 
 @keyframes wait {

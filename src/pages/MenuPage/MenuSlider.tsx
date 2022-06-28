@@ -25,7 +25,7 @@ const MenuSlider: FC<Props> = ({ reducedMotion }) => {
       controller={{ control: controlledSwiper }}
       modules={[Keyboard, Controller, EffectCoverflow, Mousewheel]}
       mousewheel
-      speed={700}
+      speed={800}
       simulateTouch
       centeredSlides
       effect="coverflow"

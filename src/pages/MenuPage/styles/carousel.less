@@ -25,11 +25,11 @@
   .initial-transform();
 
   &.isAnimating {
-    animation: zoom-in @zoom-in-duration ease-out;
+    animation: zoom-in @zoom-in-duration ease-out forwards;
   }
 
   &.isNavigating {
-    animation: zoom-out @zoom-in-duration ease-out;
+    animation: zoom-out @zoom-in-duration ease-out forwards;
   }
 
   & .boxWrapper {
@@ -74,10 +74,12 @@
 
 @keyframes zoom-in {
   0% { transform: rotateX(-2deg) scale(0); }
-  80% { transform: rotateX(-8deg) scale(0.75); }
+  // 80% { transform: rotateX(-8deg) scale(0.75); }
+  100% { transform: rotateX(-10deg) scale(0.9); }
 }
 
 @keyframes zoom-out {
   20% { transform: rotateX(-8deg) scale(0.75); }
   80% { transform: rotateX(-2deg) scale(0); }
+  100% { transform: rotateX(0deg) scale(0); }
 }

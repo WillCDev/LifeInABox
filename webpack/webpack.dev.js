@@ -6,6 +6,7 @@ const config = merge(commonConfig, {
   devtool: 'eval-cheap-module-source-map',
   devServer: {
     hot: true,
+    host: '0.0.0.0',
     port: 9003,
     historyApiFallback: true,
     client: {
