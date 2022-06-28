@@ -85,7 +85,7 @@ const ProjectListPage: FC<Props> = ({ projects }) => {
                         styles.bgImage,
                         showTitle && styles.blur,
                       ])}
-                      style={{ backgroundImage: `url(${coverImage})` }}
+                      style={{ backgroundImage: `url(/assets/${coverImage})` }}
                     />
                   </Center>
                   {showTitle && (

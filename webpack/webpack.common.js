@@ -7,8 +7,8 @@ const autoprefixer = require('autoprefixer')
 const babelConfig = require('../.babelrc.json')
 
 const fromCWD = (relPath) => path.resolve(process.cwd(), relPath)
-const BUILD_DIR = fromCWD('./dist')
 const APP_DIR = fromCWD('./src')
+const BUILD_DIR = fromCWD('./dist')
 const ASSETS_DIR = fromCWD('./public')
 const MODULES_DIR = fromCWD('./node_modules')
 

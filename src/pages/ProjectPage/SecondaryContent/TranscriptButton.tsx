@@ -47,7 +47,7 @@ const TranscriptButton: FC<Props> = ({ link, title, label }) => {
           <ModalHeader className={styles.modalTitle}>{title}</ModalHeader>
           <ModalBody className={styles.modalBody}>
             <iframe
-              src={link}
+              src={`/assets/${link}`}
               width="100%"
               style={{ minHeight: '50vh', maxHeight: '80vh' }}
             />

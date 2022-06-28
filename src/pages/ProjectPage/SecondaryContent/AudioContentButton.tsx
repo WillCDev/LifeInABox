@@ -51,7 +51,7 @@ const AudioContentButton: FC<Props> = ({ link, title, type, label }) => {
           <ModalBody className={styles.modalBody}>
             <AudioPlayer
               ref={playerRef}
-              src={link}
+              src={`/assets/${link}`}
               autoPlay={true}
               showJumpControls={false}
               customAdditionalControls={[]}

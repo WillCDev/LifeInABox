@@ -58,7 +58,7 @@ const BoxHouse: FC<Props> = ({
         >
           <div
             className={styles.inner}
-            style={{ backgroundImage: `url(${image})` }}
+            style={{ backgroundImage: `url(/assets/${image})` }}
           />
           <span className={styles.text}>{text.toUpperCase()}</span>
         </button>
