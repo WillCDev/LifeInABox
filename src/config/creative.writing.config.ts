@@ -2,7 +2,11 @@ import { Media, PageConfig } from './config.types'
 
 const creativeWritingPage: PageConfig = {
   group: 'Creative Writing',
-  coverImage: '/writing/writing_menu.png',
+  menu: {
+    coinImage: '/writing/writing_menu.png',
+    boxImage: 'writing/writing_house.svg',
+    color: '#473E8F',
+  },
   projectGroups: [
     {
       title: 'Final Pieces',

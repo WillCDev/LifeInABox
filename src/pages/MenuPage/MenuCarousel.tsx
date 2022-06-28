@@ -147,7 +147,7 @@ const MenuCarousel: FC = () => {
           transform: `rotateY(${angle}deg)`,
         }}
       >
-        {menuConfig.map(({ image, text, angle, id, path }) => (
+        {menuConfig.map(({ menu, text, angle, id, path }) => (
           <div
             tabIndex={-1}
             className={styles.carousel__cell}
@@ -159,8 +159,10 @@ const MenuCarousel: FC = () => {
           >
             <BoxHouse
               selected={id === selected && !navigating}
-              image={image}
+              coinImage={menu.coinImage}
+              faceImage={menu.boxImage}
               text={text.toUpperCase()}
+              textColor={menu.color}
             />
           </div>
         ))}

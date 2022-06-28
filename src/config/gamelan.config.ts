@@ -2,7 +2,11 @@ import { Media, PageConfig } from './config.types'
 
 const templatePage: PageConfig = {
   group: 'Gamelan',
-  coverImage: '/gamelan/gamelan_menu.png',
+  menu: {
+    coinImage: '/gamelan/gamelan_menu.png',
+    boxImage: 'gamelan/gamelan_house.svg',
+    color: '#736AAB',
+  },
   projectGroups: [
     {
       title: 'Gamelan',

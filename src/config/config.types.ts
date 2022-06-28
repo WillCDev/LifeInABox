@@ -34,6 +34,10 @@ export interface ProjectGroupConfig {
 
 export interface PageConfig {
   group: string
-  coverImage: string
+  menu: {
+    coinImage: string
+    boxImage: string
+    color: string
+  }
   projectGroups: Array<ProjectGroupConfig>
 }

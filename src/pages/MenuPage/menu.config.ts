@@ -5,7 +5,11 @@ export interface MenuItem {
   angle: number
   id: number
   text: string
-  image: string
+  menu: {
+    coinImage: string
+    boxImage: string
+    color: string
+  }
   path: string
 }
 
@@ -17,8 +21,8 @@ export const theta = 360 / menuItemCount
 export const getConfig = (): Array<MenuItem> => {
   return siteConfig
     .sort(() => Math.random() - 0.5)
-    .map(({ group, coverImage }, index) => ({
-      image: coverImage,
+    .map(({ group, menu }, index) => ({
+      menu,
       text: group,
       id: index,
       path: `${toKebabCase(group)}`,

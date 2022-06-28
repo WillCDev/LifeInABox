@@ -2,7 +2,11 @@ import { Media, PageConfig } from './config.types'
 
 const templatePage: PageConfig = {
   group: 'OACC Choir',
-  coverImage: '/choir/choir_menu.png',
+  menu: {
+    coinImage: '/choir/choir_menu.png',
+    boxImage: 'choir/choir_house.svg',
+    color: '#E74688',
+  },
   projectGroups: [
     {
       title: 'OACC Choir',

@@ -2,7 +2,11 @@ import { Media, PageConfig } from './config.types'
 
 const dramaPage: PageConfig = {
   group: 'Monday Players',
-  coverImage: '/drama/drama_menu.jpg',
+  menu: {
+    coinImage: '/drama/drama_menu.jpg',
+    boxImage: 'drama/drama_house.svg',
+    color: '#E42433',
+  },
   projectGroups: [
     {
       title: 'Monday Players',

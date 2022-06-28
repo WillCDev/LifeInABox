@@ -2,7 +2,11 @@ import { Media, PageConfig } from './config.types'
 
 const templatePage: PageConfig = {
   group: 'Luminous Soul Dance',
-  coverImage: '/luminoussoul/luminous_soul_menu.png',
+  menu: {
+    coinImage: '/luminoussoul/luminous_soul_menu.png',
+    boxImage: 'luminoussoul/luminous_soul_house.svg',
+    color: '#1C9554',
+  },
   projectGroups: [
     {
       title: 'Luminous Soul Dance',

@@ -39,7 +39,7 @@ const MenuSlider: FC<Props> = ({ reducedMotion }) => {
         !reducedMotion && styles.slideIn,
       ])}
     >
-      {config.map(({ image, text, path, id }, index) => (
+      {config.map(({ menu, text, path, id }, index) => (
         <SwiperSlide key={id} className={styles.slide}>
           {({ isActive }) => (
             <BoxHouse
@@ -47,8 +47,10 @@ const MenuSlider: FC<Props> = ({ reducedMotion }) => {
                 isActive ? navigate(path) : controlledSwiper?.slideTo(index)
               }
               selected={isActive}
-              image={image}
+              coinImage={menu.coinImage}
+              faceImage={menu.boxImage}
               text={text}
+              textColor={menu.color}
             />
           )}
         </SwiperSlide>

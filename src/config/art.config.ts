@@ -2,7 +2,11 @@ import { Media, PageConfig } from './config.types'
 
 const templatePage: PageConfig = {
   group: 'Visual Arts',
-  coverImage: '/art/art_menu.png',
+  menu: {
+    coinImage: '/art/art_menu.png',
+    boxImage: 'art/art_house.svg',
+    color: '#1B8AB8',
+  },
   projectGroups: [
     {
       title: 'Visual Art - Final Pieces',
