@@ -1,9 +1,14 @@
 import { FC, useMemo } from 'react'
-import { Center, Heading, usePrefersReducedMotion } from '@chakra-ui/react'
+import {
+  Center,
+  Heading,
+  useMediaQuery,
+  usePrefersReducedMotion,
+} from '@chakra-ui/react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import {
   Keyboard,
-  Pagination,
+  Mousewheel,
   Navigation,
   Controller,
   EffectCoverflow,
@@ -20,6 +25,8 @@ interface Props {
 }
 
 const ProjectListPage: FC<Props> = ({ projects }) => {
+  // This should be the same as @mobile-max-height in 'common/styles/variables.less'
+  const [isMobile] = useMediaQuery('(max-height: 500px)')
   const reducedMotion = usePrefersReducedMotion()
   const { navigate, navigating } = usePageContext()
   const [controlledSwiper, setControlledSwiper] = useControlledSwiper()
@@ -32,30 +39,32 @@ const ProjectListPage: FC<Props> = ({ projects }) => {
   return (
     <ContentWrapper blurred>
       <Swiper
-        modules={[
-          Controller,
-          Keyboard,
-          Pagination,
-          Navigation,
-          EffectCoverflow,
-        ]}
         controller={{ control: controlledSwiper }}
-        onSwiper={setControlledSwiper}
+        modules={[
+          Keyboard,
+          Navigation,
+          Controller,
+          EffectCoverflow,
+          Mousewheel,
+        ]}
+        grabCursor
         speed={700}
+        navigation={!isMobile}
+        mousewheel
+        simulateTouch
+        centeredSlides
+        initialSlide={0}
+        spaceBetween={30}
+        effect="coverflow"
         slidesPerView="auto"
-        effect={'coverflow'}
+        onSwiper={setControlledSwiper}
         coverflowEffect={{ rotate: 7, modifier: -1 }}
         keyboard={{ enabled: true, onlyInViewport: true }}
-        centeredSlides
-        simulateTouch
-        spaceBetween={30}
-        initialSlide={0}
         className={joinClassNames([
           styles.slider,
           reducedMotion && styles.reducedMotion,
           navigating && styles.slideOut,
         ])}
-        grabCursor
       >
         {items.map(({ coverImage, title, showTitle }, index) => {
           const onClick = (): void =>

@@ -25,7 +25,7 @@ const VideoADButton: FC = () => {
           setPlayVideosWithAD(!playVideosWithAD)
         }}
       >
-        <FaAudioDescription fill="#3182ce" size={36} />
+        <FaAudioDescription fill="currentColor" size={36} />
         <Switch
           aria-label="Play videos with Audio Descriptions"
           isChecked={playVideosWithAD}

@@ -64,3 +64,29 @@
     box-shadow: 0 0 30px 1px rgb(0 0 0 / 60%);
   }
 }
+
+:global {
+  /* stylelint-disable selector-class-pattern */
+  .swiper-button-next {
+    right: 0;
+  }
+
+  .swiper-button-prev {
+    left: 0;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: white;
+    padding: 10vh 5vw;
+    top: 5%;
+    height: 100%;
+    transition: 250ms;
+    font-weight: bold;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+  /* stylelint-enable selector-class-pattern */
+}

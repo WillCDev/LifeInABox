@@ -2,13 +2,7 @@ import { FC, useContext } from 'react'
 import { joinClassNames } from 'utils'
 // Swiper Deps
 import { Swiper, SwiperSlide } from 'swiper/react'
-import {
-  Keyboard,
-  Pagination,
-  Navigation,
-  Controller,
-  EffectCoverflow,
-} from 'swiper'
+import { Keyboard, Mousewheel, Controller, EffectCoverflow } from 'swiper'
 // Menu Deps
 import BoxHouse from './BoxHouse'
 import { getConfig } from './menu.config'
@@ -28,16 +22,17 @@ const MenuSlider: FC<Props> = ({ reducedMotion }) => {
 
   return (
     <Swiper
-      modules={[Keyboard, Pagination, Navigation, Controller, EffectCoverflow]}
       controller={{ control: controlledSwiper }}
-      onSwiper={(controller) => setControlledSwiper(controller)}
+      modules={[Keyboard, Controller, EffectCoverflow, Mousewheel]}
+      mousewheel
       speed={700}
-      effect={'coverflow'}
+      simulateTouch
+      centeredSlides
+      effect="coverflow"
+      slidesPerView="auto"
+      onSwiper={(controller) => setControlledSwiper(controller)}
       coverflowEffect={{ rotate: 7, modifier: -1 }}
       keyboard={{ enabled: true, onlyInViewport: true }}
-      centeredSlides
-      simulateTouch
-      slidesPerView={'auto'}
       initialSlide={reducedMotion ? 0 : config.length}
       className={joinClassNames([
         styles.slider,
