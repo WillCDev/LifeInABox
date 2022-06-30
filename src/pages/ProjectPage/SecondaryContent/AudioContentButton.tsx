@@ -1,4 +1,4 @@
-import { createRef, FC, useState } from 'react'
+import { createRef, FC, ReactNode, useState } from 'react'
 import {
   Button,
   Modal,
@@ -18,7 +18,7 @@ interface Props {
   link: string
   title: string
   type: string
-  label: string
+  label: ReactNode
 }
 
 const AudioContentButton: FC<Props> = ({ link, title, type, label }) => {
@@ -29,7 +29,7 @@ const AudioContentButton: FC<Props> = ({ link, title, type, label }) => {
     <>
       <Tooltip label={`Listen to ${type}`} hasArrow>
         <Button
-          aria-label={label}
+          aria-label={type}
           onClick={() => setIsPlaying(true)}
           className={styles.mediaButton}
         >

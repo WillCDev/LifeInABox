@@ -9,7 +9,8 @@ const templatePage: PageConfig = {
   },
   projectGroups: [
     {
-      title: 'Visual Art - Final Pieces',
+      // title: 'Visual Art - Final Pieces',
+      title: 'Visual Arts',
       projects: [
         {
           title: 'Angela Porter',
@@ -182,11 +183,11 @@ const templatePage: PageConfig = {
         },
       ],
     },
-    {
-      title:
-        'A Facebook collaboration between creative writers & visual artists',
-      projects: [],
-    },
+    // {
+    //   title:
+    //     'A Facebook collaboration between creative writers & visual artists',
+    //   projects: [],
+    // },
   ],
 }
 export default templatePage

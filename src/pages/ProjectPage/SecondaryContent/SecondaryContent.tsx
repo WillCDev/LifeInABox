@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import { Button, Flex } from '@chakra-ui/react'
-import { FaChevronCircleLeft } from 'react-icons/fa'
+import { FaAudioDescription, FaChevronCircleLeft } from 'react-icons/fa'
 import AudioContentButton from './AudioContentButton'
 import TranscriptButton from './TranscriptButton'
 import VideoADButton from './VideoADButton'
@@ -10,6 +10,7 @@ import { useLocation, useNavigate } from 'react-router-dom'
 interface Props {
   videoAD?: string
   audioIntro?: string
+  audioDescription?: string
   title: string
   transcript?: string
 }
@@ -18,6 +19,7 @@ const SecondaryContent: FC<Props> = ({
   children,
   videoAD,
   audioIntro,
+  audioDescription,
   transcript,
   title,
 }) => {
@@ -57,6 +59,15 @@ const SecondaryContent: FC<Props> = ({
           title={title}
           type="Audio Introduction"
           label="Intro"
+        />
+      )}
+
+      {audioDescription && (
+        <AudioContentButton
+          link={audioDescription}
+          title={title}
+          type="Audio Description"
+          label={<FaAudioDescription fill="currentColor" size={36} />}
         />
       )}
 
