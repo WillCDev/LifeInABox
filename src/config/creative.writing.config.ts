@@ -38,7 +38,7 @@ const creativeWritingPage: PageConfig = {
           title: "Lockdown the year we've had by Sarah Cantillon",
           coverImage: '/writing/lockdowntheyearwevehad/tywh_thumbnail.jpg',
           type: Media.Video,
-          link: 'https://www.youtube.com/embed/hYOcPONFAPk',
+          link: 'https://www.youtube.com/embed/X5Fswhl6Sm4',
           transcript: '/writing/lockdowntheyearwevehad/tywh_transcript.html',
         },
         {
@@ -61,13 +61,13 @@ const creativeWritingPage: PageConfig = {
           title: 'My Lockdown Companion by Gerry McBride',
           coverImage: '/writing/mylockdowncompanion/mlc_thumbnail.jpg',
           type: Media.Video,
-          link: 'https://www.youtube.com/embed/BswPV9TToLM',
+          link: 'https://www.youtube.com/embed/v6hdcfHYcqQ',
           transcript: '/writing/mylockdowncompanion/mlc_transcript.html',
         },
       ],
     },
     {
-      title: 'Visual Arts Collaboration',
+      title: 'Participant Videos',
       projects: [
         {
           title: 'Scent by Alison Black',

@@ -7,6 +7,7 @@ import SecondaryContent from '../SecondaryContent'
 const VideoContent: FC<VideoProject> = ({
   link,
   title,
+  videoAD,
   audioDescription,
   audioIntro,
   transcript,
@@ -23,8 +24,9 @@ const VideoContent: FC<VideoProject> = ({
     >
       <Flex maxH="100%">
         <SecondaryContent
-          videoAD={audioDescription}
+          videoAD={videoAD}
           audioIntro={audioIntro}
+          audioDescription={audioDescription}
           title={title}
           transcript={transcript}
         />
@@ -40,9 +42,7 @@ const VideoContent: FC<VideoProject> = ({
           <AspectRatio ratio={16 / 9} border="3px solid white" maxHeight="100%">
             <iframe
               title={title}
-              src={
-                audioDescription && playVideosWithAD ? audioDescription : link
-              }
+              src={videoAD && playVideosWithAD ? videoAD : link}
               allowFullScreen
             />
           </AspectRatio>
