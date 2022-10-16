@@ -17,7 +17,7 @@ const templatePage: PageConfig = {
           coverImage: '/luminoussoul/lockdownduets/ld_thumbnail.jpg',
           type: Media.Video,
           link: 'https://www.youtube.com/embed/AX3hxdcfhNA',
-          audioDescription: 'https://www.youtube.com/embed/3PWS8KbHQ0o',
+          videoAD: 'https://www.youtube.com/embed/3PWS8KbHQ0o',
         },
         {
           title: 'Inside The Box',
@@ -25,7 +25,7 @@ const templatePage: PageConfig = {
           coverImage: '/luminoussoul/insidethebox/itb_thumbnail.jpg',
           type: Media.Video,
           link: 'https://www.youtube.com/embed/6bYhwWLc5ic',
-          audioDescription: 'https://www.youtube.com/embed/qjjSS2cSW0o',
+          videoAD: 'https://www.youtube.com/embed/qjjSS2cSW0o',
         },
         {
           title: 'When I Hear Music',
@@ -33,7 +33,7 @@ const templatePage: PageConfig = {
           coverImage: '/luminoussoul/whenihearmusic/wihm_thumbnail.jpg',
           type: Media.Video,
           link: 'https://www.youtube.com/embed/MATNYxDAYVM',
-          audioDescription: 'https://www.youtube.com/embed/kRUDWcyX3hk',
+          videoAD: 'https://www.youtube.com/embed/kRUDWcyX3hk',
         },
       ],
     },

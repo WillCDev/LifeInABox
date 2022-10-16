@@ -9,6 +9,7 @@ export type AudioContent = { type: Media.Audio; link: string }
 export type VideoContent = {
   type: Media.Video
   link: string
+  videoAD?: string
   audioDescription?: string
 }
 export type ImageContent = {

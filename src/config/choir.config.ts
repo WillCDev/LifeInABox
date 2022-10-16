@@ -52,7 +52,7 @@ const templatePage: PageConfig = {
           coverImage: '/choir/jabmetender/jmt_thumbnail.jpg',
           type: Media.Video,
           link: 'https://www.youtube.com/embed/YTdNjfRESTQ',
-          audioDescription: 'https://www.youtube.com/embed/iTGPWe-lqXI',
+          videoAD: 'https://www.youtube.com/embed/iTGPWe-lqXI',
         },
         {
           showTitle: true,
