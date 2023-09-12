@@ -3,7 +3,8 @@
 
 <head>
   <script>
-    console.log(window.location);
+    const path = window.location.pathname.slice(1);
+    window.location.replace(`/?${path}`);
   </script>
 </head>
 
