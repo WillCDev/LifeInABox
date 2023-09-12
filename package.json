@@ -2,6 +2,7 @@
   "name": "life-in-a-box",
   "version": "1.0.0",
   "author": "WillCDev",
+  "homepage": "www.openartslivinginabox.com",
   "description": "Website for the OpenArts NI Life In A Box project",
   "private": true,
   "engines": {
@@ -9,6 +10,8 @@
     "npm": "^8"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "build": "rm -rf ./dist/ && webpack --config ./webpack/webpack.prod.js --progress --color",
     "build:dev": "rm -rf ./dist/ && webpack --config ./webpack/webpack.dev.js --progress --color",
     "dev": "webpack serve --config ./webpack/webpack.dev.js --progress --color",
@@ -57,6 +60,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
+    "gh-pages": "6.0.0",
     "html-webpack-plugin": "5.5.0",
     "identity-obj-proxy": "3.0.0",
     "less": "4.1.2",
