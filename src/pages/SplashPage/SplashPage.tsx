@@ -13,6 +13,11 @@ import ContentWrapper from 'common/components/ContentWrapper'
 
 const SplashPage: FC = () => {
   const { navigating, navigate } = usePageContext()
+
+  const params = new URLSearchParams(location.search)
+  const path = params.get('path')
+  if (path) navigate(`/${decodeURIComponent(path)}`)
+
   const useReducedMotion = usePrefersReducedMotion()
   const buttonSize = useBreakpointValue({
     base: 'md',
